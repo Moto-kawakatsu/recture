@@ -35,7 +35,7 @@ Things you may want to cover:
 | genre         | string  | null: false |
 | grade         | integer | null: false |
 | class_number  | integer | null: false |
-| studentnumber | integer | null: false |
+| student_number | integer | null: false |
 
 ### Association
 
