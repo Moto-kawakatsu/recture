@@ -27,15 +27,15 @@ Things you may want to cover:
 
 ## users テーブル
 
-| Column   | Type    | Options     |
-| -------- | ------- | ----------- |
-| name     | string  | null: false |
-| email    | string  | null: false |
-| password | string  | null: false |
-| type     | string  | null: false |
-| grade    | integer | null: false |
-| class    | integer | null: false |
-| number   | integer | null: false |
+| Column        | Type    | Options     |
+| ------------- | ------- | ----------- |
+| name          | string  | null: false |
+| email         | string  | null: false |
+| password      | string  | null: false |
+| genre         | string  | null: false |
+| grade         | integer | null: false |
+| class_number  | integer | null: false |
+| student_number | integer | null: false |
 
 ### Association
 
