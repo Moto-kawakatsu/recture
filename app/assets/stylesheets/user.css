@@ -112,3 +112,21 @@
   padding: 0;
   font-size: 13px;
 }
+
+.category {
+  display:flex;
+  /* justify-content:center; */
+}
+
+select {
+  width: 98%;
+  height: 50px;
+}
+
+.select-box {
+  margin-left:50px;
+}
+
+.header-name {
+  color:white;
+}

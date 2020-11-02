@@ -23,13 +23,14 @@
   }
   
   .create-room {
-    font-size: 10px;
+    font-size: 12px;
   }
   
   .create-room a {
     border: 1px solid lightblue;
     padding: 14px;
-    color: deepskyblue;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
   
