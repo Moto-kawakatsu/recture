@@ -5,6 +5,7 @@
       <div class='chat-room-form__field--left'>
         <%= f.label :チャットルーム名, class: 'chat-room-form__label'%>
       </div>
+   
       <div class='chat-room-form__field--right'>
         <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
       </div>
@@ -16,12 +17,15 @@
         <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
       </div>
       <div class='chat-room-form__field--right'>
-        <select name="room[user_ids][]">
-          <option value="">チャットするユーザーを選択してください</option>
-          <% User.where.not(id: current_user.id).each do |user| %>
-           <option value=<%= user.id %>><%= user.name %></option>
-        <%end%>  
-        </select>
+        <div class="grade-class">
+          １−１ <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:1).all, :id, :name %>
+        </div>
+        <div class="grade-class">
+          １−２ <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:2).all, :id, :name %>
+        </div>
+        <div class="grade-class">
+           １−３ <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:3).all, :id, :name %>
+        </div>
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
     </div>
@@ -33,3 +37,5 @@
     </div>
   <% end %>
 </div>
+
+

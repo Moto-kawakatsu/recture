@@ -41,41 +41,41 @@
           </div>
         </div>
 
+      <div class="category">
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :ユーザータイプ%>
+            <%# <%= f.label :ユーザータイプ%>
           </div>
-          <div class='field-input'>
-            <%= f.text_field :genre%>
-          </div>
+          <%= f.select :genre, [["生徒", "生徒"], ["教員", "教員"]], include_blank: "ユーザーを選択して下さい" %>
         </div>
 
         <div class='field'>
-          <div class='field-label'>
-            <%= f.label :学年%>
+          <div class='field-label select-box'>
+            <%# <%= f.label :学年%>
           </div>
-          <div class='field-input'>
-            <%= f.text_field :grade%>
-          </div>
+          <%= f.select :grade, [["1年", 1], ["2年", 2], ["3年", 3], ["教員", 4]], include_blank: "学年を選択して下さい" %>
         </div>
 
         <div class='field'>
-          <div class='field-label'>
-            <%= f.label :組%>
+          <div class='field-label select-box'>
+            <%# <%= f.label :組%>
           </div>
-          <div class='field-input'>
-            <%= f.text_field :class_number%>
-          </div>
+          <%= f.select :class_number, [["1組", 1], ["2組", 2], ["3組", 3], ["4組", 4], ["5組", 5], ["6組", 6], ["教員", 7]], include_blank: "クラスを選択して下さい" %>
         </div>
-
+       
         <div class='field'>
-          <div class='field-label'>
-            <%= f.label :番号%>
+          <div class='field-label select-box'>
+            <%# <%= f.label :番号%>
           </div>
-          <div class='field-input'>
-            <%= f.text_field :student_number%>
-          </div>
+         <%= f.select :student_number, [["1", 1], ["2", 2], ["3", 3], ["4", 4], ["5", 5], ["6", 6], ["7", 7], ["8", 8], ["9", 9], ["10", 10], ["11", 11], ["12", 12], ["13", 13], ["14", 14], ["15", 15], ["16", 16], ["17", 17], ["18", 18], ["19", 19], ["20", 20], ["21", 21], ["22", 22], ["23", 23], ["24", 24], ["25", 25], ["26", 26], ["27", 27], ["28", 28], ["29", 29], ["30", 30], ["31", 31], ["32", 32], ["33", 33], ["34", 34], ["35", 35], ["36", 36], ["37", 37], ["38", 38], ["39", 39], ["40", 40], ["教員", 41 ]], include_blank: "番号を選択して下さい" %>
         </div>
+      </div>
+
+<b>メニュー</b>
+<input type="checkbox" name="food" value="1">焼肉
+<input type="checkbox" name="food" value="2">ラーメン
+<input type="checkbox" name="food" value="3">フレッシュサラダ
+<input type="checkbox" name="food" value="4">100%オレンジジュース
 
         <div class='actions'>
           <%= f.submit "Create Account", class: 'btn'%>
