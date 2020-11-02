@@ -6,7 +6,9 @@
   </div>
   <div class="right-header">
     <div class="header-button">
+    <% if current_user.genre == "教員"%>
       <%=link_to "ルーム削除", room_path(@room), method: :delete %>
+    <% end %>
     </div>
   </div>
 </div>
