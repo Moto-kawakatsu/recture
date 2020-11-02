@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root to: "rooms#index"
   resources :users
   resources :rooms do
-    resources :messages
+    resources :messages do
+      resources :comments
+    end
   end
 end
