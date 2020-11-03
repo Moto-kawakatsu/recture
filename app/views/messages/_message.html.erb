@@ -9,8 +9,9 @@
   </div>
   <div class="lower-message">
     <div class="message-content">
-      <%=link_to message.content %>
+      <%=link_to message.content, comments_index_path %>
     </div>
      <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
   </div>
+  
 </div>

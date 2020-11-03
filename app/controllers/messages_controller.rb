@@ -1,11 +1,21 @@
 class MessagesController < ApplicationController
   def index
+    @comment = Comment.new
     @message = Message.new
     @room = Room.find(params[:room_id])
     @messages = @room.messages.includes(:user).order("created_at DESC")
     @users = @room.users.order("student_number ASC")
   end
   
+  def new
+    @comment = Comment.new
+  end
+  
+  def show
+    @comment = Comment.new
+    @comments = @message.comments.includes(:user)
+  end
+
   def create
     @room = Room.find(params[:room_id])
     @message = @room.messages.new(message_params)
