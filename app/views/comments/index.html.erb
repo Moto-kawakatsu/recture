@@ -1,0 +1,12 @@
+<div class="comment">
+      <div class="comment-box">
+      <%= form_with model: @comment,url:room_message_comments_path(@room, @messages),local: true do |f| %>
+        <%= f.text_area :text, placeholder: "コメントする", class: "comment-text" %>
+      <p class="comment-warn">
+        相手のことを考え丁寧なコメントを心がけましょう。
+        <br>
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      </p>
+      <%= f.submit "コメントする"%>
+     <% end %>
+  </div>
