@@ -8,7 +8,9 @@ class MessagesController < ApplicationController
   end
   
   def new
+    @room = Room.find(params[:room_id])
     @comment = Comment.new
+    @message = Message.new
   end
   
   def show
@@ -17,7 +19,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @room = Room.find(params[:room_id])
+    @room = Room.find(params[:id])
     @message = @room.messages.new(message_params)
     if @message.save
       redirect_to room_messages_path(@room)

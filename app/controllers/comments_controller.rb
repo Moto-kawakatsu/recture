@@ -3,21 +3,24 @@ class CommentsController < ApplicationController
   def index    
     @messages = Message.all
     @room = Room.all
-    # @comments = @messages.comments.include(:user)
+    @message = Message.find(params[:id])
+    
   end
 
   def new
-    @comment = Comment.new
-    @message = Message.new
-    @room = Room.find(params[:room_id])
-    @messages = @room.messages.includes(:user).order("created_at DESC")
+    
+    @comments = Comment.new
+    @messages = Message.all
+    @message = Message.find(params[:message_id])
+    @room = Room.all
   end
 
   def create
-     if @comment = Comment.create(comment_params)
-        redirect_to root_path
-
-     end
+     @message = Message.find(params[:message_id])
+     @comment = @message.comments.new(comment_params)
+    if @comment.save
+      redirect_to root_path
+    end
   end
     
       private
