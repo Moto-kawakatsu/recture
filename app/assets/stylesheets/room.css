@@ -134,3 +134,12 @@ li {
 .room-member {
   padding:5px;
 }
+
+
+.room-name {
+  color:#ffffff
+}
+
+.room-num {
+  font-size:12px;
+}
