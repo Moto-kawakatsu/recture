@@ -18,6 +18,7 @@
     <div class="room">
       <div class="room-name">
          <%=link_to room.name, room_messages_path(room) %>
+         <p class="room-num">(<%= room.users.count%>名)</p>
       </div>
     </div>
     <%end%>
