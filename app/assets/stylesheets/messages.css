@@ -23,7 +23,7 @@
   }
   
   .create-room {
-    font-size: 12px;
+    font-size: 16px;
   }
   
   .create-room a {
@@ -37,12 +37,12 @@
   .rooms {
     background-color: #2F3E51;
     height: calc(100vh - 100px);
-    padding: 0 20px;
+    padding: 25px 20px 0;
     overflow: scroll;
   }
   
   .room {
-    padding: 20px 0 40px;
+    padding: 20px 0 15px;
   }
   
   .room-name a {
@@ -93,6 +93,7 @@
   
   .upper-message{
     display: flex;
+    align-items:center;
   }
   
   .message-user {
@@ -116,6 +117,10 @@
     margin-bottom: 40px;
   }
   
+  .message-content a {
+    text-decoration: none;
+    color: #38aef0;
+  }
   
   .form {
     background-color: #DDDDDD;
@@ -138,7 +143,7 @@
   }
   
   .form-submit {
-    background-color: #38AEF0;
+    background-color: #38aef0;
     border: none;
     color: white;
     font-size: 16px;
@@ -149,7 +154,7 @@
 
   .form-image {
     font-size: 12px;
-    background-color: lightblue;
+    background-color: rgb(144, 214, 238);
     color: white;
     padding: 12px;
     width: 60px;
