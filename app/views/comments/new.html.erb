@@ -1,13 +1,52 @@
 <div class="comment">
       <div class="comment-box">
-      <%= form_with model: [@comments, @messages],url:message_comments_path(@message),local: true do |f| %>
-        <%= f.text_area :text, placeholder: "コメントする", class: "comment-text" %>
+      <%= form_with model: [@comment, @messages],url:message_comments_path(@message),local: true do |f| %>
+        <%= f.text_area :text, placeholder: "質問する", class: "comment-text" %>
         <%= hidden_field_tag :message_id,@message.id %>
       <p class="comment-warn">
-        相手のことを考え丁寧なコメントを心がけましょう。
-        <br>
-        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        <p>他の生徒の質問で回答できる場合には積極的に回答してください！</p>
       </p>
-      <%= f.submit "コメントする"%>
+      <br>
+      <%= f.submit "質問する",class: "comment-btn"%>
      <% end %>
+  </div>
+
+<div class="comment-box2">
+      <h4 class="comment-list">＜質問一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+        <div class="comment-content">
+         <% if current_user.genre == "教員" %> 
+          <p>
+            <strong><%= link_to comment.user.name, "#", class: "comment-nickname" %></strong>
+          </p>
+          <% elsif current_user.genre == "生徒" %>
+          <strong class= "comment-nickname">匿名</strong>
+          <% end %>
+          <p class="comment-texts">
+            <%= comment.text%>
+          </p>
+          <span class="a">共感</span>
+          <ul class="comment-time">
+            <p class="time"><%= comment.created_at.to_s(:datetime_jp) %></p>
+            <p class="time"><%= comment.created_at.to_s(:datetime_jp2) %></p>
+          </ul>
+           <% if current_user.genre == "教員" %>
+          <p>
+            <%= link_to message_comment_path(@message.id, comment.id), method: :delete, class: "delete-button" do %>
+            <i class="fas fa-trash"></i>
+            <% end %>
+          </p>
+          <% elsif user_signed_in? && current_user.id == comment.user_id %>
+          <p>
+            <%= link_to message_comment_path(@message.id, comment.id), method: :delete, class: "delete-button" do %>
+            <i class="fas fa-trash"></i>
+            <% end %>
+          </p>
+          <% end %>
+          <p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
