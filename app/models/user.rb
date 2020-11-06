@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :rooms, through: :room_users
   has_many :messages
   has_many :comments
+  has_many :responses
   has_many :agrees, dependent: :destroy
 
   def already_agreed?(comment)
