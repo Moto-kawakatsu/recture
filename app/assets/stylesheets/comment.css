@@ -14,6 +14,7 @@
     padding: 10px;
     border: solid 2px #dedede;
     resize: none;
+    background-color: #FAFAFA;
   }
 
   .comment-warn {
@@ -64,10 +65,10 @@
     display: flex;
     align-items:center;
     padding: 2vh 0;
-    width: 90%;
+    width: 85%;
     border: solid 1px #0000001a;
-    margin-left: 7.5vh;
-    background-color:  #ffffff;
+    margin-left: 110px;
+    background-color: #FAFAFA;
     margin-bottom: 3px; 
     border-radius:  10px; 
   }
@@ -79,17 +80,17 @@
     text-decoration: none;
   }
 
-  .comment-texts {
+  .comment-texts a {
     font-size:1.8vh;
     margin-top: 3.5px;
-    color:rgba(0, 0, 0, 0.788);
+    color:#558ef8;
   }
 
   .comment-time {
     font-size: 1px;
     margin-left: 15px;
     margin-top: 0px;
-    color:#38aef0;
+    color:#000000;
     background-color: rgba(255, 255, 255, 0.479);
     padding: 5px;
     display:flex;

@@ -1,0 +1,25 @@
+.comment-texts {
+    font-size:1.8vh;
+    margin-top: 3.5px;
+    color:#558ef8;
+  }
+
+  .comment-content2 {
+    display: flex;
+    align-items: center;
+    padding: 2vh 0;
+    width: 85%;
+    border: solid 1px #0000001a;
+    margin-left: 110px;
+    background-color: #FAFAFA;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+
+#text-button {
+    display: block;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
+    border: 1px solid #232323;
+  }
