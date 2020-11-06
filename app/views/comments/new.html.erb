@@ -25,7 +25,7 @@
           <strong class= "comment-nickname">匿名</strong>
           <% end %>
           <p class="comment-texts">
-            <%= comment.text%>
+            <%=link_to comment.text, new_comment_response_path(comment) %>
           </p>
           <div class="favorite-btn">
              <% if user_signed_in? && current_user.already_agreed?(comment) %>
