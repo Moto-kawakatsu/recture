@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'messages/index'
   get 'comments/index'
-  
+  get 'responses/create' => 'responses#create'
   root to: "rooms#index"
   resources :users
   resources :rooms do
@@ -10,10 +10,15 @@ Rails.application.routes.draw do
   end
   resources :messages do
     resources :comments
-end
+  end
 
   resources :comments do
     resources :agrees, only: [:create, :destroy]
-end
+  end
 
+  resources :comments do
+    resources :responses, only: [:new, :create, :destroy]
+  end
+
+  post 'posts', to: 'posts#create'
 end
