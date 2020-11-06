@@ -8,6 +8,7 @@
       </p>
       <br>
       <%= f.submit "質問する",class: "comment-btn"%>
+      <div class="back-to-top2"><%=link_to '戻る', root_path %></div>
      <% end %>
   </div>
 
@@ -26,7 +27,20 @@
           <p class="comment-texts">
             <%= comment.text%>
           </p>
-          <span class="a">共感</span>
+          <div class="favorite-btn">
+             <% if user_signed_in? && current_user.already_agreed?(comment) %>
+              <%= link_to comment_agree_path(comment, comment.agrees), method: :delete do %>
+              <p class="agree-btn-color">共感</p>
+             <% end %>
+             <% elsif user_signed_in? && current_user.id == comment.user_id%>
+              <p class="agree-btn">共感</p>
+             <% else %>
+            <%= link_to comment_agrees_path(comment), method: :post do %>
+             <p class="agree-btn">共感</p>
+             <% end %>
+             <% end %>
+            <p class="agree-count"><%= comment.agrees.count%>人</p>
+          </div>
           <ul class="comment-time">
             <p class="time"><%= comment.created_at.to_s(:datetime_jp) %></p>
             <p class="time"><%= comment.created_at.to_s(:datetime_jp2) %></p>
@@ -50,4 +64,4 @@
       <% end %>
     </div>
   </div>
-  <p class="back-to-top2"><%=link_to '戻る', root_path %></p>
+

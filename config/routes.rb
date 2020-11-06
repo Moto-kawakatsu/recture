@@ -11,4 +11,9 @@ Rails.application.routes.draw do
   resources :messages do
     resources :comments
 end
+
+  resources :comments do
+    resources :agrees, only: [:create, :destroy]
+end
+
 end
