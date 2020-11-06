@@ -6,6 +6,9 @@
     <div class="message-date">
       <%=  l message.created_at %>
     </div>
+    <div class="message-date">
+      【質問<%= message.comments.count %>個】
+    </div>
   </div>
   <div class="lower-message">
     <div class="message-content">
