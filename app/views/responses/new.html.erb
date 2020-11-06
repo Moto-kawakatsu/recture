@@ -1,0 +1,54 @@
+<div class="comment">
+      <div class="comment-box">
+      <%= form_with model:@response,url:comment_responses_path(@comment),local: true do |f| %>
+        <%= f.text_area :response_text, placeholder: "質問する", class: "comment-text" %>
+        <%# <%= hidden_field_tag :comment_id,@comment.id %>
+      <p class="comment-warn">
+        <p>他の生徒の質問で回答できる場合には積極的に回答してください！</p>
+      </p>
+      <br>
+      <%= f.submit "質問する",class: "comment-btn"%>
+      <div class="back-to-top2"><%=link_to '戻る', root_path %></div>
+     <% end %>
+  </div>
+
+<div class="comment-box2">
+      <h4 class="comment-list">＜質問一覧＞</h4>
+      <% if @responses %>
+        <% @responses.each do |response| %>
+        <div class="comment-content2">
+         <% if current_user.genre == "教員" %> 
+          <p>
+            <strong><%= link_to response.user.name, "#", class: "comment-nickname" %></strong>
+          </p>
+          <% elsif current_user.genre == "生徒" %>
+          <strong class= "comment-nickname">匿名</strong>
+          <% end %>
+          <p class="comment-texts">
+            <%= response.response_text %>
+          </p>
+            <div id="text-button"><p id="text">good</p></div>
+          <ul class="comment-time">
+            <p class="time"><%= response.created_at.to_s(:datetime_jp) %></p>
+            <p class="time"><%= response.created_at.to_s(:datetime_jp2) %></p>
+          </ul>
+           <% if current_user.genre == "教員" %>
+          <p>
+            <%= link_to comment_response_path(@comment.id, response.id), method: :delete, class: "delete-button" do %>
+            <i class="fas fa-trash"></i>
+            <% end %>
+          </p>
+          <% elsif user_signed_in? && current_user.id == response.user_id %>
+          <p>
+            <%= link_to comment_response_path(@comment.id, response.id), method: :delete, class: "delete-button" do %>
+            <i class="fas fa-trash"></i>
+            <% end %>
+          </p>
+          <% end %>
+          <p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
