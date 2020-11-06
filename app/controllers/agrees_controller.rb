@@ -17,7 +17,7 @@ class AgreesController < ApplicationController
       def agree_params
         params.require(:agree).permit(
           :comment_id, 
-          :user_id, 
+          :user_id
         ).merge(user_id: current_user.id, comment_id: params[:comment_id])
       end
   
