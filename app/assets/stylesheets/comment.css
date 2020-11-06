@@ -116,3 +116,14 @@
   width:65px;
   float:right;
   }
+
+  .favorite-btn {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  .agree-count {
+    margin-left:20px;
+    font-size:13px;
+  }
