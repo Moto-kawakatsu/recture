@@ -95,26 +95,16 @@
     text-decoration: none;
   }
 
-  .a {
-    font-size:1px;
-    padding: 5px;
-    margin-left:20px;
-    border:1px rgba(0, 0, 0, 0.205) solid;
-    border-radius: 10px;
-    background-color:rgba(255, 255, 255, 0.349);
-    color:rgba(0, 0, 0, 0.788);
-  }
-
   .back-to-top2 a {
     text-decoration: none;
     display:flex;
     border:1px solid rgba(0, 0, 0, 0.288);
-  background-color:rgba(220, 220, 220, 0.315);
-  color:rgba(0, 0, 0, 0.685);
-  font-size:15px;
-  padding: 10px 10px 10px 20px;
-  width:65px;
-  float:right;
+    background-color:rgba(220, 220, 220, 0.315);
+    color:rgba(0, 0, 0, 0.685);
+    font-size:15px;
+    padding: 10px 10px 10px 20px;
+    width:65px;
+    float:right;
   }
 
   .favorite-btn {
@@ -126,4 +116,25 @@
   .agree-count {
     margin-left:20px;
     font-size:13px;
+  }
+
+  .agree-btn {
+    font-size:1px;
+    padding: 5px;
+    margin-left:20px;
+    border:1px rgba(0, 0, 0, 0.205) solid;
+    border-radius: 10px;
+    background-color:rgba(255, 255, 255, 0.349);
+    color:rgba(0, 0, 0, 0.788);
+    
+  }
+
+  .agree-btn-color {
+    font-size:1px;
+    padding: 5px;
+    margin-left:20px;
+    border:1px rgba(0, 0, 0, 0.205) solid;
+    border-radius: 10px;
+    background-color:rgba(239, 60, 60, 0.349);
+    color:rgba(0, 0, 0, 0.788);
   }
