@@ -150,6 +150,7 @@
     height: 50px;
     margin-left: 15px;
     padding: 0 20px;
+    cursor:pointer;
   }
 
   .form-image {
