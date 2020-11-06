@@ -24,13 +24,15 @@ li {
 }
 
 .chat-room-form {
-  width: 980px;
+  width: 1000px;
   margin: 60px auto;
   padding: 40px;
+  padding-right:150px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
+  position:relative;
 }
 .chat-room-form__errors {
   margin: 30px 0;
@@ -58,6 +60,7 @@ li {
   color: #fff;
   background-color: #38aef0;
   border: 0;
+  margin-left:210px;
 }
 .chat-room-form__field {
   margin-top: 30px;
@@ -137,9 +140,56 @@ li {
 
 
 .room-name {
-  color:#ffffff
+  color:#ffffff;
+  font-size:16px;
 }
 
 .room-num {
   font-size:12px;
+}
+
+.grade-class {
+  border:1px solid rgba(255, 255, 255, 0.11);
+  font-size:12px;
+}
+
+.class-num1{
+  display:flex;
+  justify-content:center;
+  padding:5px;
+  background-color:rgba(255, 0, 0, 0.185);
+  margin:10px 0;
+}
+
+.class-num2{
+  display:flex;
+  justify-content:center;
+  padding:5px;
+  background-color:rgba(255, 213, 5, 0.299);
+  margin:10px 0;
+}
+
+.class-num3{
+  display:flex;
+  justify-content:center;
+  padding:5px;
+  background-color:rgba(0, 119, 255, 0.299);
+  margin:10px 0;
+}
+
+.new-chat-room {
+  margin-left:190px;
+}
+
+.back-to-top a {
+  text-decoration: none;
+  display:flex;
+  position:absolute;
+  right:219px;
+  top:1407px;
+  border:1px solid rgba(0, 0, 0, 0.288);
+background-color:rgba(220, 220, 220, 0.315);
+color:rgba(0, 0, 0, 0.685);
+font-size:15px;
+padding: 0 10px;
 }
