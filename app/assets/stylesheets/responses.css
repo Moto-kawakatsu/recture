@@ -13,13 +13,25 @@
     margin-left: 110px;
     background-color: #FAFAFA;
     margin-bottom: 3px;
-    border-radius: 10px;
+    border-radius: 2px;
+    position:relative;
 }
 
-.text-button {
+#text-button {
     display: block;
     cursor: pointer;
-    width: 160px;
+    width: 50px;
     text-align: center;
-    border: 1px solid #232323;
+    border: 1px solid #23232307;
+    font-size:12px;
+    line-height:70px;
+  }
+
+  .good-answer {
+    border-radius:2px;
+    position:absolute;
+    top:0px;
+    right:0px;
+    height:100%;
+    background-color:rgba(255, 115, 0, 0.432);
   }

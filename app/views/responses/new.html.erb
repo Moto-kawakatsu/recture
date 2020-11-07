@@ -27,7 +27,7 @@
           <p class="comment-texts">
             <%= response.response_text %>
           </p>
-            <div id="text-button"><p id="text">good</p></div>
+            
           <ul class="comment-time">
             <p class="time"><%= response.created_at.to_s(:datetime_jp) %></p>
             <p class="time"><%= response.created_at.to_s(:datetime_jp2) %></p>
@@ -46,6 +46,7 @@
           </p>
           <% end %>
           <p>
+          <div class="good-answer" id="text-button"><p id="text">解決</p></div>
           </div>
         <% end %>
       <% end %>
