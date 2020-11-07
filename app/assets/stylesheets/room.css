@@ -179,7 +179,8 @@ li {
 }
 
 .new-chat-room {
-  margin-left:190px;
+  margin-left:350px;
+  margin-bottom:50px;
 }
 
 .back-to-top a {
@@ -187,11 +188,10 @@ li {
   display:flex;
   position:absolute;
   right:43.2%;
-  top:1388px;
+  top:1410px;
   background-color: #ccc;
   color: #fff;
   font-size:18px;
-  /* border-radius:2px; */
   width:145px;
   padding: 10px 48px;
 
