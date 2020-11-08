@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :rooms do
     resources :messages
   end
+
   resources :messages do
     resources :comments
   end
@@ -20,5 +21,4 @@ Rails.application.routes.draw do
     resources :responses, only: [:new, :create, :destroy]
   end
 
-  post 'posts', to: 'posts#create'
 end
