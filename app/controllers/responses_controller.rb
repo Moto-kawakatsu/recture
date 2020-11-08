@@ -24,7 +24,7 @@ class ResponsesController < ApplicationController
           redirect_to new_comment_response_path(@comment)
         else
           redirect_to new_comment_response_path(@comment)
-         end       
+        end       
    end
 
     private
