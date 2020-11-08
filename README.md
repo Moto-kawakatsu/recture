@@ -4,9 +4,11 @@
 
 学校での授業の後に家でも授業に近い形で学習することができるwebアプリケーションです。
 
-# DEMO 
-生徒は授業で使われたPowerPointやKeyNoteのスライドを、URLからもう一度見ることができる。  
+# HOW TO USE 
+生徒は授業で使われたPowerPointやKeyNoteのスライドを、URLからもう一度見ることができる  
 <img width="1437" alt="スクリーンショット 2020-11-08 16 30 28" src="https://user-images.githubusercontent.com/70629162/98459618-e0ed3e00-21df-11eb-8a80-61adb570f1a4.png">
+  
+投稿されたメッセージをクリックすると、そのメッセージの質問ページに遷移
 
  
 # Features
