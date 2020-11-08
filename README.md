@@ -6,15 +6,15 @@
 
 # HOW TO USE 
 生徒は授業で使われたPowerPointやKeyNoteのスライドを、URLからもう一度見ることができる  
-<img width="1437" alt="スクリーンショット 2020-11-08 16 30 28" src="https://user-images.githubusercontent.com/70629162/98459618-e0ed3e00-21df-11eb-8a80-61adb570f1a4.png">
+<img width="600" alt="スクリーンショット 2020-11-08 16 30 28" src="https://user-images.githubusercontent.com/70629162/98459618-e0ed3e00-21df-11eb-8a80-61adb570f1a4.png">
   
 投稿されたメッセージをクリックすると、そのメッセージの質問ページに遷移する。  
 生徒は他の生徒がした質問に共感ボタンを押すことで意思を表示できる。  
-<img width="1229" alt="スクリーンショット 2020-11-08 17 11 07" src="https://user-images.githubusercontent.com/70629162/98460210-7dfea580-21e5-11eb-9578-4ba551e55d75.png">　　
+<img width="600" alt="スクリーンショット 2020-11-08 17 11 07" src="https://user-images.githubusercontent.com/70629162/98460210-7dfea580-21e5-11eb-9578-4ba551e55d75.png">　　
   
 質問ページ投稿された質問をクリックすると、回答ページに遷移する。  
 質問に回答できる生徒がいれば回答する。質問した生徒は問題が解決した場合、解決ボタンを押す。
-<img width="1226" alt="スクリーンショット 2020-11-08 17 24 45" src="https://user-images.githubusercontent.com/70629162/98460398-79d38780-21e7-11eb-9861-18e6ca571fa4.png">
+<img width="600" alt="スクリーンショット 2020-11-08 17 24 45" src="https://user-images.githubusercontent.com/70629162/98460398-79d38780-21e7-11eb-9861-18e6ca571fa4.png">
 
 
 # Features
