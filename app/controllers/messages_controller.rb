@@ -28,6 +28,17 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+    @room = Room.find(params[:id])
+    @messages = @room.messages
+    @messages.each do |message|
+    if message.destroy
+       redirect_to room_messages_path(message.room)
+    else
+       render :new
+    end
+  end       
+  end
 
   private
 
