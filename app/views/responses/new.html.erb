@@ -1,13 +1,13 @@
 <div class="comment">
       <div class="comment-box">
       <%= form_with model:@response,url:comment_responses_path(@comment),local: true do |f| %>
-        <%= f.text_area :response_text, placeholder: "質問する", class: "comment-text" %>
+        <%= f.text_area :response_text, placeholder: "回答する", class: "comment-text" %>
         <%# <%= hidden_field_tag :comment_id,@comment.id %>
       <p class="comment-warn">
         <p>他の生徒の質問で回答できる場合には積極的に回答してください！</p>
       </p>
       <br>
-      <%= f.submit "質問する",class: "comment-btn"%>
+      <%= f.submit "回答する",class: "comment-btn"%>
       <div class="back-to-top2"><%=link_to '戻る', root_path %></div>
      <% end %>
   </div>
