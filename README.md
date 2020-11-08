@@ -4,10 +4,9 @@
 
 学校での授業の後に家でも授業に近い形で学習することができるwebアプリケーションです。
 
-# DEMO
- 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
- images.githubusercontent.com/70629162/98457825-2bfe5580-21ce-11eb-8240-78ce66c73dab.png
+# DEMO  
+<img width="1437" alt="スクリーンショット 2020-11-08 16 30 28" src="https://user-images.githubusercontent.com/70629162/98459618-e0ed3e00-21df-11eb-8a80-61adb570f1a4.png">
+
  
 # Features
 
