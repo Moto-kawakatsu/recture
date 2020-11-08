@@ -6,7 +6,7 @@
 
 # HOW TO USE 
 生徒は授業で使われたPowerPointやKeyNoteのスライドを、URLからもう一度見ることができる  
-<br>  
+<br>
 <img width="800" alt="スクリーンショット 2020-11-08 16 30 28" src="https://user-images.githubusercontent.com/70629162/98459618-e0ed3e00-21df-11eb-8a80-61adb570f1a4.png">
 <br>
 <br>
