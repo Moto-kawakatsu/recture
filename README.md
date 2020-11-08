@@ -10,7 +10,8 @@
   
 投稿されたメッセージをクリックすると、そのメッセージの質問ページに遷移する。  
 生徒は他の生徒がした質問と疑問を思っている場合、共感ボタンを押して意思を表示できる。  
-<img width="1229" alt="スクリーンショット 2020-11-08 17 03 57" src="https://user-images.githubusercontent.com/70629162/98460095-886c6f80-21e4-11eb-9125-daf779af5309.png">
+<img width="1229" alt="スクリーンショット 2020-11-08 17 11 07" src="https://user-images.githubusercontent.com/70629162/98460210-7dfea580-21e5-11eb-9578-4ba551e55d75.png">
+
 
  
 # Features
