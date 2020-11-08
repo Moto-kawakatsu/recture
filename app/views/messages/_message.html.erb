@@ -9,6 +9,21 @@
     <div class="message-date">
       【質問<%= message.comments.count %>個】
     </div>
+    <div>
+    <% if current_user.genre == "教員" %>
+      <p>
+        <%= link_to room_message_path(message.id, @room.id), method: :delete, class: "delete-button" do %>
+        <i class="fas fa-trash"></i>
+        <% end %>
+      </p>
+      <% elsif user_signed_in? && current_user.id == message.user_id %>
+      <p>
+        <%= link_to room_message_path(message.id, @room.id), method: :delete, class: "delete-button" do %>
+        <i class="fas fa-trash"></i>
+        <% end %>
+      </p>
+    <% end %>
+    </div>
   </div>
   <div class="lower-message">
     <div class="message-content">
