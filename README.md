@@ -36,21 +36,6 @@
 ◯どの生徒が質問をしたのか分かる  
   
   
-# Requirement
- 
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
- 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
-  
 # 特記事項
  
 質問された内容に、他の生徒が答えて、その結果解決された場合には
