@@ -17,7 +17,7 @@
       <% if @responses %>
         <% @responses.each do |response| %>
         <div class="comment-content2">
-         <% if current_user.genre == "教員" %> 
+         <% if current_user.genre == "教員" || response.user.id == current_user.id %> 
           <p>
             <strong><%= link_to response.user.name, "#", class: "comment-nickname" %></strong>
           </p>
