@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
     @messages = @room.messages
     @messages.each do |message|
     if message.destroy
-       redirect_to room_messages_path(message.room)
+       return redirect_to room_messages_path(message.room)
     else
        render :new
     end
