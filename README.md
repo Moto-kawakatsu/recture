@@ -33,8 +33,8 @@ URL：https://recture.herokuapp.com/
 user : admin　
 pass : 2222 
   
-ログインEmail(教員用)：test-taro@gmail.com  
-ログインpassword：test1212
+Log In Email(教員用)：test-taro@gmail.com  
+Log In pass：test1212
   
   
 # 特徴
