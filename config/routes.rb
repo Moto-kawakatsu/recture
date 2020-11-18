@@ -21,4 +21,6 @@ Rails.application.routes.draw do
     resources :responses, only: [:new, :create, :destroy]
   end
 
+  resources :questions
+
 end
