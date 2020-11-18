@@ -166,3 +166,13 @@
   .hidden {
     display: none;
   }
+
+  .quiz-button a{
+    font-size:17px;
+    border:1px solid rgb(0, 55, 255);
+    color:blue;
+    cursor: pointer;
+    padding:10px;
+    text-align:right;
+    margin-right:20px;
+  }
