@@ -45,6 +45,7 @@
     width:150px;
     padding: 15px 55px;
     border-radius: 3px;
+    text-align:center;
   }
 
 .comment-box2 {
@@ -59,6 +60,7 @@
 
   .comment-list {
     margin: 2vh 0;
+    font-size:20px;
   }
 
   .comment-content {
