@@ -144,3 +144,18 @@
  a{
    text-decoration:none;
   }
+.back-button {
+  width:100%;
+}
+
+  .back a{
+    text-decoration: none;
+    background-color: #ccc;
+    color: #fff;
+    font-size:18px;
+    width:150px;
+    padding: 15px 55px;
+    border-radius: 3px;
+    text-align:center; 
+    margin-left: 43%;
+  }
