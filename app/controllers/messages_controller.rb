@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
   
   def show
     @comment = Comment.new
+    @message = Message.new
     @comments = @message.comments.includes(:user)
   end
 
