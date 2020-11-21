@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'messages/index'
   get 'comments/index'
-  delete '/logout',  to: 'users#destroy'
+  delete 'messages' => 'messages#destroy'
   get 'responses/create' => 'responses#create'
   root to: "rooms#index"
   resources :users, only: [:edit, :update]
