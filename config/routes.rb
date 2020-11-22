@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'messages/index'
-  delete "messages/destroy" => "messages#destroy"
+  delete "messages/:id" => "messages#destroy"
   get 'comments/index'
   delete 'messages' => 'messages#destroy'
+  delete 'responses' => 'responses#destroy'
   get 'responses/create' => 'responses#create'
   root to: "rooms#index"
   resources :users, only: [:edit, :update]
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :new, :create, :destroy]
   end
 
-  resources :messages do
+  resources :messages, only: [:index, :new, :create, :destroy] do
     resources :comments
   end
 
