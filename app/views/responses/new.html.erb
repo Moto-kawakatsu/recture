@@ -13,7 +13,7 @@
   </div>
 
 <div class="comment-box2">
-      <h4 class="comment-list">＜質問一覧＞</h4>
+      <h4 class="comment-list">＜回答一覧＞</h4>
       <% if @responses %>
         <% @responses.each do |response| %>
         <div class="comment-content2">
@@ -34,13 +34,13 @@
           </ul>
            <% if current_user.genre == "教員" %>
           <p>
-            <%= link_to comment_response_path(@comment.id, response.id), method: :delete, class: "delete-button" do %>
+            <%= button_to comment_response_path(@comment.id, response.id), method: :delete, class: "delete-button" do %>
             <i class="fas fa-trash"></i>
             <% end %>
           </p>
           <% elsif user_signed_in? && current_user.id == response.user_id %>
           <p>
-            <%= link_to comment_response_path(@comment.id, response.id), method: :delete, class: "delete-button" do %>
+            <%= button_to comment_response_path(@comment.id, response.id), method: :delete, class: "delete-button" do %>
             <i class="fas fa-trash"></i>
             <% end %>
           </p>

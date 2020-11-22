@@ -6,9 +6,8 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-    <%=link_to "宿題", "#", class:"quiz-button"%>
     <% if current_user.genre == "教員"%>
-      <%=link_to "ルーム削除", room_path(@room), method: :delete %>
+    <%=button_to "ルーム削除", room_path(@room), method: :delete %>
     <% end %>
     </div>
   </div>

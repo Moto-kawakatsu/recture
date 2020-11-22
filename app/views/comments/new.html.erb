@@ -33,13 +33,13 @@
           </p>
           <div class="favorite-btn">
              <% if user_signed_in? && current_user.already_agreed?(comment) %>
-              <%= link_to comment_agree_path(comment, comment.agrees), method: :delete do %>
+              <%= button_to comment_agree_path(comment, comment.agrees), method: :delete do %>
               <p class="agree-btn-color">共感</p>
              <% end %>
              <% elsif user_signed_in? && current_user.id == comment.user_id%>
               <p class="agree-btn">共感</p>
              <% else %>
-            <%= link_to comment_agrees_path(comment), method: :post do %>
+            <%= button_to comment_agrees_path(comment), method: :post do %>
              <p class="agree-btn">共感</p>
              <% end %>
              <% end %>
@@ -51,13 +51,13 @@
           </ul>
            <% if current_user.genre == "教員" %>
           <p>
-            <%= link_to message_comment_path(@message.id, comment.id), method: :delete, class: "delete-button" do %>
+            <%= button_to message_comment_path(@message.id, comment.id), method: :delete, class: "delete-button" do %>
             <i class="fas fa-trash"></i>
             <% end %>
           </p>
           <% elsif user_signed_in? && current_user.id == comment.user_id %>
           <p>
-            <%= link_to message_comment_path(@message.id, comment.id), method: :delete, class: "delete-button" do %>
+            <%= button_to message_comment_path(@message.id, comment.id), method: :delete, class: "delete-button" do %>
             <i class="fas fa-trash"></i>
             <% end %>
           </p>
