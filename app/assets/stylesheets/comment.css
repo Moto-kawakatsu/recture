@@ -60,8 +60,9 @@
 
   .comment-list {
     margin: 2vh 0;
-    font-size:20px;
+    font-size:18px;
   }
+
 
   .comment-content {
     display: flex;
