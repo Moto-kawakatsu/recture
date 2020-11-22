@@ -30,7 +30,7 @@ class MessagesController < ApplicationController
   end
 
   def destroy
-    @room = Room.find(params[:id])
+    @room = Room.find(params[:room_id])
     @messages = @room.messages
     @messages.each do |message|
     if message.destroy
