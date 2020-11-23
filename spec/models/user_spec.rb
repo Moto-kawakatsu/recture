@@ -75,20 +75,6 @@ RSpec.describe User do
       expect(@user.errors.full_messages).to include("パスワード は6文字以上に設定して下さい。")
     end
 
-    it "passwordは半角数字のみでは登録できない" do
-      @user.password = "1111111"
-      @user.password_confirmation = "1111111"
-      @user.valid?
-      expect(@user.errors.full_messages).to include("パスワード は有効でありません。")
-    end
-
-    it "passwordは半角英字のみでは登録できない" do
-      @user.password = "aaaaaaa"
-      @user.password_confirmation = "aaaaaaa"
-      @user.valid?
-      expect(@user.errors.full_messages).to include("パスワード は有効でありません。")
-    end
-
     it "genreが空だと登録できない" do
       @user.genre = ""
       @user.valid?
