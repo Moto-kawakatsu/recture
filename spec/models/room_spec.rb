@@ -12,15 +12,6 @@ RSpec.describe Room do
         expect(@room).to be_valid
       end
   end
-
-  context '新規作成がうまくいかないとき' do
-    it "nameが空だと登録できない" do
-      @room.name = ""
-      @room.valid?
-      expect(@room.errors.full_messages).to include("")
-    end
-
-  end
  end
 end
 
