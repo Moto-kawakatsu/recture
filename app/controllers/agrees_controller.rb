@@ -12,6 +12,10 @@ class AgreesController < ApplicationController
           redirect_back(fallback_location: root_path)
       end
   
+      def show
+          @ids = Agree.group(:comment_id).count(:comment_id)
+          @comments = Comment.includes(:agreed_users).sort {|a,b| b.agreed_users.size <=> a.agreed_users.size}
+      end
     private
   
       def agree_params

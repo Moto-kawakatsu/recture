@@ -1,0 +1,18 @@
+<h1 class="pop-comments">みんなの疑問</h1>
+<div class='comment-contents'>
+<ul class='comment-lists'>
+<% num = 0 %>
+ <% @comments.each do |comment| %>
+ <% if comment.agrees.ids.count >= 5 %>
+      <li class='list items2'>
+      
+      <div class="comment-texts2"><%= num += 1%><%=comment.message.content %><%=comment.message.room.name%></div>
+      <div class="comment-texts2"><%=comment.text %></div>
+
+        <%end%>
+        <%end%>
+  </li>
+ </ul>
+</div>
+<br>
+<div><%= link_to 'back', root_path, class: "move-to-top"%></div>

@@ -1,0 +1,24 @@
+.pop-comments {
+    
+}
+
+.pop-nums {
+    font-size:18px;
+    float:left;
+    font-weight:normal;
+}
+
+
+
+.comment-texts2 {
+    font-size: 1.8vh;
+    margin-top: 3.5px;
+    color: #558ef8;
+}
+.comment-texts2 {
+    width: 70%;
+    padding: 25px 10px;
+    border: solid 2px #dedede;
+    resize: none;
+    background-color: #FAFAFA;
+}
