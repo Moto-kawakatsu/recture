@@ -5,10 +5,12 @@
  <% @comments.each do |comment| %>
  <% if comment.agrees.ids.count >= 5 %>
       <li class='list items2'>
-      
-      <div class="comment-texts2"><%= num += 1%><%=comment.message.content %><%=comment.message.room.name%></div>
-      <div class="comment-texts2"><%=comment.text %></div>
-
+      <div class="comment-text-content">
+        <div class="comment-texts-num"><%= num += 1%>位：</div>
+        <div class="comment-texts-message">「 <%=comment.message.content%> 」</div>
+        <div class="comment-texts-room">( <%=comment.message.room.name %> ) 【 <%= comment.agrees.count%>人の疑問 】</div>
+      </div>
+      <div class="comment-texts2"><%=link_to comment.text, new_message_comment_path(comment.message.id) %></div>
         <%end%>
         <%end%>
   </li>
