@@ -1,5 +1,14 @@
+.our-questions {
+    font-size:16px;
+    padding:13px;
+    margin-left:20px;
+    border: 1px solid rgb(22, 81, 219);
+    color: rgb(22, 81, 219);
+}
+
 .pop-comments {
-    
+    padding:30px;
+    margin-top:30px;
 }
 
 .pop-nums {
@@ -9,16 +18,50 @@
 }
 
 
+.comment-text-content {
+    display:flex;
+    justify-content:center;
+}
 
 .comment-texts2 {
     font-size: 1.8vh;
     margin-top: 3.5px;
     color: #558ef8;
-}
-.comment-texts2 {
-    width: 70%;
     padding: 25px 10px;
-    border: solid 2px #dedede;
     resize: none;
     background-color: #FAFAFA;
+    display:flex;
+    justify-content:center;
+    margin-bottom:50px;
+}
+
+.comment-texts-num {
+    font-size: 1.8vh;
+    margin-top: 3.5px;
+    color: black;
+    padding: 25px 10px;
+    resize: none;
+}
+
+.comment-texts-message {
+    font-size: 1.8vh;
+    margin-top: 3.5px;
+    color: black;
+    padding: 25px 10px;
+    resize: none;
+}
+
+.comment-texts-room {
+    font-size: 1.8vh;
+    margin-top: 3.5px;
+    color: black;
+    padding: 25px 10px;
+    resize: none;
+}
+
+.move-to-top { 
+    padding:15px 30px;
+    margin:0 47%;
+    background-color:rgb(220, 220, 220);
+    color:white;
 }
