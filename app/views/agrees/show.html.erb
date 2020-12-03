@@ -3,7 +3,7 @@
 <ul class='comment-lists'>
 <% num = 0 %>
  <% @comments.each do |comment| %>
- <% if comment.agrees.ids.count >= 5 %>
+ <% if comment.agrees.ids.count >= 3 %>
       <li class='list items2'>
       <div class="comment-text-content">
         <div class="comment-texts-num"><%= num += 1%>位：</div>
