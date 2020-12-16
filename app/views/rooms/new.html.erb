@@ -18,7 +18,8 @@
       </div>
       <div class='chat-room-form__field--right'>
       
-          <div class="grade-class"><span class="class-num1">１−１</span><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:1).all.order("student_number ASC"), :id, :name %>
+          <div class="grade-class">
+              <span class="class-num1">１−１</span><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:1).all.order("student_number ASC"), :id, :name %>
               <span class="class-num1">１−２</span><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:2).all.order("student_number ASC"), :id, :name %>
               <span class="class-num1">１−３</span><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:3).all.order("student_number ASC"), :id, :name %>
               <span class="class-num1">１−４</span> <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:4).all.order("student_number ASC"), :id, :name %>
