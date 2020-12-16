@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   delete 'responses' => 'responses#destroy'
   get 'responses/create' => 'responses#create'
   get 'agrees' => 'agrees#show'
+  get 'explanations' => 'explanations#index'
   root to: "rooms#index"
   resources :users, only: [:edit, :update]
   resources :rooms, except: [:show] do
