@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get 'responses/create' => 'responses#create'
   get 'agrees' => 'agrees#show'
   get 'explanations' => 'explanations#index'
+  get 'tips/story' => 'tips#story'
+  get 'tips/question' => 'tips#question'
+  get 'tips/hours' => 'tips#hours'
+
   root to: "rooms#index"
   resources :users, only: [:edit, :update]
   resources :rooms, except: [:show] do
