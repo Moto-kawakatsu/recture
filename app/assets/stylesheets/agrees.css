@@ -5,6 +5,14 @@
     border: 1px solid rgb(22, 81, 219);
     color: rgb(22, 81, 219);
 }
+.our-questions:hover {
+    background: #2f73fc;
+    color:white;
+  }
+
+
+
+
 
 .pop-comments {
     padding:30px;
@@ -20,7 +28,6 @@
 
 .comment-text-content {
     display:flex;
-    justify-content:center;
 }
 
 .comment-texts2 {
@@ -29,10 +36,14 @@
     color: #558ef8;
     padding: 25px 10px;
     resize: none;
-    background-color: #FAFAFA;
     display:flex;
-    justify-content:center;
-    margin-bottom:50px;
+    margin-bottom:20px;
+    margin-left:67px;
+}
+
+.comment-texts2 a{
+    color:rgb(0, 98, 255);
+    letter-spacing:2px;
 }
 
 .comment-texts-num {
@@ -49,6 +60,8 @@
     color: black;
     padding: 25px 10px;
     resize: none;
+    letter-spacing:2px;
+    margin-left:50px;
 }
 
 .comment-texts-room {
@@ -57,6 +70,7 @@
     color: black;
     padding: 25px 10px;
     resize: none;
+    letter-spacing:2px;
 }
 
 .move-to-top { 

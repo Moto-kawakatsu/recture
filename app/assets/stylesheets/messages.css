@@ -49,6 +49,13 @@
     text-decoration: none;
     color: white;
   }
+
+  .room-name a:hover {
+    /* font-size:px; */
+    font-weight:bold;
+    color:rgb(255, 191, 0);
+  }
+
   
   .chat {
     background-color: #ffffff;
@@ -81,6 +88,10 @@
     padding: 10px;
   }
   
+  .header-button input:hover {
+    background:rgb(255, 104, 62);
+    color:white;
+  }
   
   .messages {
     background-color: #FAFAFA;
@@ -203,4 +214,10 @@ button{
   color: darkred;
   padding: 10px;
   display:inline-block;
+}
+
+.items2 {
+  background:rgb(255, 233, 182);
+  border:1px solid rgb(255, 255, 255);
+  margin-bottom:10px;
 }
