@@ -6,12 +6,12 @@
  <% if comment.agrees.ids.count >= 3 %>
       <li class='list items2'>
       <div class="comment-text-content">
-        <div class="comment-texts-num"><%= num += 1%>位：</div>
         <div class="comment-texts-message">「 <%=comment.message.content%> 」</div>
-        <div class="comment-texts-room">( <%=comment.message.room.name %> ) 【 <%= comment.agrees.count%>人の疑問 】</div>
+        <div class="comment-texts-room">( <%=comment.user.grade %>年生 ) 【 <%= comment.agrees.count%>人の疑問 】</div>
       </div>
       <div class="comment-texts2"><%=link_to comment.text, new_message_comment_path(comment.message.id) %></div>
         <%end%>
+        
         <%end%>
   </li>
  </ul>
