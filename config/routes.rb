@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get 'tips/story' => 'tips#story'
   get 'tips/question' => 'tips#question'
   get 'tips/hours' => 'tips#hours'
+  get 'tips/commentnum' => 'tips#commentnum'
+  get 'stories/teacher1' => 'stories#teacher1'
+  get 'stories/teacher2' => 'stories#teacher2'
+  get 'stories/teacher3' => 'stories#teacher3'
 
   root to: "rooms#index"
   resources :users, only: [:edit, :update]
@@ -30,4 +34,7 @@ Rails.application.routes.draw do
     resources :responses, only: [:new, :create, :destroy]
   end
 
+  resources :comments do
+    resources :tips
+  end
 end
