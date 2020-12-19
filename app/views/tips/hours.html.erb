@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+
+<div class ="container">
+
+<div class="top-area">
+  <h3>勉強するか迷っているあなたのために先生が勉強時間を決めてあげます</h3>
+</div>
+
+
+<div class ="input-area">
+ <option value="0分" id ="do1" >0分</option>
+ <option value="30分" id ="do2" >30分</option>
+ <option value="60分" id ="do3" >60分</option>
+ <option value="90分" id ="do4" >90分</option>
+
+ <div id ="btn">押</div>
+</div>
+
+
+<div class ="result-area">
+  <p id ="result">結果はここに表示されます</p>
+  <p id ="reset" class="hidden">もう一度やる</p>
+
+</div>
+
+
+<%=image_tag "teacher.jpeg", class:"img"%>
+</div>
+<br>
+ <div class="back2"><%=link_to 'back', root_path %></div>
+<br>
+<script>
+
+(function(){
+    'use strict';
+  
+  var btn = document.getElementById('btn');
+  var do1 = document.getElementById('do1');
+  var do2 = document.getElementById('do2');
+  var do3 = document.getElementById('do3');
+  var do4 = document.getElementById('do4');
+  var result = document.getElementById('result');
+  var reset = document.getElementById('reset');
+  
+  //ボタンを押したときのアニメーション
+  btn.addEventListener('mousedown',function(){
+    this.className ='pushed';
+  });
+  
+  //ボタンから離れたときの処理
+  btn.addEventListener('mouseup',function(){
+    this.className ='';
+  });
+  
+  //ボタンをクリックしたときの処理
+  btn.addEventListener("click",function(){
+    var choise = [do1,do2,do3,do4,do3,do4];
+    var n = Math.floor(Math.random()*choise.length);
+    if (`${choise[n].value}`=== '0分') {
+       result.textContent  = '今日は休もう！！！！';
+     } else if (`${choise[n].value}`=== '30分') {
+       result.textContent  = `${choise[n].value}全集中で頑張れ！`;
+     } else if (`${choise[n].value}`=== '60分') {
+       result.textContent  = `${choise[n].value}?毎日そのくらいはやってるよね？`;
+     } else {
+       result.textContent = `${choise[n].value}後の君は覚醒！！`  
+     }
+
+  reset.classList.remove("hidden");
+  });
+  
+  reset.addEventListener("click",function(){
+   result.textContent = "結果はここに表示されます";
+   do1.value ="";
+   do2.value = "";
+   do2.value = "";
+   do3.value = "";
+   do4.focus();
+  });
+  
+  
+  do1.focus();
+  })();
+</script>
+ </body>
+ </html>
