@@ -200,3 +200,11 @@ label {
   margin-right:4.5px;
   cursor:pointer;
 }
+
+.member {
+  display:none;
+}
+
+.class-num1 {
+  cursor:pointer;
+}
