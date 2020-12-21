@@ -3,6 +3,7 @@
     <div class="header-title">
       <%= @room.name %>
       <%=link_to "みんなの疑問",agrees_path, class:"our-questions" %>
+      <%=link_to "クイズ",questions_index_path, class:"our-questions" %>
       <%=link_to "勉強時間",tips_hours_path, class:"our-questions" %>
       <%=link_to "コメント数",tips_commentnum_path, class:"our-questions" %>
     </div>
