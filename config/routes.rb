@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'stories/teacher1' => 'stories#teacher1'
   get 'stories/teacher2' => 'stories#teacher2'
   get 'stories/teacher3' => 'stories#teacher3'
+  get 'questions/index' => 'questions#index'
 
   root to: "rooms#index"
   resources :users, only: [:edit, :update]
