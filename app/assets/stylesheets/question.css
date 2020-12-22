@@ -1,0 +1,30 @@
+.question-content {
+display:flex;
+justify-content:center;
+margin-bottom:30px;
+padding:30px;
+color:rgb(70, 70, 70);
+font-size:25px;
+letter-spacing:10px;
+font-weight:900;
+}
+
+.alert-primary.alert {
+    letter-spacing:10px;
+    padding:20px;
+    margin-bottom:50px;
+    font-size:25px;
+    font-weight:800;
+}
+
+.btn-primary.btn {
+    letter-spacing:10px;
+    padding:20px;
+    margin:0 20px;
+    font-size:20px;
+    font-weight:900;
+}
+
+.btn-primary.btn:hover {
+  opacity:30%;
+}
