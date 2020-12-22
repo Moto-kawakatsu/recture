@@ -9,13 +9,12 @@ Rails.application.routes.draw do
   get 'agrees' => 'agrees#show'
   get 'explanations' => 'explanations#index'
   get 'tips/story' => 'tips#story'
-  get 'tips/question' => 'tips#question'
+  get 'tips/questions' => 'tips#questions'
   get 'tips/hours' => 'tips#hours'
   get 'tips/commentnum' => 'tips#commentnum'
   get 'stories/teacher1' => 'stories#teacher1'
   get 'stories/teacher2' => 'stories#teacher2'
   get 'stories/teacher3' => 'stories#teacher3'
-  get 'questions/index' => 'questions#index'
 
   root to: "rooms#index"
   resources :users, only: [:edit, :update]
