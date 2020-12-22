@@ -1,0 +1,108 @@
+  <div class="container">
+    <div class="jumbotron mt-5">
+         <div class="question-content">Answer the correct meaning</div>
+      <div class="d-flex justify-content-center">
+        <div id="js-question" class="alert alert-primary" role="alert">
+          A simple primary alert—check it out!
+        </div>
+      </div>
+      <div id="js-items" class="d-flex justify-content-center">
+        <div class="m-2">
+          <button type="button" id="js-btn-1" class="btn btn-primary">Primary</button>
+        </div>
+        <div class="m-2">
+          <button type="button" id="js-btn-2" class="btn btn-primary">Primary</button>
+        </div>
+        <div class="m-2">
+          <button type="button" id="js-btn-3" class="btn btn-primary">Primary</button>
+        </div>
+        <div class="m-2">
+          <button type="button" id="js-btn-4" class="btn btn-primary">Primary</button>
+        </div>
+      </div>
+    </div>
+    <div classback-button>
+        <div class="back"><%=link_to 'back', root_path %></div>
+    </div>
+  </div>
+<script>
+const quiz = [
+  {
+    question: 'effective',
+    answers: [ '重要な', '効果的な', '影響力', '不器用な'],
+    correct: '効果的な'
+  }, {
+    question: 'additional',
+    answers: [ '秘密の', '専門的な', '追加の', '熱心な'],
+    correct: '追加の'
+  }, {
+    question: 'expert',
+    answers: [ '初心者', '専門家', '経験', '師匠'],
+    correct: '専門家'
+  }, {
+    question: 'consumer',
+    answers: [ '浪費する', '消費者', '顧客', '同僚'],
+    correct: '消費者'
+  }
+];
+
+const $window = window;
+const $doc = document;
+const $question = $doc.getElementById('js-question');
+const $buttons = $doc.querySelectorAll('.btn');
+
+const quizLen = quiz.length;
+let quizCount = 0;
+let score = 0;
+
+const init = () => {
+  $question.textContent = quiz[quizCount].question;
+  
+  const buttonLen = $buttons.length;
+  let btnIndex = 0;
+  
+  while(btnIndex < buttonLen){
+    $buttons[btnIndex].textContent = quiz[quizCount].answers[btnIndex];
+    btnIndex++;
+  }
+};
+
+const goToNext = () => {
+  quizCount++;
+  if(quizCount < quizLen){
+    init(quizCount);
+  } else {
+    // $window.alert('クイズ終了！');
+    showEnd();
+  }
+};
+
+const judge = (elm) => {
+  if(elm.textContent === quiz[quizCount].correct){
+    $window.alert('正解!');
+    score++;
+  } else {
+    $window.alert('不正解!');
+  }
+  goToNext();
+};
+
+const showEnd = () => {
+  $question.textContent = '終了！あなたのスコアは' + score + '/' + quizLen + 'です';
+  
+  const $items = $doc.getElementById('js-items');
+  $items.style.visibility = 'hidden';
+};
+
+init();
+
+let answersIndex = 0;
+let answersLen = quiz[quizCount].answers.length;
+
+while(answersIndex < answersLen){
+  $buttons[answersIndex].addEventListener('click', (e) => {
+    judge(e.target);
+  });
+  answersIndex++;
+}
+</script>
