@@ -208,3 +208,12 @@ label {
 .class-num1 {
   cursor:pointer;
 }
+
+.diary {
+  color:rgb(0, 0, 0);
+  border:1px solid white;
+  background:rgba(255, 230, 104, 0.699);
+  letter-spacing:4px;
+  padding:4px;
+  font-weight:bold;
+}

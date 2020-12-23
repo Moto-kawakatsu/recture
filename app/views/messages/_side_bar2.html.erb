@@ -6,6 +6,7 @@
     <%= link_to current_user.name, edit_user_path(current_user) %>（教員）
   <% end %>
   </div>
+  <%=link_to '日記',root_path,class:"diary"%>
   <div class="create-room">
   <% if current_user.genre == "教員" %>
     <%=link_to "ルーム作成", new_room_path %>
