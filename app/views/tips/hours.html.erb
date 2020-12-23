@@ -20,15 +20,13 @@
   <p id ="reset" class="hidden">もう一度やる</p>
 
 </div>
-
-
-<%=image_tag "teacher.jpeg", class:"img"%>
 </div>
 <br>
- <div class="back2"><%=link_to 'back', root_path %></div>
+ <div class="back-from-hour"><%=link_to 'back', root_path %></div>
 <br>
 <script>
 
+(function(){
     'use strict';
   
   var btn = document.getElementById('btn');
@@ -77,4 +75,5 @@
   
   
   do1.focus();
+  })();
 </script>

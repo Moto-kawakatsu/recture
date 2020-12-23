@@ -67,22 +67,23 @@
   
   .result-area{
     background: #f8f8f8;
-    width:500px;
+    width:700px;
     text-align: center;
-    margin-left: 80px;
+    margin:0 auto;
     padding:100px 10px;
     border: solid;
     border-radius: 5px;
     position: relative;
+    
   }
   
   
   #result{
    margin:0 auto;
-   font-size:20px;
+   font-size:30px;
    font-weight:bold;
    letter-spacing:2px;
-   width:400px;
+   width:700px;
 
   }
   
@@ -105,4 +106,18 @@
     display: inline-block;
     width:300px; 
     height:300px;
+  }
+
+  .back-from-hour a{
+    text-decoration: none;
+    background-color: #ccc;
+    color: #fff;
+    font-size:18px;
+    width:150px;
+    padding: 15px 55px;
+    border-radius: 3px;
+    text-align:center; 
+    margin-left: 45%;
+    font-weight:900;
+    letter-spacing:10px;
   }
