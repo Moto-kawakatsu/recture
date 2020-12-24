@@ -51,7 +51,7 @@
   }
 
   .room-name a:hover {
-    /* font-size:px; */
+    text-decoration: none;
     font-weight:bold;
     color:rgb(255, 191, 0);
   }
