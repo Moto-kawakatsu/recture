@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :responses
   has_many :agrees, dependent: :destroy
+  has_many :writings, dependent: :destroy
   
 with_options presence: true do
   validates :email
