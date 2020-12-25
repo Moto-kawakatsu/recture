@@ -37,4 +37,8 @@ Rails.application.routes.draw do
   resources :comments do
     resources :tips
   end
+
+  resources :users do
+    resources :diaries
+  end
 end
