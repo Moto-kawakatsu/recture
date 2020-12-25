@@ -7,7 +7,7 @@
   <% end %>
   </div>
   <% if current_user.genre == "生徒" %>
-  <%=link_to '日記',root_path,class:"diary"%>
+  <%=link_to '日記',user_diaries_path(current_user.id),class:"diary"%>
   <% end %>
   <div class="create-room">
   <% if current_user.genre == "教員" %>
