@@ -12,12 +12,12 @@ Rails.application.routes.draw do
   get 'tips/questions' => 'tips#questions'
   get 'tips/hours' => 'tips#hours'
   get 'tips/commentnum' => 'tips#commentnum'
-  get 'stories/teacher1' => 'stories#teacher1'
-  get 'stories/teacher2' => 'stories#teacher2'
-  get 'stories/teacher3' => 'stories#teacher3'
+  get 'rooms/students' => 'rooms#students'
 
   root to: "rooms#index"
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:edit, :update] do
+    resources :diaries, only: [:index, :new, :create, :show, :destroy]  end
+
   resources :rooms, except: [:show] do
     resources :messages, only: [:index, :new, :create, :destroy]
   end
@@ -36,9 +36,5 @@ Rails.application.routes.draw do
 
   resources :comments do
     resources :tips
-  end
-
-  resources :users do
-    resources :diaries
   end
 end
