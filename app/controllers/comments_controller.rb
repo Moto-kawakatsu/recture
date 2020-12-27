@@ -4,7 +4,6 @@ class CommentsController < ApplicationController
     @messages = Message.all
     @room = Room.all
     @message = Message.find(params[:id])
-    
   end
 
   def new
