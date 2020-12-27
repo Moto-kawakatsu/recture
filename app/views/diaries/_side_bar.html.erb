@@ -1,0 +1,25 @@
+<div class="side-bar-header">
+  <div class="header-name">
+  <% if current_user.genre == "生徒" %>
+    <%= link_to current_user.name, edit_user_path(current_user) %>（生徒）
+  <% else %>
+    <%= link_to current_user.name, edit_user_path(current_user) %>（教員）
+  <% end %>
+  </div>
+
+</div>
+
+<div class="rooms">
+  <% current_user.diaries.each do |diary| %>
+    <div class="room">
+      <div class="room-name">
+         <%=link_to user_diary_path(diary.user, diary) do %>
+         <%= l diary.created_at %>
+         <% end %>
+      </div>
+    </div>
+    <%end%>
+  <div class="room-members">  
+
+  </div>
+</div>
