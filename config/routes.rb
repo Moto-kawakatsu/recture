@@ -37,4 +37,8 @@ Rails.application.routes.draw do
   resources :comments do
     resources :tips
   end
+
+  resources :diaries do
+    resources :replies, only: [:new, :create, :destroy]
+  end
 end
