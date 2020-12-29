@@ -73,6 +73,12 @@
     letter-spacing:2px;
 }
 
+.comment-texts-room span {
+    font-weight:bold;
+    font-size:15px;
+    color:red;
+}
+
 .move-to-top { 
     padding:15px 30px;
     margin:0 47%;

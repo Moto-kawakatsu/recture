@@ -24,12 +24,9 @@ li {
 }
 
 .chat-room-form {
-  /* width: 1000px; */
-  margin: 60px auto;
-  /* padding: 40px; */
+  margin: 30px auto;
   padding-right:300px;
   background-color: #fff;
-  /* border: 1px solid #ddd; */
   border-radius: 5px;
   box-sizing: border-box;
   position:relative;
@@ -60,7 +57,7 @@ li {
   color: #fff;
   background-color: #38aef0;
   border: 0;
-  margin-left:330px;
+  margin-left:235px;
   cursor:pointer;
 }
 .chat-room-form__field {
@@ -81,6 +78,7 @@ li {
 .chat-room-form__field--right {
   float: right;
   width: 70%;
+  margin-bottom:20px;
 }
 
 .chat-room-user {
@@ -211,9 +209,9 @@ label {
 
 .diary {
   color:rgb(0, 0, 0);
-  border:1px solid white;
   background:rgba(255, 230, 104, 0.699);
-  letter-spacing:4px;
-  padding:4px;
-  font-weight:bold;
+  /* letter-spacing:4px; */
+  /* padding:4px; */
+  padding:5px 10px;
+  border-radius:20px;
 }

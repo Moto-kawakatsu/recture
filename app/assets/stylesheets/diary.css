@@ -1,0 +1,192 @@
+.left-content {
+    width:200px;
+    background:red;
+}
+
+.writing-content {
+    display:flex;
+}
+
+.writing-text {
+
+}
+
+.writing-time {
+
+}
+
+.main-content {
+    display:flex;
+}
+
+.diary-title {
+    width:100%;
+    height:100px;
+    text-align:center;
+    background:rgba(255, 236, 110, 0.648);
+    font-size:50px;
+    letter-spacing:30px;
+    color:rgba(0, 72, 131, 0.699);
+    padding-top:10px;
+    font-family:'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
+}
+
+.diary-title2 {
+  font-size:15px;
+  margin-bottom:10px;
+
+}
+
+.chat-header2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .small-no {
+      font-size:38px;
+  }
+
+  .message-content2 {
+    color: #434a54c4;
+    font-size: 16px;
+    letter-spacing:6px;
+    line-height:40px;
+    margin:0 20px;
+  }
+  
+  .message-content3 {
+    color: #434a54c4;
+    font-size: 16px;
+    letter-spacing:6px;
+    margin:0 20px;
+    
+  }
+
+  .upper-message {
+  }
+
+  .messages2 {
+    overflow: scroll;
+  }
+
+  .form-message2 {
+    border: none;
+    height: 248px;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .message2 {
+    margin: 0px 0 0 0;
+    width:100%;
+    height:250px;
+    border-bottom:3px solid rgba(151, 148, 148, 0.171);
+  }
+  .message3 {
+    margin: 0px 0 0 0;
+    width:100%;
+    height:250px;
+    border-top:3px solid rgba(151, 148, 148, 0.171);
+  }
+
+  .message3 span {
+    width:70px;
+    padding:5px 2px;
+    font-size:13px;
+    color:rgba(248, 120, 120, 0.637);
+    margin-left:17px;
+  }
+
+
+  .form2 {
+    background-color: #DDDDDD;
+    padding: 16px 40px;
+    display: flex;
+    /* height:190px; */
+  }
+
+  .messages1 {
+    background-color: #FAFAFA;
+    height: calc(100vh - 350px - 90px);
+    padding: 46px 40px 0;
+    overflow: scroll;
+  }
+
+  .form-submit2 {
+    background-color: #38aef0;
+    border: none;
+    color: white;
+    font-size: 16px;
+    height: 300px;
+    margin-left: 15px;
+    padding: 0 20px;
+    cursor:pointer;
+  }
+
+  .form-submit3 {
+    background-color: #38aef0;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-left: 15px;
+    padding: 0 20px;
+    cursor:pointer;
+  }
+
+  .form-input ::placeholder {
+    font-size:20px;
+  }
+
+  .back-from-diary {
+    color:rgb(0, 0, 0);
+    background: rgba(255, 230, 104, 0.699);
+    padding:5px 10px;
+    margin-right:45px;
+    border-radius:20px;
+  }
+
+
+  .back-from-diary a{
+    color:black;
+  }
+
+  .form-message3 {
+    border: none;
+    height: 150px;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .form-message4 {
+    border: none;
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    border:1px solid rgba(0, 0, 0, 0.155);
+    background:rgb(255, 255, 255);
+  }
+
+  .room2 {
+    padding: 20px 0 30px;
+  }
+  
+  .rule-check {
+    padding:20px 0 30px 0;
+    font-size:25px;
+    display:flex;
+    justify-content:center;
+    letter-spacing:8px;
+  }
+
+  .messages1 li {
+    font-size:22px;
+    letter-spacing:8px;
+    display:flex;
+    justify-content:center;
+    padding:10px 0 30px 0;
+  }
+
+  .messages1 span {
+    color:red;
+    font-weight:bold;
+  }
