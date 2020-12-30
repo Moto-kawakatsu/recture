@@ -2,9 +2,11 @@ class TipsController < ApplicationController
     def questions
     end
 
-    def story
+    def list
+        @users = User.all
     end
 
     def hours
     end
+
 end
