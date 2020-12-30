@@ -1,5 +1,9 @@
 class Diary < ApplicationRecord
     belongs_to :user
-    has_one :reply
-    validates :writing, presence: true
+    has_many :replies
+
+    with_options presence: true do
+    validates :writing
+    validates :title
+    end
 end
