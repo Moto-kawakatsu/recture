@@ -19,6 +19,6 @@ class RepliesController < ApplicationController
     private
 
     def reply_params
-        params.require(:reply).permit(:reply_text, :user_id, :diary_id).merge(user_id: current_user.id, diary_id: @diary.id)
+        params.require(:reply).permit(:reply_text).merge(user_id: current_user.id)
     end
 end
