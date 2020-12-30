@@ -1,8 +1,4 @@
 class DiariesController < ApplicationController
-    def index
-        @user = current_user
-        @diaries = @user.diaries.order("created_at DESC")
-    end
 
     def new
         @diary = Diary.new
@@ -20,12 +16,17 @@ class DiariesController < ApplicationController
         end
     end
 
+    def count_words
+        # @diaries = Diary.find(params[:id])
+    end
+
     def show
         @diary = Diary.new
         # @diaries = Diary.all
         @user = User.find(params[:user_id])
         @diaries = @user.diaries.order("created_at DESC")
         @diary = Diary.find(params[:id])
+        
     end
 
     def destroy
@@ -43,6 +44,6 @@ class DiariesController < ApplicationController
     private
 
     def diary_params
-        params.require(:diary).permit(:writing, :user_id).merge(user_id: current_user.id)
+        params.require(:diary).permit(:writing, :title, :user_id).merge(user_id: current_user.id)
     end
 end
