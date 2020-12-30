@@ -7,6 +7,9 @@ class RoomsController < ApplicationController
         @room = Room.new
     end
 
+    def students
+    end
+
     def create
         @room = Room.new(room_params)
         if @room.save
@@ -25,6 +28,6 @@ class RoomsController < ApplicationController
     private
 
     def room_params
-        params.require(:room).permit(:name, user_ids: [])
+        params.require(:room).permit(:name, user_ids: []).merge(diary_id: @diary.id)
     end
 end
