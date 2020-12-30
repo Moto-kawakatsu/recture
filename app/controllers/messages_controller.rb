@@ -38,7 +38,13 @@ class MessagesController < ApplicationController
     else
        render :new
     end
-  end       
+   end       
+   end
+
+  def list 
+    @users = User.all.order("class_number ASC").order("student_number ASC")
+    # @daily = Daily.all
+    @ids = current_user.diary_ids
   end
 
   private
