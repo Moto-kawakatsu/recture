@@ -8,11 +8,8 @@
 .our-questions:hover {
     background: #2f73fc;
     color:white;
+    text-decoration:none;
   }
-
-
-
-
 
 .pop-comments {
     padding:30px;
