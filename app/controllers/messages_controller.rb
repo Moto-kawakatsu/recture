@@ -31,14 +31,12 @@ class MessagesController < ApplicationController
 
   def destroy
     @room = Room.find(params[:room_id])
-    @messages = @room.messages
-    @messages.each do |message|
-    if message.destroy
-       return redirect_to room_messages_path(message.room)
+    @message = Message.find(params[:id])    
+    if @message.destroy
+      return redirect_to room_messages_path(@message.room)
     else
        render :new
     end
-   end       
    end
 
   def list 
