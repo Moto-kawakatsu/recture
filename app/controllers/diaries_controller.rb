@@ -30,15 +30,14 @@ class DiariesController < ApplicationController
     end
 
     def destroy
-        @user = User.find(params[:user_id])
-        @diaries = @user.diaries
-        @diaries.each do |diary|
-        if diary.destroy
-           return redirect_to root_path
+
+        @diary = Diary.find(params[:id])
+        @user = @diary.user
+        if @diary.destroy
+            redirect_to new_user_diary_path(@user)
         else
-           render :new
+            redirect_to root_path
         end
-    end
     end
 
     private
