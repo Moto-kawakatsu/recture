@@ -158,10 +158,16 @@ select {
 }
 
 .list1-1 {
-  width:200px;
+  width:300px;
 
 }
 
 .hidden {
   display:none;
+}
+
+.header-name2{
+  color:white;
+  font-size:14px;
+  line-height:25px;
 }

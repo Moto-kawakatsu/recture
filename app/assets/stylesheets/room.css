@@ -213,3 +213,58 @@ label {
   padding:5px 10px;
   border-radius:20px;
 }
+
+.stu-num {
+  letter-spacing:10px;
+}
+
+.students-in-room {
+  display:flex;
+  padding:10px;
+  border:1px solid rgba(130, 130, 130, 0.301);
+  width:700px;
+  margin-bottom:10px;
+  margin-left:20px;
+}
+
+.stu-name1 {
+  letter-spacing:36px;
+}
+
+.stu-name2 {
+  letter-spacing:20px;
+}
+
+.stu-name3 {
+  letter-spacing:10px;
+  margin-right:10px;
+}
+
+.stu-name4 {
+  letter-spacing:5px;
+  margin-right:17px;
+}
+
+
+.room-name2 {
+  font-size:20px;
+  padding:10px;
+  margin-left:10px;
+  display:flex;
+}
+
+.room-name3 {
+  margin-right:20px;
+}
+
+.back-to-top {
+
+}
+
+.login-day {
+  
+}
+
+.back-to-top4 {
+
+}
