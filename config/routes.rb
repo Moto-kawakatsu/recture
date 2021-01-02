@@ -13,14 +13,15 @@ Rails.application.routes.draw do
   get 'tips/hours' => 'tips#hours'
   get 'tips/commentnum' => 'tips#commentnum'
   get 'rooms/students' => 'rooms#students'
+  get 'messages/students' => 'messages#students'
   get 'messages/list' => 'messages#list'
   get 'diaries/count_words' => 'diaries#count_words'
 
   root to: "rooms#index"
   resources :users, only: [:edit, :update] do
-    resources :diaries, only: [:index, :new, :create,:destroy]  end
+    resources :diaries, only: [:index, :new, :create,:destroy, :show]  end
 
-  resources :rooms, except: [:show] do
+  resources :rooms do
     resources :messages, only: [:index, :new, :create, :destroy]
   end
 
