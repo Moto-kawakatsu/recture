@@ -1,6 +1,8 @@
 class RepliesController < ApplicationController
     def new
         @diary = Diary.find(params[:diary_id])
+        @user = @diary.user
+        @diaries = @user.diaries.order("created_at DESC")
         @reply = Reply.new
     end
 
@@ -15,9 +17,10 @@ class RepliesController < ApplicationController
     end
 
     def destroy
+      @diary = Diary.find(params[:diary_id])
       @reply = Reply.find(params[:id])
       if @reply.destroy
-        redirect_to root_path
+        redirect_to new_diary_reply_path(@diary,@reply)
       else
         redirect_to root_path
       end
