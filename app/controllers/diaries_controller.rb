@@ -2,8 +2,8 @@ class DiariesController < ApplicationController
 
     def new
         @diary = Diary.new
-        # @diaries = Diary.all
         @user = User.find(params[:user_id])
+        @users = User.all
         @diaries = @user.diaries.order("created_at DESC")
     end
 
@@ -14,19 +14,6 @@ class DiariesController < ApplicationController
         else
           redirect_to new_user_diary_path(current_user.id)
         end
-    end
-
-    def count_words
-        # @diaries = Diary.find(params[:id])
-    end
-
-    def show
-        @diary = Diary.new
-        # @diaries = Diary.all
-        @user = User.find(params[:user_id])
-        @diaries = @user.diaries.order("created_at DESC")
-        @diary = Diary.find(params[:id])
-        
     end
 
     def destroy
