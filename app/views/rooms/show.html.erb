@@ -1,0 +1,35 @@
+<div class="room-name2">
+  <div class="room-name3"><%=@room.name%></div>
+  <div class="back-to-top4"><%=link_to "back", root_path %></div>
+</div>
+<%@users.each do |user| %>
+<%if user.genre == "生徒"%>
+<div class="students-in-room">
+    <div class="stu-num"><%=user.student_number%>番</div>　　
+    <%# <%=link_to root_path do%>
+    <%if user.name.length == 3%>
+    <div class="stu-name1"><%=user.name%></div>　　
+    <% elsif user.name.length == 4%>
+    <div class="stu-name2"><%=user.name%></div>　　　
+    <% elsif user.name.length == 5%>
+    <div class="stu-name3"><%=user.name%></div>　　　
+    <% elsif user.name.length == 6%>
+    <div class="stu-name4"><%=user.name%></div>　　　
+   <%# <% end %>
+   <% end %>
+    <div><%=l user.current_sign_in_at%></div>
+    <%if user.current_sign_in_at < Date.current.ago(1.day)%>
+    <div class="login-day">　　２日前にログインしました</div>
+    <%elsif user.current_sign_in_at < Date.current.ago(2.days)%>
+    <div class="login-day">　　３日前にログインしました</div>
+    <%elsif user.current_sign_in_at < Date.current.ago(3.days)%>
+    <div class="login-day">　　４日前にログインしました</div>
+    <%elsif user.current_sign_in_at < Date.current.ago(4.days)%>
+    <div class="login-day">　　５日前にログインしました</div>
+    <%elsif user.current_sign_in_at < Date.current.ago(5.days || 6.days || 7.days)%>
+    <div class="login-day">　　５日間以上未ログイン</div>
+    <% end %>
+</div>
+<% end %>
+<% end %>
+
