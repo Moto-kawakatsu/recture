@@ -7,7 +7,9 @@ class RoomsController < ApplicationController
         @room = Room.new
     end
 
-    def students
+    def show
+        @room = Room.find(params[:id])
+        @users = @room.users.order("student_number ASC")
     end
 
     def create
@@ -28,6 +30,6 @@ class RoomsController < ApplicationController
     private
 
     def room_params
-        params.require(:room).permit(:name, user_ids: []).merge(diary_id: @diary.id)
+        params.require(:room).permit(:name, user_ids: [])
     end
 end
