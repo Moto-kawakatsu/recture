@@ -9,7 +9,7 @@
       </p>
       <br>
       <%= f.submit "質問する",class: "comment-btn"%>
-      <div class="back-to-top2"><%=link_to '戻る', root_path %></div>
+      <div class="back-to-top2"><%=link_to '戻る', room_messages_path(@message.room) %></div>
      <% end %>
   </div>
 
@@ -76,8 +76,9 @@
     input.addEventListener("keyup", function(){
       if (input.value.length > 75) {
         span.textContent = "投稿できません"
+        span.style.color = 'red';
       }else{
-      span.textContent = input.value.length;
+        span.textContent = input.value.length;
       }   
     });
   </script>
