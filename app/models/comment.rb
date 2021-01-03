@@ -5,5 +5,5 @@ class Comment < ApplicationRecord
     has_many :responses, dependent: :destroy
     has_many :agreed_users, through: :agrees, source: :user
 
-    validates :text, presence: true, length: {maximum: 200 }
+    validates :text, presence: true, length: {maximum: 75 }
 end
