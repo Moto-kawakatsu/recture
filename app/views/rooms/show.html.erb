@@ -17,7 +17,7 @@
     <div class="stu-name4"><%=user.name%></div>　　　
    <%# <% end %>
    <% end %>
-    <div><%=l user.current_sign_in_at%></div>
+    <div><%=user.current_sign_in_at.strftime('%m月%d日 %H:%M')%></div>
     <%if user.current_sign_in_at < Date.current.ago(1.day)%>
     <div class="login-day">　　２日前にログインしました</div>
     <%elsif user.current_sign_in_at < Date.current.ago(2.days)%>

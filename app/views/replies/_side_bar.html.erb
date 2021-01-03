@@ -68,7 +68,7 @@
     <div>レベル0</div>   
     <%end%>
   </div>
-  <div><%=l @user.current_sign_in_at%></div>
+  <div><%=@user.current_sign_in_at.strftime('%m/%d %H:%M:%S')%></div>
   </div>
   <div class="back-from-diary"><%=link_to "back",new_user_diary_path(@diary.user)  %></div>
 </div>
@@ -79,7 +79,7 @@
       <div class="room-name">
       <%=link_to new_diary_reply_path(diary) do %>
          <div class="diary-title2"><%=diary.title %></div>
-         <div><%= l diary.created_at %></div>
+         <div><%=diary.created_at.strftime('%m/%d %H:%M:%S') %></div>
          <% end %>
       </div>
     </div>
