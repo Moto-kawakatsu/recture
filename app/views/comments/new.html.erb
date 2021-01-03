@@ -1,8 +1,9 @@
 <div class="comment">
       <div class="comment-box">
       <%= form_with model: [@comment, @messages],url:message_comments_path(@message),local: true do |f| %>
-        <%= f.text_area :text, placeholder: "質問する", class: "comment-text" %>
+        <%= f.text_area :text, placeholder: "質問する", class: "comment-text", id:"input" %>
         <%= hidden_field_tag :message_id,@message.id %>
+      <p><span id="inputCounter">0</span></p>
       <p class="comment-warn">
         <p>他の生徒の質問で回答できる場合には積極的に回答してください！</p>
       </p>
@@ -45,10 +46,10 @@
              <% end %>
             <p class="agree-count"><%= comment.agrees.count%>人</p>
           </div>
-          <ul class="comment-time">
+          <div class="comment-time">
             <p class="time"><%= comment.created_at.to_s(:datetime_jp) %></p>
             <p class="time"><%= comment.created_at.to_s(:datetime_jp2) %></p>
-          </ul>
+          </div>
            <% if current_user.genre == "教員" %>
           <p>
             <%= button_to message_comment_path(@message.id, comment.id), method: :delete, class: "delete-button" do %>
@@ -69,3 +70,14 @@
     </div>
   </div>
 
+  <script>
+    var input = document.getElementById("input");
+    var span = document.getElementById("inputCounter");
+    input.addEventListener("keyup", function(){
+      if (input.value.length > 75) {
+        span.textContent = "投稿できません"
+      }else{
+      span.textContent = input.value.length;
+      }   
+    });
+  </script>
