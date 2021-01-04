@@ -18,18 +18,36 @@
 </div>
 
 <div class="messages">
+  <div id="image-list"></div>
    <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: @message, class: 'form', local: true do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
   <div class="form-input2">
     <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <%= f.file_field :image, class: 'hidden' %>
+      <%= f.file_field :image,placeholder: "画像のURL" ,class: 'hidden' %>
     </label>
       <%= hidden_field_tag :id,@room.id %>
   </div>
-
   <%= f.submit '送信', class: 'form-submit' %>
+  <%= image_tag @message.image, id: 'image' if @message.image.present? %> 
 <% end %>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    const ImageList = document.getElementById('image-list');
+  
+    document.getElementById('message_image').addEventListener('change', function(e){
+      const file = e.target.files[0];
+      const blob = window.URL.createObjectURL(file);
+      const imageElement = document.createElement('div');
+      const blobImage = document.createElement('img');
+      blobImage.setAttribute('src', blob);
+      imageElement.appendChild(blobImage);
+      ImageList.appendChild(imageElement);
+    });
+  });
+</script>
