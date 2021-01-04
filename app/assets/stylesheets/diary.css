@@ -100,6 +100,13 @@
 
   .form2 {
     background-color: #DDDDDD;
+    padding: 20px 40px;
+    display: flex;
+    /* height:190px; */
+  }
+
+  .form3 {
+    background-color: #DDDDDD;
     padding: 16px 40px;
     display: flex;
     /* height:190px; */
