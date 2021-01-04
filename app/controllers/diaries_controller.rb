@@ -12,12 +12,13 @@ class DiariesController < ApplicationController
         if @diary.save
           redirect_to new_user_diary_path(current_user.id)
         else
-          redirect_to new_user_diary_path(current_user.id)
+          @user = User.find(params[:user_id])
+          @diaries = @user.diaries.order("created_at DESC")
+          render :new
         end
     end
 
     def destroy
-
         @diary = Diary.find(params[:id])
         @user = @diary.user
         if @diary.destroy
