@@ -9,7 +9,10 @@ ja:
   activerecord:
     attributes:
       reply:
-       reply_text: 記録
+       reply_text: コメント
+      diary:
+       writing: 記録
+       title: タイトル
   date:
     abbr_day_names:
     - 日
