@@ -1,0 +1,119 @@
+<div class="chat-header2">
+<div class="diary-title">学習<span class="small-no">の</span>記録</div>
+  <div class="left-header">
+    <div class="header-title">
+    </div>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+    </div>
+  </div>
+</div>
+
+<div class="messages2">
+   <div class="message3">
+<span>diary</span>
+   
+  <div class="upper-message">
+    <div class="message-user">
+    </div>
+    <div class="message-date">
+      <%=@diary.created_at.strftime('%m/%d %H:%M') %>
+      【<%= @diary.writing.length %>文字】
+      <%=@diary.user.name%>
+    </div>
+      <% if current_user.genre == "教員" %>
+      <p>
+        <%= button_to diary_path(@diary) ,method: :delete, class: "delete-button" do %>
+        <i class="fas fa-trash"></i>
+        <% end %>
+      </p>
+      <% elsif user_signed_in? && current_user.id == @diary.user_id %>
+      <p>
+        <%= button_to diary_path(@diary), method: :delete, class: "delete-button" do %>
+        <i class="fas fa-trash"></i>
+        <% end %>
+      </p>
+    <% end %>
+  </div>
+  <div class="lower-message">
+    <div class="message-content3">
+      <%= @diary.writing %>
+    </div>
+     <%= link_to  root_path do %>
+     <%end%>
+  </div>
+</div>
+
+   <div class="message3">
+<span>comment</span>
+  <%unless @diary.reply.nil? %>
+  <div class="upper-message">
+    <div class="message-user">
+    </div>
+    <div class="message-date">
+      <%=@diary.reply.created_at.strftime('%m/%d %H:%M') %>
+      <%=@diary.reply.user.name%>
+    </div>
+          <% if current_user.genre == "教員" %>
+      <p>
+        <%= button_to diary_reply_path(@diary, @diary.reply) ,method: :delete, class: "delete-button" do %>
+        <i class="fas fa-trash"></i>
+        <% end %>
+      </p>
+      <% elsif user_signed_in? && current_user.id == @diary.user_id %>
+      <p>
+        <%= button_to diary_reply_path(@diary, @reply), method: :delete, class: "delete-button" do %>
+        <i class="fas fa-trash"></i>
+        <% end %>
+      </p>
+    <% end %>
+  </div>
+  <div class="lower-message">
+    <div class="message-content3">
+      <%= @diary.reply.reply_text %>
+    </div>
+     <%= link_to  root_path do %>
+     <%end%>
+  </div>
+</div>
+</div>
+<%else%>
+  <div class="upper-message">
+    <div class="message-user">
+    </div>
+    <div class="message-date">
+
+    </div>
+  </div>
+  <div class="lower-message">
+    <div class="message-content3">
+
+    </div>
+     <%= link_to  root_path do %>
+     <%end%>
+  </div>
+</div>
+</div>
+
+<% end %>
+
+<%= form_with model:[@diary,@reply],class: 'form3', local: true do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
+    <%= f.text_area :reply_text, class: 'form-message3',id:"input", placeholder: 'write a reply' %>
+  <% if current_user.genre == "教員" %>
+  <%= f.submit '送信', class: 'form-submit3' %>
+  <% end %>
+<% end %>
+
+  <script>
+    var input = document.getElementById("input");
+    var span = document.getElementById("inputCounter");
+    input.addEventListener("keyup", function(){
+      if (input.value.length > 75) {
+        span.textContent = "投稿できません"
+      }else{
+      span.textContent = input.value.length;
+      }   
+    });
+  </script>
