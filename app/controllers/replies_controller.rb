@@ -12,6 +12,8 @@ class RepliesController < ApplicationController
         if @reply.save
           redirect_to new_diary_reply_path(@diary)
         else
+          @user = @diary.user
+          @diaries = @user.diaries.order("created_at DESC")
           render :new
         end        
     end
