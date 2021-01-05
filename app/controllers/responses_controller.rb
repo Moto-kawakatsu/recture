@@ -13,7 +13,7 @@ class ResponsesController < ApplicationController
         if @response.save
           redirect_to new_comment_response_path(@comment)
         else
-          redirect_to new_comment_response_path(@comment)
+          render :new
         end
     end
 
