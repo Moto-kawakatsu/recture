@@ -85,7 +85,7 @@
   .message3 {
     margin: 0px 0 0 0;
     width:100%;
-    height:250px;
+    height:300px;
     border-top:3px solid rgba(151, 148, 148, 0.171);
   }
 
@@ -109,7 +109,7 @@
     background-color: #DDDDDD;
     padding: 16px 40px;
     display: flex;
-    /* height:190px; */
+    height:200px;
   }
 
   .messages1 {
@@ -159,7 +159,7 @@
 
   .form-message3 {
     border: none;
-    height: 150px;
+    /* height: 150px; */
     width: 100%;
     padding-left: 10px;
   }
@@ -217,4 +217,12 @@
     color:red;
     width:120px;
     margin-bottom:20px;
+  }
+
+  .error-message2 {
+    padding-right:25px;
+    margin-right:5px;
+    color:red;
+    margin-bottom:20px;
+    font-size:18px;
   }

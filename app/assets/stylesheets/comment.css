@@ -73,13 +73,14 @@
     margin:0px auto;
     background-color: #FAFAFA;
     margin-bottom: 3px; 
+    padding:5px 0;
   }
 
   .comment-nickname {
     margin: 0 4vh;
-    font-size: 1.8vh;
+    font-size: 1.5vh;
     color: rgb(0, 0, 0);
-    text-decoration: none;
+
   }
 
   .comment-texts a {
@@ -91,10 +92,11 @@
   .comment-time {
     font-size: 1px;
     margin-left: 15px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     color:#000000;
     background-color: rgba(255, 255, 255, 0.479);
     padding: 5px;
+    padding-top:10px;
     display:flex;
     flex-direction:column;
   }
@@ -113,6 +115,7 @@
     display:flex;
     flex-direction:column;
     justify-content:center;
+    padding-bottom:2px;
   }
 
   .agree-count {
@@ -136,6 +139,7 @@
   }
 
   .agree-btn-color {
+    margin-top:10px;
     font-size:1px;
     padding: 5px;
     margin-left:20px;
