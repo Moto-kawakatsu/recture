@@ -19,13 +19,17 @@ class MessagesController < ApplicationController
     @comments = @message.comments.includes(:user)
   end
 
+  def students
+    @users = User.all
+  end
+
   def create
     @room = Room.find(params[:id])
     @message = @room.messages.new(message_params)
     if @message.save
       redirect_to room_messages_path(@room)
     else
-      redirect_to room_messages_path(@room)
+      render :index
     end
   end
 
