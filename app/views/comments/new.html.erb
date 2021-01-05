@@ -1,6 +1,7 @@
 <div class="comment">
       <div class="comment-box">
-      <%= form_with model: [@comment, @messages],url:message_comments_path(@message),local: true do |f| %>
+      <%= form_with model: @comment,url:message_comments_path(@message),local: true do |f| %>
+      <%= render 'layouts/error_messages2', model: f.object %>
         <%= f.text_area :text, placeholder: "質問する", class: "comment-text", id:"input" %>
         <%= hidden_field_tag :message_id,@message.id %>
       <p><span id="inputCounter">0</span></p>
@@ -20,35 +21,35 @@
         <div class="comment-content">
          <% if comment.user.genre == "教員" || comment.user.id == current_user.id %>
           <p>
-            <strong><%= link_to comment.user.name, "#", class: "comment-nickname" %></strong>
+            <div><%= link_to comment.user.name, new_user_diary_path(comment.user), class: "comment-nickname" %></div>
           </p>
          <% elsif current_user.genre == "教員" %> 
           <p>
-            <strong><%= link_to comment.user.name, "#", class: "comment-nickname" %></strong>
+            <div><%= link_to comment.user.name, new_user_diary_path(comment.user), class: "comment-nickname" %></div>
           </p>
           <% elsif current_user.genre == "生徒" %>
-          <strong class= "comment-nickname">匿名</strong>
+          <div class= "comment-nickname">匿名</div>
           <% end %>
-          <p class="comment-texts">
+          <div class="comment-texts">
             <%=link_to comment.text, new_comment_response_path(comment) %>
-          </p>
+          </div>
           <div class="favorite-btn">
              <% if user_signed_in? && current_user.already_agreed?(comment) %>
               <%= button_to comment_agree_path(comment, comment.agrees), method: :delete do %>
-              <p class="agree-btn-color">共感</p>
+              <div class="agree-btn-color">共感</div>
              <% end %>
              <% elsif user_signed_in? && current_user.id == comment.user_id%>
-              <p class="agree-btn">共感</p>
+              <div class="agree-btn">共感</div>
              <% else %>
             <%= button_to comment_agrees_path(comment), method: :post do %>
-             <p class="agree-btn">共感</p>
+             <div class="agree-btn">共感</div>
              <% end %>
              <% end %>
-            <p class="agree-count"><%= comment.agrees.count%>人</p>
+            <div class="agree-count"><%= comment.agrees.count%>人</div>
           </div>
           <div class="comment-time">
-            <p class="time"><%= comment.created_at.to_s(:datetime_jp) %></p>
-            <p class="time"><%= comment.created_at.to_s(:datetime_jp2) %></p>
+            <div class="time"><%= comment.created_at.to_s(:datetime_jp) %></div>
+            <div class="time"><%= comment.created_at.to_s(:datetime_jp2) %></div>
           </div>
            <% if current_user.genre == "教員" %>
           <p>
