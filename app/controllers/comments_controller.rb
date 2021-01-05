@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     @message = Message.find(params[:message_id])
     @comments = @message.comments.order("created_at DESC")
     @comment = Comment.new
-    @messages = Message.all
+    # @messages = Message.all
     @room = Room.all
   end
 
@@ -20,7 +20,9 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to new_message_comment_path(@message)
     else
-      redirect_to new_message_comment_path(@message)
+      @message = Message.find(params[:message_id])
+      @comments = @message.comments.order("created_at DESC")
+      render :new
     end
   end
 
@@ -37,6 +39,6 @@ class CommentsController < ApplicationController
     
       private
       def comment_params
-        params.require(:message).permit(:text).merge(user_id: current_user.id, message_id: params[:message_id])
+        params.require(:comment).permit(:text).merge(user_id: current_user.id, message_id: params[:message_id])
       end
 end
