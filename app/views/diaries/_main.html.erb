@@ -1,0 +1,32 @@
+<div class="chat-header2">
+<div class="diary-title">学習<span class="small-no">の</span>記録</div>
+  <div class="left-header">
+    <div class="header-title">
+      <%# <%= @room.name %>
+    </div>
+  </div>
+
+  <div class="right-header">
+    <div class="header-button">
+    </div>
+  </div>
+</div>
+<div class="messages1">
+<div class="rule-check">記述のルール</div>
+    <ul>
+      <li>①学習の記録を<span>毎日</span>記述すること。</li>
+      <li>②<span>100文字</span>以上で記述すること。</li>
+    </ul>
+   <%= render partial: 'message', collection: @messages %>
+</div>
+
+<%= form_with model: [@user,@diary],class: 'form2', local: true do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
+  <div class="form-input">
+    <div><%= f.text_area :title,class: 'form-message4', placeholder: 'title' %></div>
+    <div><%= f.text_area :writing,class: 'form-message2', placeholder: 'write your diary' %></div>
+  </div>
+<%unless current_user == @diary.user%>
+  <%= f.submit '送信', class: 'form-submit2' %>
+<%end%>
+<% end %>
