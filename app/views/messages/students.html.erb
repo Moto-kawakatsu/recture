@@ -1,0 +1,8 @@
+<%@users.each do |user| %>
+ <div>
+ <%=user.name%>
+ <%=@rank =user.diary_ids.length + user.comment_ids.length + user.response_ids.length%>
+ <% end %>
+ </div>
+
+ <%=@comment%>
