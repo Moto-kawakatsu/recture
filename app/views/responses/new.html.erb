@@ -1,14 +1,16 @@
 <div class="comment">
       <div class="comment-box">
       <%= form_with model:@response,url:comment_responses_path(@comment),local: true do |f| %>
-        <%= f.text_area :response_text, placeholder: "回答する", class: "comment-text" %>
+        <%= render 'layouts/error_messages2', model: f.object %>
+        <%= f.text_area :response_text, placeholder: "回答する", class: "comment-text", id:"input" %>
         <%# <%= hidden_field_tag :comment_id,@comment.id %>
+      <p><span id="inputCounter">0</span></p>
       <p class="comment-warn">
         <p>他の生徒の質問で回答できる場合には積極的に回答してください！</p>
       </p>
       <br>
       <%= f.submit "回答する",class: "comment-btn"%>
-      <div class="back-to-top2"><%=link_to '戻る', root_path %></div>
+      <div class="back-to-top2"><%=link_to '戻る', new_message_comment_path(@comment.message) %></div>
      <% end %>
   </div>
 
@@ -18,38 +20,48 @@
         <% @responses.each do |response| %>
         <div class="comment-content2">
          <% if current_user.genre == "教員" || response.user.id == current_user.id %> 
-          <p>
-            <strong><%= link_to response.user.name, "#", class: "comment-nickname" %></strong>
-          </p>
+          <div>
+            <div><%= link_to response.user.name, new_user_diary_path(response.user), class: "comment-nickname" %></div>
+          </div>
           <% elsif current_user.genre == "生徒" %>
-          <strong class= "comment-nickname">匿名</strong>
+          <div class= "comment-nickname">匿名</div>
           <% end %>
-          <p class="comment-texts">
+          <div class="comment-texts">
             <%= response.response_text %>
-          </p>
+          </div>
             
-          <ul class="comment-time">
-            <p class="time"><%= response.created_at.to_s(:datetime_jp) %></p>
-            <p class="time"><%= response.created_at.to_s(:datetime_jp2) %></p>
-          </ul>
+          <div class="comment-time">
+            <div class="time"><%= response.created_at.to_s(:datetime_jp) %></div>
+            <div class="time"><%= response.created_at.to_s(:datetime_jp2) %></div>
+          </div>
            <% if current_user.genre == "教員" %>
-          <p>
+          <div>
             <%= button_to comment_response_path(@comment.id, response.id), method: :delete, class: "delete-button" do %>
             <i class="fas fa-trash"></i>
             <% end %>
-          </p>
+          </div>
           <% elsif user_signed_in? && current_user.id == response.user_id %>
-          <p>
+          <div>
             <%= button_to comment_response_path(@comment.id, response.id), method: :delete, class: "delete-button" do %>
             <i class="fas fa-trash"></i>
             <% end %>
-          </p>
+          </div>
           <% end %>
-          <p>
-          <div class="good-answer" id="text-button"><p id="text">解決</p></div>
           </div>
         <% end %>
       <% end %>
     </div>
   </div>
 
+  <script>
+    var input = document.getElementById("input");
+    var span = document.getElementById("inputCounter");
+    input.addEventListener("keyup", function(){
+      if (input.value.length > 75) {
+        span.textContent = "投稿できません"
+        span.style.color = 'red';
+      }else{
+        span.textContent = input.value.length;
+      }   
+    });
+  </script>
