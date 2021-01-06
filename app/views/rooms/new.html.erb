@@ -18,24 +18,25 @@
         <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
       </div>
       <div class='chat-room-form__field--right'>
-              <span class="class-num1">１−１</span><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:1).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num1">１−２</span><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:2).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num1">１−３</span><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:3).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num1">１−４</span> <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:4).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num1">１−５</span> <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:5).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num1">１−６</span> <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:6).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num2">２−１</span> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:1).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num2">２−２</span> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:2).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num2">２−３</span> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:3).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num2">２−４</span> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:4).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num2">２−５</span> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:5).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num2">２−６</span> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:6).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num3">３−１</span> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:1).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num3">３−２</span> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:2).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num3">３−３</span> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:3).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num3">３−４</span> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:4).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num3">３−５</span> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:5).all.order("student_number ASC"), :id, :name %>
-              <span class="class-num3">３−６</span> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:6).all.order("student_number ASC"), :id, :name %>
+      <% @num= "student_number ASC"%>
+              <div class="class-num1">１−１</div><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:1).all.order(@num), :id, :name %>
+              <div class="class-num1">１−２</div><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:2).all.order(@num), :id, :name %>
+              <div class="class-num1">１−３</div><%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:3).all.order(@num), :id, :name %>
+              <div class="class-num1">１−４</div> <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:4).all.order(@num), :id, :name %>
+              <div class="class-num1">１−５</div> <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:5).all.order(@num), :id, :name %>
+              <div class="class-num1">１−６</div> <%= f.collection_check_boxes :user_ids, User.where(grade:1, class_number:6).all.order(@num), :id, :name %>
+              <div class="class-num2">２−１</div> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:1).all.order(@num), :id, :name %>
+              <div class="class-num2">２−２</div> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:2).all.order(@num), :id, :name %>
+              <div class="class-num2">２−３</div> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:3).all.order(@num), :id, :name %>
+              <div class="class-num2">２−４</div> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:4).all.order(@num), :id, :name %>
+              <div class="class-num2">２−５</div> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:5).all.order(@num), :id, :name %>
+              <div class="class-num2">２−６</div> <%= f.collection_check_boxes :user_ids, User.where(grade:2, class_number:6).all.order(@num), :id, :name %>
+              <div class="class-num3">３−１</div> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:1).all.order(@num), :id, :name %>
+              <div class="class-num3">３−２</div> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:2).all.order(@num), :id, :name %>
+              <div class="class-num3">３−３</div> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:3).all.order(@num), :id, :name %>
+              <div class="class-num3">３−４</div> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:4).all.order(@num), :id, :name %>
+              <div class="class-num3">３−５</div> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:5).all.order(@num), :id, :name %>
+              <div class="class-num3">３−６</div> <%= f.collection_check_boxes :user_ids, User.where(grade:3, class_number:6).all.order(@num), :id, :name %>
           </div>
 
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
