@@ -157,7 +157,7 @@ select {
 
 }
 
-.list1-1 {
+.list {
   width:300px;
 
 }
@@ -170,4 +170,86 @@ select {
   color:white;
   font-size:14px;
   line-height:25px;
+}
+
+.wrapper1 {
+  margin-right:100px;
+  margin-left:100px;
+}
+
+.wrapper2 {
+  margin-right:100px;
+}
+
+.wrapper2 {
+  /* height:200px; */
+}
+
+.grade {
+  display:flex;
+  justify-content:center;
+  width:280px;
+  /* margin-top:30px; */
+  font-weight:bold;
+  color:rgba(65, 65, 65, 0.747);
+  background:rgba(207, 207, 207, 0.158);
+  letter-spacing:10px;
+  height:30px;
+  padding-top:2px;
+}
+
+.lists, .lists2, .lists3 {
+  margin:15px 0 15px;
+  /* margin-left:20px; */
+  margin-bottom:5px;
+}
+
+.list, .list2, .list3 {
+  width:300px;
+  /* margin-left:20px; */
+}
+
+.class-number, .class-number2, .class-number3 {
+  width:280px;
+  letter-spacing:10px;
+  font-weight:bold;
+  color:rgba(65, 65, 65, 0.747);
+  height:30px;
+  padding-top:3px;
+}
+
+.class-number span {
+  display:flex;
+  justify-content:center;
+}
+
+.class-number2 span {
+  display:flex;
+  justify-content:center;
+}
+
+.class-number3 span {
+  display:flex;
+  justify-content:center;
+}
+
+.class-number {
+  background:rgba(255, 93, 93, 0.185);
+}
+
+.class-number2 {
+  background:rgba(255, 229, 97, 0.299);
+}
+
+.class-number3 {
+  background:rgba(94, 166, 248, 0.299);
+}
+
+.main-wrapper {
+  display:flex;
+
+}
+
+.user-name {
+  color:rgba(57, 116, 255, 0.97);
 }
