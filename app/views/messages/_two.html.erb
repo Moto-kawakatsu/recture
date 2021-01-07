@@ -1,0 +1,177 @@
+<div class="wrapper2">
+<div class="grade" id="second">２年</div>
+<div class="class-number2" id="twoone"><span>１組</span></div>
+<div class="lists">
+<% @users.each do |user|%>
+    <div class="list2-1 wid hidden">
+        <% if user.grade == 2 && user.class_number == 1%>
+        <%= user.student_number%>.
+        <%=link_to new_user_diary_path(user) do %>
+        <%= user.name%>
+        <%end%>
+        <%=@login_time%>
+        <% end %>
+    </div>
+     <%end%>
+</div>
+
+
+<div class="class-number2" id="twotwo"><span>２組</span></div>
+<div class="lists">
+<% @users.each do |user|%>
+    <div class="list2-2 wid hidden">
+        <% if user.grade == 2 && user.class_number == 2%>
+        <%= user.student_number%>.
+        <%=link_to new_user_diary_path(user) do %>
+        <%= user.name%>
+        <%end%>
+        <%=@login_time%>
+        <% end %>
+    </div>
+        <%end%>
+</div>
+
+
+<div class="class-number2" id="twothree"><span>３組</span></div>
+<div class="lists">
+<% @users.each do |user|%>
+    <div class="list2-3 wid hidden">
+        <% if user.grade == 2 && user.class_number == 3%>
+        <%= user.student_number%>.
+        <%=link_to new_user_diary_path(user) do %>
+        <%= user.name%>
+        <%end%>
+        <%=@login_time%>
+        <% end %>
+    </div>
+        <%end%>
+</div>
+
+
+<div class="class-number2" id="twofour"><span>４組</span></div>
+<div class="lists">
+<% @users.each do |user|%>
+    <div class="list2-4 wid hidden">
+        <% if user.grade == 2 && user.class_number == 4%>
+        <%= user.student_number%>.
+        <%=link_to new_user_diary_path(user) do %>
+        <%= user.name%>
+        <%end%>
+        <%=@login_time%>
+        <% end %>
+    </div>
+        <%end%>
+</div>
+
+
+<div class="class-number2" id="twofive"><span>５組</span></div>
+<div class="lists">
+<% @users.each do |user|%>
+    <div class="list2-5 wid hidden">
+        <% if user.grade == 2 && user.class_number == 5%>
+        <%= user.student_number%>.
+        <%=link_to new_user_diary_path(user) do %>
+        <%= user.name%>
+        <%end%>
+        <%=@login_time%>
+        <% end %>
+    </div>
+        <%end%>
+</div>
+
+
+<div class="class-number2" id="twosix"><span>６組</span></div>
+<div class="lists">
+<% @users.each do |user|%>
+    <div class="list2-6 wid hidden">
+        <% if user.grade == 2 && user.class_number == 6%>
+        <%= user.student_number%>.
+        <%=link_to new_user_diary_path(user) do %>
+        <%= user.name%>
+        <%end%>
+        <%=@login_time%>
+        <% end %>
+    </div>
+    <% end %>
+</div>
+</div>
+
+<script>
+    let one21 = document.getElementById('twoone');
+    let members21 = document.querySelectorAll('.list2-1');
+
+        one21.addEventListener('click', function(){
+        for(const member21 of members21) {
+        if (member21.getAttribute('style') == 'display:block;') {
+            member21.removeAttribute('style','display:block;')
+        } else {
+            member21.setAttribute('style','display:block;')
+        }
+     }
+    })
+
+    let one22 = document.getElementById('twotwo');
+    let members22 = document.querySelectorAll('.list2-2');
+
+        one22.addEventListener('click', function(){
+        for(const member22 of members22) {
+        if (member22.getAttribute('style') == 'display:block;') {
+            member22.removeAttribute('style','display:block;')
+        } else {
+            member22.setAttribute('style','display:block;')
+        }
+     }
+    })
+
+    let one23 = document.getElementById('twothree');
+    let members23 = document.querySelectorAll('.list2-3');
+
+        one23.addEventListener('click', function(){
+        for(const member23 of members23) {
+        if (member23.getAttribute('style') == 'display:block;') {
+            member23.removeAttribute('style','display:block;')
+        } else {
+            member23.setAttribute('style','display:block;')
+        }
+     }
+    })
+
+    let one24 = document.getElementById('twofour');
+    let members24 = document.querySelectorAll('.list2-4');
+
+        one24.addEventListener('click', function(){
+        for(const member24 of members24) {
+        if (member24.getAttribute('style') == 'display:block;') {
+            member24.removeAttribute('style','display:block;')
+        } else {
+            member24.setAttribute('style','display:block;')
+        }
+     }
+    })
+
+    let one25 = document.getElementById('twofive');
+    let members25 = document.querySelectorAll('.list2-5');
+
+        one25.addEventListener('click', function(){
+        for(const member25 of members25) {
+        if (member25.getAttribute('style') == 'display:block;') {
+            member25.removeAttribute('style','display:block;')
+        } else {
+            member25.setAttribute('style','display:block;')
+        }
+     }
+    })
+
+    let one26 = document.getElementById('twosix');
+    let members26 = document.querySelectorAll('.list2-6');
+
+        one26.addEventListener('click', function(){
+        for(const member26 of members26) {
+        if (member26.getAttribute('style') == 'display:block;') {
+            member26.removeAttribute('style','display:block;')
+        } else {
+            member26.setAttribute('style','display:block;')
+        }
+     }
+    })
+</script>
