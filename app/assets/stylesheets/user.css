@@ -149,9 +149,6 @@ select {
   color:white;
 }
 
-.main-list {
-}
-
 .lists {
   width:200px;
 
@@ -181,15 +178,10 @@ select {
   margin-right:100px;
 }
 
-.wrapper2 {
-  /* height:200px; */
-}
-
 .grade {
   display:flex;
   justify-content:center;
   width:300px;
-  /* margin-top:30px; */
   font-weight:bold;
   color:rgba(65, 65, 65, 0.747);
   background:rgba(207, 207, 207, 0.158);
@@ -200,13 +192,11 @@ select {
 
 .lists, .lists2, .lists3 {
   margin:15px 0 15px;
-  /* margin-left:20px; */
   margin-bottom:5px;
 }
 
 .wid{
   width:300px;
-  /* margin-left:20px; */
   padding-bottom:2px;
   letter-spacing:8px;
   margin-left:10px;
@@ -249,7 +239,7 @@ select {
 
 .main-wrapper {
   display:flex;
-
+  margin:50px 0 0 70px;
 }
 
 .user-name {

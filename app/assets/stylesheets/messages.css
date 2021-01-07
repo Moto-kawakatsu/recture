@@ -96,6 +96,10 @@
     padding: 10px;
   }
   
+  .header-button input {
+    letter-spacing:5px;
+  }
+  
   .header-button input:hover {
     background:rgb(255, 104, 62);
     color:white;

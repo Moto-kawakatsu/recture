@@ -1,14 +1,30 @@
-.our-questions {
+.qs1, .qs2, .qs3, .qs4 {
     font-size:16px;
     padding:13px;
     margin-left:20px;
     border: 1px solid rgb(22, 81, 219);
     color: rgb(22, 81, 219);
 }
-.our-questions:hover {
+
+.qs1:hover, .qs2:hover, .qs3:hover, .qs4:hover {
     background: #2f73fc;
     color:white;
     text-decoration:none;
+  }
+
+  .qs1 {
+    letter-spacing:8px;
+    padding-left:18px;
+  }
+
+  .qs3 {
+    letter-spacing:12px;
+    padding-left:25px;
+  }
+
+  .qs4 {
+    letter-spacing:7px;
+    padding-left:20px;
   }
 
 .pop-comments {

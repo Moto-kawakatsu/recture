@@ -57,7 +57,7 @@ li {
   color: #fff;
   background-color: #38aef0;
   border: 0;
-  margin-left:235px;
+  margin-left:242px;
   cursor:pointer;
 }
 .chat-room-form__field {
@@ -255,16 +255,4 @@ label {
 
 .room-name3 {
   margin-right:20px;
-}
-
-.back-to-top {
-
-}
-
-.login-day {
-  
-}
-
-.back-to-top4 {
-
 }
