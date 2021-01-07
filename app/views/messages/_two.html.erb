@@ -9,7 +9,22 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-        <%=@login_time%>
+            <% @login = user.current_sign_in_at%>
+            <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
+            <span class="login-day">５日間以上</span>
+            <%elsif @login < Date.current.ago(5.days)%>
+            <span class="login-day">５日前</span>
+            <%elsif @login < Date.current.ago(4.days)%>
+            <span class="login-day">４日前</span>
+            <%elsif @login < Date.current.ago(3.days)%>
+            <span class="login-day">３日前</span>
+            <%elsif @login < Date.current.ago(2.days)%>
+            <span class="login-day">２日前</span>
+            <%elsif @login < Date.current.ago(1.days)%>
+            <span class="login-day">１日前</span>
+            <%elsif @login = Date.today%>
+            <span class="login-day">今日</span>
+            <% end %>
         <% end %>
     </div>
      <%end%>
@@ -25,7 +40,22 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-        <%=@login_time%>
+            <% @login = user.current_sign_in_at%>
+            <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
+            <span class="login-day">５日間以上</span>
+            <%elsif @login < Date.current.ago(5.days)%>
+            <span class="login-day">５日前</span>
+            <%elsif @login < Date.current.ago(4.days)%>
+            <span class="login-day">４日前</span>
+            <%elsif @login < Date.current.ago(3.days)%>
+            <span class="login-day">３日前</span>
+            <%elsif @login < Date.current.ago(2.days)%>
+            <span class="login-day">２日前</span>
+            <%elsif @login < Date.current.ago(1.days)%>
+            <span class="login-day">１日前</span>
+            <%elsif @login = Date.today%>
+            <span class="login-day">今日</span>
+            <% end %>
         <% end %>
     </div>
         <%end%>
@@ -41,7 +71,22 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-        <%=@login_time%>
+            <% @login = user.current_sign_in_at%>
+            <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
+            <span class="login-day">５日間以上</span>
+            <%elsif @login < Date.current.ago(5.days)%>
+            <span class="login-day">５日前</span>
+            <%elsif @login < Date.current.ago(4.days)%>
+            <span class="login-day">４日前</span>
+            <%elsif @login < Date.current.ago(3.days)%>
+            <span class="login-day">３日前</span>
+            <%elsif @login < Date.current.ago(2.days)%>
+            <span class="login-day">２日前</span>
+            <%elsif @login < Date.current.ago(1.days)%>
+            <span class="login-day">１日前</span>
+            <%elsif @login = Date.today%>
+            <span class="login-day">今日</span>
+            <% end %>
         <% end %>
     </div>
         <%end%>
@@ -57,7 +102,22 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-        <%=@login_time%>
+            <% @login = user.current_sign_in_at%>
+            <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
+            <span class="login-day">５日間以上</span>
+            <%elsif @login < Date.current.ago(5.days)%>
+            <span class="login-day">５日前</span>
+            <%elsif @login < Date.current.ago(4.days)%>
+            <span class="login-day">４日前</span>
+            <%elsif @login < Date.current.ago(3.days)%>
+            <span class="login-day">３日前</span>
+            <%elsif @login < Date.current.ago(2.days)%>
+            <span class="login-day">２日前</span>
+            <%elsif @login < Date.current.ago(1.days)%>
+            <span class="login-day">１日前</span>
+            <%elsif @login = Date.today%>
+            <span class="login-day">今日</span>
+            <% end %>
         <% end %>
     </div>
         <%end%>
@@ -73,7 +133,22 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-        <%=@login_time%>
+            <% @login = user.current_sign_in_at%>
+            <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
+            <span class="login-day">５日間以上</span>
+            <%elsif @login < Date.current.ago(5.days)%>
+            <span class="login-day">５日前</span>
+            <%elsif @login < Date.current.ago(4.days)%>
+            <span class="login-day">４日前</span>
+            <%elsif @login < Date.current.ago(3.days)%>
+            <span class="login-day">３日前</span>
+            <%elsif @login < Date.current.ago(2.days)%>
+            <span class="login-day">２日前</span>
+            <%elsif @login < Date.current.ago(1.days)%>
+            <span class="login-day">１日前</span>
+            <%elsif @login = Date.today%>
+            <span class="login-day">今日</span>
+            <% end %>
         <% end %>
     </div>
         <%end%>
@@ -89,7 +164,22 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-        <%=@login_time%>
+            <% @login = user.current_sign_in_at%>
+            <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
+            <span class="login-day">５日間以上</span>
+            <%elsif @login < Date.current.ago(5.days)%>
+            <span class="login-day">５日前</span>
+            <%elsif @login < Date.current.ago(4.days)%>
+            <span class="login-day">４日前</span>
+            <%elsif @login < Date.current.ago(3.days)%>
+            <span class="login-day">３日前</span>
+            <%elsif @login < Date.current.ago(2.days)%>
+            <span class="login-day">２日前</span>
+            <%elsif @login < Date.current.ago(1.days)%>
+            <span class="login-day">１日前</span>
+            <%elsif @login = Date.today%>
+            <span class="login-day">今日</span>
+            <% end %>
         <% end %>
     </div>
     <% end %>
