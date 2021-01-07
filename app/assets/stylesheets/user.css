@@ -204,7 +204,7 @@ select {
   margin-bottom:5px;
 }
 
-.list, .list2, .list3 {
+.wid{
   width:300px;
   /* margin-left:20px; */
 }
