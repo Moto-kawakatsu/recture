@@ -1,11 +1,11 @@
 <div class="main-wrapper">
 <div class="wrapper1">
 <div class="grade" id="first">１年</div>
-<div class="class-number hidden"><span>１組</span></div>
+<div class="class-number" id="oneone"><span>１組</span></div>
 <div class="lists">
 <% @users.each do |user|%>
 <% @login_time = user.current_sign_in_at.strftime('%m月%d日 %H:%M')%>
-    <div class="list hidden">
+    <div class="hidden list1-1">
         <% if user.grade == 1 && user.class_number == 1%>
         <%= user.student_number%>番.
         <%=link_to new_user_diary_path(user) do %>
@@ -17,10 +17,10 @@
     <% end %>
 </div>
 
-<div class="class-number hidden"><span>２組</span></div>
+<div class="class-number" id="onetwo"><span>２組</span></div>
 <div class="lists">
 <% @users.each do |user|%>
-    <div class="list hidden">
+    <div class="hidden list1-2">
         <% if user.grade == 1 && user.class_number == 2%>
         No.<%= user.student_number%>
         <%=link_to new_user_diary_path(user) do %>
@@ -32,10 +32,10 @@
     <% end %>
 </div>
 
-<div class="class-number hidden"><span>３組</span></div>
+<div class="class-number" id="onethree"><span>３組</span></div>
 <div class="lists">
 <% @users.each do |user|%>
-    <div class="list hidden">
+    <div class="hidden list1-3">
         <% if user.grade == 1 && user.class_number == 3%>
         <%=link_to new_user_diary_path(user) do %>
         No.<%= user.student_number%>
@@ -48,10 +48,10 @@
 </div>
 
 
-<div class="class-number hidden"><span>４組</span></div>
+<div class="class-number" id="onefour"><span>４組</span></div>
 <div class="lists">
 <% @users.each do |user|%>
-    <div class="list hidden">
+    <div class="hidden list1-4">
         <% if user.grade == 1 && user.class_number == 4%>
         <%=link_to new_user_diary_path(user) do %>
         No.<%= user.student_number%>
@@ -63,10 +63,10 @@
         <%end%>
 </div>
 
-<div class="class-number hidden"><span>５組</span></div>
+<div class="class-number" id="onefive"><span>５組</span></div>
 <div class="lists">
 <% @users.each do |user|%>
-    <div class="list hidden">
+    <div class="hidden list1-5">
         <% if user.grade == 1 && user.class_number == 5%>
         <%=link_to new_user_diary_path(user) do %>
         No.<%= user.student_number%>
@@ -78,10 +78,10 @@
         <%end%>
 </div>
 
-<div class="class-number hidden"><span>６組</span></div>
+<div class="class-number" id="onesix"><span>６組</span></div>
 <div class="lists">
 <% @users.each do |user|%>
-    <div class="list hidden">
+    <div class="hidden list1-6">
         <% if user.grade == 1 && user.class_number == 6%>
         <%=link_to new_user_diary_path(user) do %>
         No.<%= user.student_number%>
@@ -95,267 +95,86 @@
 </div>
 
 
-<div class="wrapper2">
-<div class="grade" id="second">２年</div>
-<div class="class-number2"><span>１組</span></div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list2 hidden">
-        <% if user.grade == 2 && user.class_number == 1%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-     <%end%>
-</div>
-
-
-<div class="class-number2"><span>２組</span></div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list2 hidden">
-        <% if user.grade == 2 && user.class_number == 2%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-        <%end%>
-</div>
-
-
-<div class="class-number2"><span>３組</span></div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list2 hidden">
-        <% if user.grade == 2 && user.class_number == 3%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-        <%end%>
-</div>
-
-
-<div class="class-number2"><span>４組</span></div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list2 hidden">
-        <% if user.grade == 2 && user.class_number == 4%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-        <%end%>
-</div>
-
-
-<div class="class-number2"><span>５組</span></div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list2 hidden">
-        <% if user.grade == 2 && user.class_number == 5%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-        <%end%>
-</div>
-
-
-<div class="class-number2"><span>６組</span></div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list2 hidden">
-        <% if user.grade == 2 && user.class_number == 6%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-    <% end %>
-</div>
-
-</div>
-
-
-
-
-<div class="wrapper3">
-<div class="grade" id="third">３年</div>
-<div class="class-number3">１組</div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list3 hidden">
-        <% if user.grade == 3 && user.class_number == 1%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-    <% end %>
-</div>
-
-<div class="class-number3">２組</div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list3 hidden">
-        <% if user.grade == 3 && user.class_number == 2%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-    <% end %>
-</div>
-
-
-
-<div class="class-number3">３組</div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list3 hidden">
-        <% if user.grade == 3 && user.class_number == 3%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-<% end %>
-</div>
-
-
-<div class="class-number3">４組</div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list3 hidden">
-        <% if user.grade == 3 && user.class_number == 4%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-<% end %>
-</div>
-
-
-<div class="class-number3">５組</div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list3 hidden">
-        <% if user.grade == 3 && user.class_number == 5%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-    <% end %>
-</div>
-
-
-
-<div class="class-number3">６組</div>
-<div class="lists">
-<% @users.each do |user|%>
-    <div class="list3 hidden">
-        <% if user.grade == 3 && user.class_number == 6%>
-        <%=link_to new_user_diary_path(user) do %>
-        No.<%= user.student_number%>
-        <%= user.name%>
-        <%end%>
-        <%=@login_time%>
-        <% end %>
-    </div>
-    <% end %>
-</div>
-
-</div>
-</div>
-
 
 <script>
-    let grade1 = document.getElementById('first');
-    let members = document.querySelectorAll('.list');
-  
-        first.addEventListener('click', function(){
-        for(const member of members) {
-        if (member.getAttribute('style') == 'display:block;') {
-            member.removeAttribute('style','display:block;')
+    let one11 = document.getElementById('oneone');
+    let members11 = document.querySelectorAll('.list1-1');
+
+        one11.addEventListener('click', function(){
+        for(const member11 of members11) {
+        if (member11.getAttribute('style') == 'display:block;') {
+            member11.removeAttribute('style','display:block;')
         } else {
-            member.setAttribute('style','display:block;')
+            member11.setAttribute('style','display:block;')
         }
      }
     })
 
-    let classes = document.querySelectorAll('.class-number');
-        first.addEventListener('click', function(){
-        for(const class1 of classes) {
-        if (class1.getAttribute('style') == 'display:block;') {
-            class1.removeAttribute('style','display:block;')
+    let one12 = document.getElementById('onetwo');
+    let members12 = document.querySelectorAll('.list1-2');
+
+        one12.addEventListener('click', function(){
+        for(const member12 of members12) {
+        if (member12.getAttribute('style') == 'display:block;') {
+            member12.removeAttribute('style','display:block;')
         } else {
-            class1.setAttribute('style','display:block;')
+            member12.setAttribute('style','display:block;')
         }
      }
     })
 
-    let c2 = document.querySelectorAll('.class-number2');
-    let grade2 = document.getElementById('second');
-    let members2 = document.querySelectorAll('.list2');
-    c2 = Array.from(c2);
+    let one13 = document.getElementById('onethree');
+    let members13 = document.querySelectorAll('.list1-3');
 
-        second.addEventListener('click', function(){
-        let members3 = Array.from(members2);
-        for(const member3 of members3) {
-        if (member3.getAttribute('style') == 'display:block;') {
-            member3.removeAttribute('style','display:block;')
+        one13.addEventListener('click', function(){
+        for(const member13 of members13) {
+        if (member13.getAttribute('style') == 'display:block;') {
+            member13.removeAttribute('style','display:block;')
         } else {
-            member3.setAttribute('style','display:block;')
+            member13.setAttribute('style','display:block;')
         }
+     }
+    })
+
+    let one14 = document.getElementById('onefour');
+    let members14 = document.querySelectorAll('.list1-4');
+
+        one14.addEventListener('click', function(){
+        for(const member14 of members14) {
+        if (member14.getAttribute('style') == 'display:block;') {
+            member14.removeAttribute('style','display:block;')
+        } else {
+            member14.setAttribute('style','display:block;')
         }
+     }
+    })
+
+    let one15 = document.getElementById('onefive');
+    let members15 = document.querySelectorAll('.list1-5');
+
+        one15.addEventListener('click', function(){
+        for(const member15 of members15) {
+        if (member15.getAttribute('style') == 'display:block;') {
+            member15.removeAttribute('style','display:block;')
+        } else {
+            member15.setAttribute('style','display:block;')
+        }
+     }
+    })
+
+    let one16 = document.getElementById('onesix');
+    let members16 = document.querySelectorAll('.list1-6');
+
+        one16.addEventListener('click', function(){
+        for(const member16 of members16) {
+        if (member16.getAttribute('style') == 'display:block;') {
+            member16.removeAttribute('style','display:block;')
+        } else {
+            member16.setAttribute('style','display:block;')
+        }
+     }
     })
 
 
-    let c3 = document.querySelectorAll('.class-number3');
-    let grade3 = document.getElementById('third');
-    let members4 = document.querySelectorAll('.list3');
-    c2 = Array.from(c3);
-
-
-        third.addEventListener('click', function(){
-        let members5 = Array.from(members4);
-        for(const member5 of members5) {
-        if (member5.getAttribute('style') == 'display:block;') {
-            member5.removeAttribute('style','display:block;')
-        } else {
-            member5.setAttribute('style','display:block;')
-        }
-        }
-    })
 
 </script>
