@@ -13,6 +13,8 @@ ja:
       diary:
        writing: 記録
        title: タイトル
+       study_time: 学習時間
+       study_content: 学習内容
       message:
         content: 投稿内容
       comment:
