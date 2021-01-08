@@ -23,13 +23,12 @@
 <%= form_with model: [@user,@diary],class: 'form2', local: true do |f| %>
 <%= render 'layouts/error_messages', model: f.object %>
   <div class="form-input">
-    <div>
-      <div><%= f.text_area :title,class: 'form-message4', placeholder: 'title' %></div>
-      <div><%= f.select :study_time, [["０分", 0],["１０分", 10], ["２０分", 20]], include_blank: "学習時間を選択" %></div>
-    </div>
-    <div><%= f.text_area :writing,class: 'form-message2', placeholder: 'write your diary' %></div>
+      <div class="study-title"><%= f.text_area :title,class: 'form-message4', placeholder: 'タイトル' %></div>
+      <div class="studies">
+        <div class="study-hour"><%= f.select :study_content, [["学習内容",nil],["単語", "単語"],["文法", "文法"], ["スピーキング", "スピーキング"], ["ライティング", "ライティング"], ["リスニング", "リスニング"]]%></div>
+        <div class="study-content"><%= f.select :study_time, [["学習時間",nil],["０分", 0],["１０分", 10],["２０分", 20],["３０分", 30],["４０分", 40],["５０分", 50],["６０分", 60],["８０分", 70],["８０分", 80],["９０分", 90],["１００分", 100],["１２０分", 120],["１３０分", 130],["１４０分", 140],["１５０分", 150]] %></div>
+      </div>
+      <div><%= f.text_area :writing,class: 'form-message2', placeholder: '学習の記録' %></div>
   </div>
-<%unless current_user == @diary.user%>
   <%= f.submit '送信', class: 'form-submit2' %>
-<%end%>
 <% end %>
