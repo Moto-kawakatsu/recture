@@ -7,14 +7,6 @@
     display:flex;
 }
 
-.writing-text {
-
-}
-
-.writing-time {
-
-}
-
 .main-content {
     display:flex;
 }
@@ -62,18 +54,16 @@
     
   }
 
-  .upper-message {
-  }
-
   .messages2 {
     overflow: scroll;
   }
 
   .form-message2 {
     border: none;
-    height: 248px;
+    height: 243px;
     width: 100%;
     padding-left: 10px;
+    margin-top:5px;
   }
 
   .message2 {
@@ -100,9 +90,9 @@
 
   .form2 {
     background-color: #DDDDDD;
-    padding: 20px 40px;
+    padding: 20px 25px;
     display: flex;
-    /* height:190px; */
+    
   }
 
   .form3 {
@@ -114,8 +104,8 @@
 
   .messages1 {
     background-color: #FAFAFA;
-    height: calc(100vh - 350px - 90px);
-    padding: 46px 40px 0;
+    height: calc(100vh - 400px - 90px);
+    padding: 30px 40px 0;
     overflow: scroll;
   }
 
@@ -124,7 +114,7 @@
     border: none;
     color: white;
     font-size: 16px;
-    height: 300px;
+    height: 350px;
     margin-left: 15px;
     padding: 0 20px;
     cursor:pointer;
@@ -141,7 +131,7 @@
   }
 
   .form-input ::placeholder {
-    font-size:20px;
+    font-size:18px;
   }
 
   .back-from-diary {
@@ -169,8 +159,33 @@
     height: 40px;
     width: 100%;
     padding-left: 10px;
+    padding-top:5px;
     border:1px solid rgba(0, 0, 0, 0.155);
     background:rgb(255, 255, 255);
+  }
+  
+  .study-hour, .study-content {
+    width:50%; 
+
+  }
+
+  .study-hour select, .study-content select {
+    border: 1px solid rgba(0, 0, 0, 0.155);
+    padding-left:5px;
+  }
+
+  .study-hour select  {
+    font-size:18px;
+    color:rgb(113, 113, 113);
+  }
+
+  .study-content select  {
+    font-size:18px;
+    color:rgb(113, 113, 113);
+  }
+
+  .studies {
+    display:flex;
   }
 
   .room2 {
