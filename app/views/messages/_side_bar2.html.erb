@@ -23,7 +23,7 @@
       <div class="room-name">
          <%=link_to room.name, room_messages_path(room) %>
          <%=link_to room_path(room) do %> 
-           <p class="room-num">(<%= room.users.count%>名)</p>
+           <p class="room-num">(<%= room.users.count-1%>名)</p>
          <% end %>
       </div>
     </div>
