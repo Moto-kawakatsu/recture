@@ -4,6 +4,7 @@ class CreateDiaries < ActiveRecord::Migration[6.0]
       t.integer :user_id, foreign_key: true
       t.string  :writing
       t.string :title
+      t.string :study_content
       t.integer :study_time
       t.timestamps
     end
