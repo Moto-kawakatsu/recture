@@ -23,7 +23,10 @@
 <%= form_with model: [@user,@diary],class: 'form2', local: true do |f| %>
 <%= render 'layouts/error_messages', model: f.object %>
   <div class="form-input">
-    <div><%= f.text_area :title,class: 'form-message4', placeholder: 'title' %></div>
+    <div>
+      <div><%= f.text_area :title,class: 'form-message4', placeholder: 'title' %></div>
+      <div><%= f.select :study_time, [["０分", 0],["１０分", 10], ["２０分", 20]], include_blank: "学習時間を選択" %></div>
+    </div>
     <div><%= f.text_area :writing,class: 'form-message2', placeholder: 'write your diary' %></div>
   </div>
 <%unless current_user == @diary.user%>
