@@ -31,7 +31,6 @@
     padding:20px;
     width:140px;
     margin-right: 20px;
-    border:solid;
     border-radius: 10px;
     display: inline-block;
     background:rgb(255, 179, 0);
@@ -55,6 +54,7 @@
     border:3px solid #D1483E;
     user-select:none;
     display: inline-block;
+    margin-left:40px;
   }
   
   #btn:hover{
@@ -71,7 +71,6 @@
     text-align: center;
     margin:0 auto;
     padding:100px 10px;
-    border: solid;
     border-radius: 5px;
     position: relative;
     
