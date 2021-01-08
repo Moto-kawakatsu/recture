@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_12_27_003458) do
     t.integer "user_id"
     t.string "writing"
     t.string "title"
+    t.integer "study_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
