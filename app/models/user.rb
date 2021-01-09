@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :trackable
+         :recoverable, :rememberable, :validatable
 
 
   has_many :room_users
