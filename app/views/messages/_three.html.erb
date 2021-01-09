@@ -9,7 +9,7 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-            <% @login = user.current_sign_in_at%>
+            <% @login = user.Date%>
             <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
             <span class="login-day">５日間以上</span>
             <%elsif @login < Date.current.ago(5.days)%>
@@ -39,7 +39,7 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-            <% @login = user.current_sign_in_at%>
+            <% @login = user.Date%>
             <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
             <span class="login-day">５日間以上</span>
             <%elsif @login < Date.current.ago(5.days)%>
@@ -71,7 +71,7 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-            <% @login = user.current_sign_in_at%>
+            <% @login = user.Date%>
             <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
             <span class="login-day">５日間以上</span>
             <%elsif @login < Date.current.ago(5.days)%>
@@ -102,7 +102,7 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-            <% @login = user.current_sign_in_at%>
+            <% @login = user.Date%>
             <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
             <span class="login-day">５日間以上</span>
             <%elsif @login < Date.current.ago(5.days)%>
@@ -133,7 +133,7 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-            <% @login = user.current_sign_in_at%>
+            <% @login = user.Date%>
             <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
             <span class="login-day">５日間以上</span>
             <%elsif @login < Date.current.ago(5.days)%>
@@ -165,7 +165,7 @@
         <%=link_to new_user_diary_path(user) do %>
         <%= user.name%>
         <%end%>
-            <% @login = user.current_sign_in_at%>
+            <% @login = user.Date%>
             <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
             <span class="login-day">５日間以上</span>
             <%elsif @login < Date.current.ago(5.days)%>

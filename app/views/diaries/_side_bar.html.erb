@@ -2,7 +2,7 @@
   <div class="header-name2">
   <%=@user.name%>
   <%= render "layouts/level" %>
-  <div><%=l @user.current_sign_in_at%></div>
+  <div><%=l @user.Date%></div>
   </div>
   <div>
   <div class="back-from-diary"><%=link_to "時間", diary_path(@user.diary_ids) %></div>
