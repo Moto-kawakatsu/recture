@@ -3,7 +3,7 @@
 <div class="class-number" id="oneone"><span>１組</span></div>
 <div class="lists">
 <% @users.each do |user|%>
-<% @login_time = user.current_sign_in_at.strftime('%m月%d日 %H:%M')%>
+<% @login_time = l user.current_sign_in_at%>
     <div class="hidden wid list1-1">
         <% if user.grade == 1 && user.class_number == 1%>
         <%= user.student_number%>番

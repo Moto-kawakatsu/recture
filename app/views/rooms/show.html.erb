@@ -16,7 +16,7 @@
     <% elsif user.name.length == 6%>
     <div class="stu-name4"><%=@d_path%></div>　　　
    <% end %>
-    <div><%=user.current_sign_in_at.strftime('%m月%d日 %H:%M')%></div>
+    <div><%=l user.current_sign_in_at%></div>
     <% @login = user.current_sign_in_at%>
     <%if @login < Date.current.ago(5.days || 6.days || 7.days)%>
     <div class="login-day">　　５日間以上未ログイン</div>
