@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'messages/students' => 'messages#students'
   get 'messages/list' => 'messages#list'
   get 'diaries/count_words' => 'diaries#count_words'
+  get '/users/sign_out' => 'devise/sessions#destroy'
 
   root to: "rooms#index"
   resources :users, only: [:edit, :update] do
