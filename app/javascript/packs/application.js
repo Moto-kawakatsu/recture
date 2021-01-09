@@ -8,6 +8,9 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("../good_answer")
+require("chartkick")
+require("chart.js")
+// = require Chart.bundle
 // require("../question")
 //= require jquery
 //= require_tree .

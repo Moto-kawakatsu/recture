@@ -63,6 +63,7 @@ gem 'image_processing', '~> 1.2'
 gem 'pry-rails'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem "chartkick"
 
 group :production do
   gem 'rails_12factor'
