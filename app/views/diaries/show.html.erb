@@ -1,0 +1,81 @@
+<div>
+Vocabulary
+<%@array_word = []%>
+<%@diaries.each do |diary|%>
+<%if diary.study_content == "単語"%>
+    <%@sum_word = diary.study_time%>
+    <%@array_word << @sum_word%>
+<%else%>
+    <%@sum_word = 0%>
+    <%@array_word << @sum_word%>
+<%end%>
+<%end%>
+
+<%=@array_word.sum%>
+</div>
+
+
+<div>
+Grammar
+<%@array_grammar = []%>
+<%@diaries.each do |diary|%>
+<%if diary.study_content == "文法"%>
+    <%@sum_grammar = diary.study_time%>
+    <%@array_grammar << @sum_grammar%>
+<%else%>
+    <%@sum_grammar = 0%>
+    <%@array_grammar << @sum_grammar%>
+<%end%>
+<%end%>
+
+<%=@array_grammar.sum%>
+</div>
+
+
+<div>
+Speaking
+<%@array_speaking = []%>
+<%@diaries.each do |diary|%>
+<%if diary.study_content == "スピーキング"%>
+    <%@sum_speaking = diary.study_time%>
+    <%@array_speaking << @sum_speaking%>
+<%else%>
+    <%@sum_speaking = 0%>
+    <%@array_speaking << @sum_speaking%>
+<%end%>
+<%end%>
+
+<%=@array_speaking.sum%>
+</div>
+
+<div>
+Writing
+<%@array_writing = []%>
+<%@diaries.each do |diary|%>
+<%if diary.study_content == "ライティング"%>
+    <%@sum_writing = diary.study_time%>
+    <%@array_writing << @sum_writing%>
+<%else%>
+    <%@sum_writing = 0%>
+    <%@array_writing << @sum_writing%>
+<%end%>
+<%end%>
+
+<%=@array_writing.sum%>
+</div>
+
+<div>
+Listening
+<%@array_listening = []%>
+<%@diaries.each do |diary|%>
+<%if diary.study_content == "リスニング"%>
+    <%@sum_listening = diary.study_time%>
+    <%@array_listening << @sum_listening%>
+<%else%>
+    <%@sum_listening = 0%>
+    <%@array_listening << @sum_listening%>
+<%end%>
+<%end%>
+
+<%=@array_listening.sum%>
+</div>
