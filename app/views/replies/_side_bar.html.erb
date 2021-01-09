@@ -2,7 +2,7 @@
   <div class="header-name2">
   <%=@user.name %>
    <%= render "layouts/level" %>
-  <div><%=@user.current_sign_in_at.strftime('%m/%d %H:%M:%S')%></div>
+  <div><%=@user.current_sign_in_at.strftime('%m月%d日 %H:%M')%></div>
   </div>
   <div class="back-from-diary"><%=link_to "back",new_user_diary_path(@diary.user)  %></div>
 </div>
@@ -13,7 +13,7 @@
       <div class="room-name">
       <%=link_to new_diary_reply_path(diary) do %>
          <div class="diary-title2"><%=diary.title %></div>
-         <div><%=diary.created_at.strftime('%m/%d %H:%M:%S') %></div>
+         <div><%=diary.created_at.strftime('%m/%d %H:%M') %></div>
          <% end %>
       </div>
     </div>
