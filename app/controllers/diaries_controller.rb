@@ -28,6 +28,12 @@ class DiariesController < ApplicationController
         end
     end
 
+    def show
+        @diary = Diary.find(params[:id])
+        @user = @diary.user
+        @diaries = @user.diaries
+    end
+
     private
 
     def diary_params
