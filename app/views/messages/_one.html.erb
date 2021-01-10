@@ -3,14 +3,13 @@
 <div class="class-number" id="oneone"><span>１組</span></div>
 <div class="lists">
 <% @users.each do |user|%>
-<%# <% @login_time = user.current_sign_in_at.strftime('%m月%d日 %H:%M')%>
     <div class="hidden wid list1-1">
         <% if user.grade == 1 && user.class_number == 1%>
         <%= user.student_number%>番
         <%=link_to new_user_diary_path(user) do %>
         <span class="user-name"><%= user.name%></span>
         <% end %>
-            <% @login = user.current_sign_in_at.strftime('%m月%d日 %H:%M') if user && user.created_at%>
+            <% @login = user.current_sign_in_at&.strftime('%m月%d日 %H:%M') if user && user.created_at%>
             <%if @login < Date.current.ago(6.days || 7.days || 8.days)%>
             <span class="login-day">５日間以上</span>
             <%elsif @login < Date.current.ago(5.days)%>
