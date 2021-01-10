@@ -4,7 +4,7 @@
       <%= @diary.user.name %>
     </div>
     <div class="message-date">
-      <%# <%=  l @diary.created_at %>
+      <%=@diary.created_at.strftime('%m/%d %H:%M') if @diary%>
     </div>
     <div class="message-date">
 
