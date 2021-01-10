@@ -16,7 +16,7 @@
       <div class="room-name">
       <%=link_to new_diary_reply_path(diary) do %>
          <div class="diary-title2"><%=diary.title %></div>
-         <div><%=diary.created_at.strftime('%m/%d %H:%M') %></div>
+         <div><%=diary.created_at.strftime('%m/%d %H:%M') if diary %></div>
          <% end %>
       </div>
     </div>
