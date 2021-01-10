@@ -18,7 +18,7 @@
     <div class="message-user">
     </div>
     <div class="message-date">
-      <%=@diary.created_at.strftime('%m/%d %H:%M') if @diary.reply%>
+      <%=@diary.created_at.strftime('%m/%d %H:%M') if @diary%>
       【<%=@diary.writing.length %>文字】
       <%=@diary.user.name%>
     </div>
