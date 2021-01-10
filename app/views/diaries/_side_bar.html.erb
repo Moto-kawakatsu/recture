@@ -2,10 +2,10 @@
   <div class="header-name2">
   <%=@user.name%>
   <%= render "layouts/level" %>
-  <div><%=l @user.Date%></div>
+  <%# <div><%=l @user.Date</div> %>
   </div>
   <div>
-  <div class="back-from-diary"><%=link_to "時間", diary_path(@user.diary_ids) %></div>
+  <div class="back-from-diary"><%=link_to "時間", diary_path(@user.diary_ids)%></div>
   <div class="back-from-diary"><%=link_to "back", root_path %></div>
   </div>
 </div>
@@ -16,7 +16,6 @@
       <div class="room-name">
       <%=link_to new_diary_reply_path(diary) do %>
          <div class="diary-title2"><%=diary.title %></div>
-         <div><%=l diary.created_at%></div>
          <% end %>
       </div>
     </div>
