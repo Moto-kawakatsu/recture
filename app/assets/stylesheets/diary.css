@@ -149,11 +149,18 @@
 
   .back-from-diary {
     padding-top:5px;
+    padding-left:8px;
   }
 
-  .back-from-diary a{
+  .back-from-diary a {
+    color:white;
+  }
+
+  .back-from-reply {
+    margin-right:20px;
+  }
+  .back-from-reply a{
     color:rgb(255, 255, 255);
-    padding-left:8px;
   }
 
   .form-message3 {
