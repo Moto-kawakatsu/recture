@@ -81,7 +81,7 @@ Listening
 </div>
 
 
-<%# <%= column_chart Diary.group(:study_content).sum(:study_time),id: "column-chart", width: "500px", height: "400px" %>
-<%# <%= pie_chart Diary.group(:study_content).sum(:study_time) %> %>
+<%= column_chart Diary.group(:study_content).sum(:study_time),id: "column-chart", width: "500px", height: "400px"%>
+<%= pie_chart Diary.group(:study_content).sum(:study_time)%>
 
 
