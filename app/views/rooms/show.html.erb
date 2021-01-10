@@ -1,6 +1,5 @@
 <div class="room-name2">
   <div class="room-name3"><%=link_to @room.name, room_messages_path(@room)%></div>
-  <div class="back-to-top4"><%=link_to "back", root_path %></div>
 </div>
 <%@users.each do |user| %>
 <%if user.genre == "生徒"%>
@@ -16,8 +15,8 @@
     <% elsif user.name.length == 6%>
     <div class="stu-name4"><%=@d_path%></div>　　　
    <% end %>
-    <div><%=l user.Date%></div>
-    <% @login = user.Date%>
+    <div><%=user.current_sign_in_at.strftime('%m/%d %H:%M') %></div>
+    <% @login = user.current_sign_in_at if user.current_sign_in_at%>
     <%if @login < Date.current.ago(5.days || 6.days || 7.days)%>
     <div class="login-day">　　５日間以上未ログイン</div>
     <%elsif @login < Date.current.ago(4.days)%>
