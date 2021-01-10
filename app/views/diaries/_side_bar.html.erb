@@ -5,7 +5,7 @@
   <div><%=@user.current_sign_in_at.strftime('%m/%d %H:%M') if @user.current_sign_in_at%></div>
   </div>
   <div>
-  <div class="back-from-diary"><%=link_to "時間", diary_path(@user.diary_ids) %></div>
+  <div class="diary-study-time"><%=link_to "時間", diary_path(@user.diary_ids) %></div>
   <div class="back-from-diary"><%=link_to "back", root_path %></div>
   </div>
 </div>
