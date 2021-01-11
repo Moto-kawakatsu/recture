@@ -32,6 +32,12 @@ class DiariesController < ApplicationController
         @diary = Diary.find(params[:id])
         @user = @diary.user
         @diaries = @user.diaries
+        @vocabulary = @diaries.where(study_content: "単語")
+        @grammar = @diaries.where(study_content: "文法")
+        @speaking = @diaries.where(study_content: "スピーキング")
+        @listening = @diaries.where(study_content: "リスニング")
+        @writing = @diaries.where(study_content: "ライティング")
+        @reading = @diaries.where(study_content: "リーディング")
     end
 
     private
