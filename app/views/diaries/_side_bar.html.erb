@@ -7,8 +7,10 @@
   <div>
   <%if @user.diaries.present?%>
   <div class="diary-study-time"><%=link_to "data", diary_path(@user.diary_ids) %></div>
-  <%end%>
   <div class="back-from-diary"><%=link_to "back", root_path %></div>
+  <%else%>
+  <div class="back-from-diary2"><%=link_to "back", root_path %></div>
+  <%end %>
   </div>
 </div>
 
