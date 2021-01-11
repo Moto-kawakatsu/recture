@@ -257,3 +257,152 @@
     margin-bottom:20px;
     font-size:18px;
   }
+
+  .contents {
+    display:flex;
+    flex-wrap :wrap;
+    margin-bottom:20px;
+  }
+
+  .content-title {
+   margin:30px 290px;
+   margin-top:50px;
+   padding:10px;
+   font-weight:bold;
+   border-radius:50px;
+  }
+
+  .total {
+    font-size:15px;
+    margin-left:200px;
+    padding:10px 0 10px 0;
+  }
+
+  .study-wrapper {
+    display:flex;
+    padding:20px 25px;
+   
+    width:200px;
+    border-radius:5px;
+  }
+
+  .study-hour-wrapper {
+  }
+
+  .study-hour {
+    margin-left:10px;
+    width:50%;
+  }
+
+  .study-hour b {
+    font-size:20px;
+  }
+
+  .mins {
+    font-size:12px;
+    margin-left:2px;
+  }
+
+  .studies {
+    font-size:15px;
+    padding-top:4px;
+  }
+
+  .content-bar-chart {
+    display:flex;
+    justify-content:center;
+    margin:20px 0 80px 20px;
+  }
+
+  .bar-chart {
+    margin-left:100px;
+  }
+
+  .content {
+    margin-left:25px;
+    margin-bottom:10px;
+  }
+
+  .study-data {
+    margin-bottom:50px;
+    width:100%;
+    margin:0 0%;
+  }
+
+  .page-title {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:20px 0;
+    font-size:20px;
+    letter-spacing:7px;
+  }
+
+  .vocabulary {
+    /* background:rgb(84, 129, 251); */
+    /* color:white; */
+  }
+
+  .grammar {
+    /* background:rgb(251, 226, 104); */
+    /* color:white; */
+    letter-spacing:2px;
+  }
+
+  .speaking {
+    /* background:#8074d1; */
+    /* color:white; */
+    letter-spacing:1px;
+  }
+  
+  .writing {
+    /* background:#a94141; */
+    /* color:white; */
+    letter-spacing:4px;
+  }
+
+  .listening {
+    /* background:#FFBBFF; */
+    /* color:white; */
+    letter-spacing:1px;
+  }
+  
+  .reading {
+    /* background:#099898; */
+    /* color:white; */
+    letter-spacing:2.5px;
+    
+  }
+
+  .voca {
+    background:rgb(84, 129, 251);
+  }
+
+  .gra {
+    background:rgb(251, 226, 104);
+  }
+
+  .spe {
+    background:#8074d1;
+  }
+
+  .wri {
+    background:#a94141;
+  }
+
+  .lis {
+    background:#FFBBFF;
+  }
+
+  .rea {
+    background:#099898;
+  }
+
+  .total-hours {
+    background:rgb(255, 253, 253);
+    border:rgb(240, 239, 239) 1px solid;
+  }
+
+.studies span{
+  letter-spacing:2px;
+}
