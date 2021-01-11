@@ -1,5 +1,9 @@
-<div>
-Vocabulary
+<div class="page-title"><%=link_to @user.name, new_user_diary_path(@user)%>さんのデータ</div>
+<div class="study-data">
+<div class="content-bar-chart">
+<div class="study-hour-wrapper">
+<div class="study-wrapper voca">
+<div class="studies">Vocabulary</div>
 <%@array_word = []%>
 <%@diaries.each do |diary|%>
 <%if diary.study_content == "単語"%>
@@ -11,12 +15,12 @@ Vocabulary
 <%end%>
 <%end%>
 
-<%=@array_word.sum%>
+<div class="study-hour"><b><%=@array_word.sum%></b><span class="mins">mins</span></div>
 </div>
 
 
-<div>
-Grammar
+<div class="study-wrapper gra">
+<div class="studies">Grammar</div>
 <%@array_grammar = []%>
 <%@diaries.each do |diary|%>
 <%if diary.study_content == "文法"%>
@@ -28,12 +32,12 @@ Grammar
 <%end%>
 <%end%>
 
-<%=@array_grammar.sum%>
+<div class="study-hour"><b><%=@array_grammar.sum%></b><span class="mins">mins</span></div>
 </div>
 
 
-<div>
-Speaking
+<div class="study-wrapper spe">
+<div class="studies">Speaking</div>
 <%@array_speaking = []%>
 <%@diaries.each do |diary|%>
 <%if diary.study_content == "スピーキング"%>
@@ -45,11 +49,11 @@ Speaking
 <%end%>
 <%end%>
 
-<%=@array_speaking.sum%>
+<div class="study-hour"><b><%=@array_speaking.sum%></b><span class="mins">mins</span></div>
 </div>
 
-<div>
-Writing
+<div class="study-wrapper wri">
+<div class="studies">Writing</div>
 <%@array_writing = []%>
 <%@diaries.each do |diary|%>
 <%if diary.study_content == "ライティング"%>
@@ -61,11 +65,13 @@ Writing
 <%end%>
 <%end%>
 
-<%=@array_writing.sum%>
+<div class="study-hour"><b><%=@array_writing.sum%></b><span class="mins">mins</span></div>
 </div>
 
-<div>
-Listening
+
+
+<div class="study-wrapper lis">
+<div class="studies">Listening</div>
 <%@array_listening = []%>
 <%@diaries.each do |diary|%>
 <%if diary.study_content == "リスニング"%>
@@ -77,11 +83,66 @@ Listening
 <%end%>
 <%end%>
 
-<%=@array_listening.sum%>
+<div class="study-hour"><b><%=@array_listening.sum%></b><span class="mins">mins</span></div>
 </div>
 
+<div class="study-wrapper rea">
+<div class="studies">Reading</div>
+<%@array_reading = []%>
+<%@diaries.each do |diary|%>
+<%if diary.study_content == "リーディング"%>
+    <%@sum_reading = diary.study_time%>
+    <%@array_reading << @sum_reading%>
+<%else%>
+    <%@sum_reading = 0%>
+    <%@array_reading << @sum_reading%>
+<%end%>
+<%end%>
 
-<%= column_chart Diary.group(:study_content).sum(:study_time),id: "column-chart", width: "500px", height: "400px"%>
-<%= pie_chart Diary.group(:study_content).sum(:study_time)%>
+<div class="study-hour"><b><%=@array_reading.sum%></b><span class="mins">mins</span></div>
+</div>
 
+<div class="study-wrapper total-hours">
+<div class="studies"><span>total</span></div>
+<div class="study-hour"><b><%=@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum%></b><span class="mins">mins</span></div>
+</div>
 
+</div>
+    <div class="bar-chart">
+        <%= column_chart Diary.group(:study_content).sum(:study_time),id: "column-chart", width: "700px", height: "450px",ytitle: "mins",colors: ['#CCCCCC']%>
+    </div>
+</div>
+
+<div class="contents">
+    <div class="content">
+        <div class="content-title vocabulary">Vocabulary</div>
+        <%= line_chart @vocabulary.group_by_day(:created_at).sum(:study_time), width: "600px", height: "150px",ytitle: "mins",colors: ['rgb(28, 88, 255)'] %>
+    </div>
+
+    <div class="content">
+        <div class="content-title grammar">Grammar</div>
+        <%= line_chart @grammar.group_by_day(:created_at).sum(:study_time), width: "600px", height: "150px",ytitle: "mins",colors: ['rgb(255, 213, 0)'] %>
+    </div>
+
+    <div class="content">
+        <div class="content-title speaking">Speaking</div>
+        <%= line_chart @speaking.group_by_day(:created_at).sum(:study_time), width: "600px", height: "150px",ytitle: "mins",colors: ['#8074d1'] %>
+    </div>
+
+    <div class="content">
+       <div class="content-title writing">Writing</div>
+       <%= line_chart @writing.group_by_day(:created_at).sum(:study_time), width: "600px", height: "150px",ytitle: "mins",colors: ['#a94141'] %>
+    </div>
+
+    <div class="content">
+       <div class="content-title listening">Listening</div>
+       <%= line_chart @listening.group_by_day(:created_at).sum(:study_time), width: "600px", height: "150px",ytitle: "mins",colors: ['#FFBBFF'] %>
+    </div>
+
+    <div class="content">
+       <div class="content-title reading">Reading</div>
+       <%= line_chart @reading.group_by_day(:created_at).sum(:study_time), width: "600px", height: "150px",ytitle: "mins",colors: ['#008080'] %>
+    </div>
+
+</div>
+</div>
