@@ -339,37 +339,25 @@
   }
 
   .vocabulary {
-    /* background:rgb(84, 129, 251); */
-    /* color:white; */
   }
 
   .grammar {
-    /* background:rgb(251, 226, 104); */
-    /* color:white; */
     letter-spacing:2px;
   }
 
   .speaking {
-    /* background:#8074d1; */
-    /* color:white; */
     letter-spacing:1px;
   }
   
   .writing {
-    /* background:#a94141; */
-    /* color:white; */
     letter-spacing:4px;
   }
 
   .listening {
-    /* background:#FFBBFF; */
-    /* color:white; */
     letter-spacing:1px;
   }
   
   .reading {
-    /* background:#099898; */
-    /* color:white; */
     letter-spacing:2.5px;
     
   }
