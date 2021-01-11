@@ -4,7 +4,7 @@
       <%= message.user.name %>
     </div>
     <div class="message-date">
-      <%=l message.created_at%>
+      <%=message.created_at.strftime('%m月%d日 %H:%M') if message.user.current_sign_in_at%>
     </div>
     <div class="message-date">
       【質問<%= message.comments.count %>個】
