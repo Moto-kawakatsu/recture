@@ -16,7 +16,7 @@
 <h1>アプリケーションの説明</h1>
   
 <h1>message（投稿）→ comment（質問）→ response（回答）</h1>  
-  
+<br>  
 <h3>☑message（投稿）</h3>
 教員は授業後、専用のルームにて授業で使ったスライドのURLをメッセージとして投稿する。
 
@@ -26,18 +26,18 @@
 <img width="120" alt="スクリーンショット 2021-01-12 12 25 16" src="https://user-images.githubusercontent.com/70629162/104265566-3c35f800-54d1-11eb-80ad-86573c1dc3a9.png">
 <img width="400" alt="スクリーンショット 2021-01-12 12 16 48" src="https://user-images.githubusercontent.com/70629162/104265024-0e9c7f00-54d0-11eb-925c-72d4af30f67e.png">  
 <br>  
+<br>  
 <h3>☑comment（質問）</h3>
 投稿されたメッセージをクリックすると、そのメッセージに対する質問ページに遷移する。
 生徒は授業内容について質問を投稿することができる。この時、他の生徒にはどの生徒が質問したのか、投稿者名を匿名表示にすることで分からなくしている。
 ルームに入っている生徒は、他の生徒から出された質問に対して同じ思いを持っている場合には共感ボタンを押すことができる。  
 <br>
-<img width="800" alt="スクリーンショット 2021-01-12 14 08 45" src="https://user-images.githubusercontent.com/70629162/104272220-01878c00-54e0-11eb-8cae-3449b72f3dbd.png">
-
-  
-  
+<img width="1400" alt="スクリーンショット 2021-01-12 14 08 45" src="https://user-images.githubusercontent.com/70629162/104272220-01878c00-54e0-11eb-8cae-3449b72f3dbd.png">
+<br>  
+<br>  
 <h3>☑response（回答）</h3>
 他の生徒によって投稿された質問に回答
-<img width="1337" alt="スクリーンショット 2021-01-12 14 04 47" src="https://user-images.githubusercontent.com/70629162/104271906-51198800-54df-11eb-9ba3-dc65aa810b64.png">
+<img width="1400" alt="スクリーンショット 2021-01-12 14 04 47" src="https://user-images.githubusercontent.com/70629162/104271906-51198800-54df-11eb-9ba3-dc65aa810b64.png">
 
 
 
