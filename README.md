@@ -13,9 +13,9 @@
 <img width="500" alt="スクリーンショット 2020-11-23 14 12 28" src="https://user-images.githubusercontent.com/70629162/99930848-ed53c800-2d95-11eb-9136-8683e8f31c88.png"></div>
   
 <br>
-# アプリケーションの説明 
-# message（スライド投稿） → comment（質問）→ response（回答）  
+## アプリケーションの説明
   
+<h1>message</h1>  
 生徒は授業で使われたPowerPointやKeyNoteのスライドを、URLからもう一度見ることができる  
 <br>  
 <img width="400" alt="スクリーンショット 2021-01-12 12 26 29" src="https://user-images.githubusercontent.com/70629162/104265919-f75e9100-54d1-11eb-9d8c-938e3ca32223.png">
