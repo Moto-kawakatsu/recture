@@ -138,6 +138,8 @@ Things you may want to cover:
 - has_many :comments
 - has_many :responses
 - has_many :agrees, dependent: :destroy
+- has_many :diaries, dependent: :destroy
+- has_many :replies, dependent: :destroy
 
 
 
@@ -225,3 +227,32 @@ Things you may want to cover:
 
 - belongs_to :comment
 - belongs_to :user
+
+## diaries テーブル
+
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| user          | references | null: false, foreign_key: true |
+| writing       | string     | null: false                    |
+| title         | string     | null: false                    |
+| study_content | string     | null: false                    |
+| study_time    | integer    | null: false                    |
+
+### Association
+
+- belongs_to :user
+- has_one :reply, dependent: :destroy
+
+
+## replies テーブル
+
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| user          | references | null: false, foreign_key: true |
+| diary         | references | null: false, foreign_key: true |
+| reply_text    | string     | null: false                    |
+
+### Association
+
+- belongs_to :user
+- belongs_to :diary
