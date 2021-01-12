@@ -36,7 +36,7 @@
 <br>  
 <br>  
 <h3>☑response（回答）</h3>
-他の生徒によって投稿された質問に回答
+他の生徒によって投稿された質問に対する回答をすることができる。この時質問と同じように回答者の名前も匿名表示になる。
 <img width="1400" alt="スクリーンショット 2021-01-12 14 04 47" src="https://user-images.githubusercontent.com/70629162/104271906-51198800-54df-11eb-9ba3-dc65aa810b64.png">
 
 
@@ -47,8 +47,11 @@ URL：https://recture.herokuapp.com/
 user : admin　
 pass : 2222 
   
-Log in Email(教員用)：test-taro@gmail.com  
-Log in pass：test1212
+Log in Email(教員用)：kawakatu12271@gmail.com  
+Log in pass：aaaa111
+
+Log in Email(生徒用)：kawakatu1228@gmail.com  
+Log in pass：aaaa111
   
   
 # 特徴
