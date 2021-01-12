@@ -109,7 +109,7 @@
 
 </div>
     <div class="bar-chart">
-        <%= column_chart Diary.group(:study_content).sum(:study_time),id: "column-chart", width: "700px", height: "450px",ytitle: "mins",colors: ['#CCCCCC']%>
+        <%= column_chart @bar_chart.group(:study_content).sum(:study_time),id: "column-chart", width: "700px", height: "450px",ytitle: "mins",colors: ['#CCCCCC']%>
     </div>
 </div>
 
