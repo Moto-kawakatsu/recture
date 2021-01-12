@@ -18,18 +18,12 @@
 <img width="400" alt="スクリーンショット 2021-01-12 12 26 29" src="https://user-images.githubusercontent.com/70629162/104265919-f75e9100-54d1-11eb-9d8c-938e3ca32223.png">
 <img width="120" alt="スクリーンショット 2021-01-12 12 25 16" src="https://user-images.githubusercontent.com/70629162/104265566-3c35f800-54d1-11eb-80ad-86573c1dc3a9.png">
 <img width="400" alt="スクリーンショット 2021-01-12 12 16 48" src="https://user-images.githubusercontent.com/70629162/104265024-0e9c7f00-54d0-11eb-925c-72d4af30f67e.png">  
+<br>  
 投稿されたメッセージをクリックすると、そのメッセージの質問ページに遷移する。  
 生徒は他の生徒がした質問に同じ思いを持っている場合には共感ボタンを押すことができる。  
 <br>
 <img width="800" alt="スクリーンショット 2020-11-08 17 11 07" src="https://user-images.githubusercontent.com/70629162/98460210-7dfea580-21e5-11eb-9578-4ba551e55d75.png">
 
-
-
-<br>  
-質問ページ投稿された質問をクリックすると、回答ページに遷移する。  
-質問に回答できる生徒がいれば回答する。質問した生徒は問題が解決した場合、解決ボタンを押す。
-<br>  
-<img width="800" alt="スクリーンショット 2020-11-08 17 24 45" src="https://user-images.githubusercontent.com/70629162/98460398-79d38780-21e7-11eb-9861-18e6ca571fa4.png">
 
 # 本番環境
 URL：https://recture.herokuapp.com/  
