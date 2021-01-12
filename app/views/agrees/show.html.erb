@@ -3,8 +3,8 @@
 <ul class='comment-lists'>
 <% num = 0 %>
  <% @comments.each do |comment| %>
- <% if comment.agrees.ids.count >= 1 %>
-      <li class='agree-list items2'>
+ <% if comment.agrees.ids.count >= 3 %>
+      <li class='list items2'>
       <div class="comment-text-content">
         <div class="comment-texts-message">「 <%=comment.message.content%> 」</div>
         <div class="comment-texts-room">( <%=comment.user.grade %>年生 ) 【 <span><%= comment.agrees.count%>人</span>の疑問 】</div>
