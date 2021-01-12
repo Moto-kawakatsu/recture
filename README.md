@@ -16,14 +16,18 @@
 <h1>アプリケーションの説明</h1>
   
 <h1>message（投稿）→ comment（質問）→ response（回答）</h1>  
+  
+<h3>☑message（投稿）</h3>
 生徒は授業で使われたPowerPointやKeyNoteのスライドを、URLからもう一度見ることができる  
 <br>  
 <img width="400" alt="スクリーンショット 2021-01-12 12 26 29" src="https://user-images.githubusercontent.com/70629162/104265919-f75e9100-54d1-11eb-9d8c-938e3ca32223.png">
 <img width="120" alt="スクリーンショット 2021-01-12 12 25 16" src="https://user-images.githubusercontent.com/70629162/104265566-3c35f800-54d1-11eb-80ad-86573c1dc3a9.png">
 <img width="400" alt="スクリーンショット 2021-01-12 12 16 48" src="https://user-images.githubusercontent.com/70629162/104265024-0e9c7f00-54d0-11eb-925c-72d4af30f67e.png">  
 <br>  
-投稿されたメッセージをクリックすると、そのメッセージの質問ページに遷移する。  
-生徒は他の生徒がした質問に同じ思いを持っている場合には共感ボタンを押すことができる。  
+<h3>☑comment（質問）</h3>
+投稿されたメッセージをクリックすると、そのメッセージに対する質問ページに遷移する。
+
+ルームに入っている生徒は、他の生徒から出された質問に対して同じ思いを持っている場合には共感ボタンを押すことができる。  
 <br>
 <img width="800" alt="スクリーンショット 2021-01-12 13 43 59" src="https://user-images.githubusercontent.com/70629162/104270672-5e814300-54dc-11eb-967c-9475c1f5d57f.png">
 
