@@ -64,15 +64,19 @@ Password：aaaa111
 <h1>diary（学習の記録）→ reply（教員コメント）→ data（学習データ）</h1> 
 <br>  
 <h3>☑diary（学習の記録）</h3>
+  
 毎日学習後に記録を書くことで、生徒は自分の学習について向き合うことができる。  
   
 そして、教員は各生徒がどのような学習していて、どのような悩みを持っているのか把握できる。
-<img width="900" alt="スクリーンショット 2021-01-12 21 03 03" src="https://user-images.githubusercontent.com/70629162/104312354-d588fc80-5519-11eb-9358-41276b1d03ad.png">
+<img width="900" alt="スクリーンショット 2021-01-12 21 03 03" src="https://user-images.githubusercontent.com/70629162/104312354-d588fc80-5519-11eb-9358-41276b1d03ad.png">  
+<br>  
 
 <h3>☑reply（教員コメント）</h3>
-生徒が書いた学習の記録に対して教員がコメントをすることによって、教員が毎回確認していることを生徒に認知させることができる。
-<img width="900" alt="スクリーンショット 2021-01-12 21 12 08" src="https://user-images.githubusercontent.com/70629162/104313262-20efda80-551b-11eb-9c6c-a907d66edfb4.png">
   
+生徒が書いた学習の記録に対して教員がコメントをすることによって、教員が毎回確認していることを生徒に認知させることができる。
+<img width="900" alt="スクリーンショット 2021-01-12 21 12 08" src="https://user-images.githubusercontent.com/70629162/104313262-20efda80-551b-11eb-9c6c-a907d66edfb4.png">  
+  
+<br>  
 <h3>☑data（学習データ）</h3>
 学習の記録で記入した学習内容と学習時間をもとにチャートが作成され、生徒が自身の努力を可視化することができる。
 <img width="900" alt="スクリーンショット 2021-01-12 21 16 51" src="https://user-images.githubusercontent.com/70629162/104313536-7fb55400-551b-11eb-8af5-c5c2334932db.png">
