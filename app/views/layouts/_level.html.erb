@@ -1,5 +1,5 @@
  <div class="user-level">
-    <%@levelup = current_user.diary_ids.length + current_user.comment_ids.length + current_user.response_ids.length%>
+    <%@levelup = current_user.diary_ids.length + current_user.comment_ids.length*1.2 + current_user.response_ids.length*1.5%>
     <%if @levelup >= 350%>
     <div>レベル30</div>
     <%elsif @levelup >= 335%>
