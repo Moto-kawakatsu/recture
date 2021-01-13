@@ -52,12 +52,12 @@ Password：aaaa111
 生徒は授業内容について質問を投稿することができる。この時、他の生徒にはどの生徒が質問したのか、投稿者名を匿名表示にすることで分かりません。
 ルームに入っている生徒は、他の生徒から出された質問に対して同じ思いを持っている場合には共感ボタンを押すことができる。  
 <br>
-<img width="1200" alt="スクリーンショット 2021-01-12 14 08 45" src="https://user-images.githubusercontent.com/70629162/104272220-01878c00-54e0-11eb-8cae-3449b72f3dbd.png">
+<img width="1100" alt="スクリーンショット 2021-01-12 14 08 45" src="https://user-images.githubusercontent.com/70629162/104272220-01878c00-54e0-11eb-8cae-3449b72f3dbd.png">
 <br>  
 <br>  
 <h3>☑response（回答）</h3>
 他の生徒によって投稿された質問に対する回答をすることができる。この時質問と同じように回答者の名前も匿名表示になる。
-<img width="1200" alt="スクリーンショット 2021-01-12 14 04 47" src="https://user-images.githubusercontent.com/70629162/104271906-51198800-54df-11eb-9ba3-dc65aa810b64.png">  
+<img width="1100" alt="スクリーンショット 2021-01-12 14 04 47" src="https://user-images.githubusercontent.com/70629162/104271906-51198800-54df-11eb-9ba3-dc65aa810b64.png">  
   
   
 <br>  
@@ -67,16 +67,16 @@ Password：aaaa111
 毎日学習後に記録を書くことで、生徒は自分の学習について向き合うことができる。  
   
 そして、教員は各生徒がどのような学習していて、どのような悩みを持っているのか把握できる。
-<img width="1200" alt="スクリーンショット 2021-01-12 21 03 03" src="https://user-images.githubusercontent.com/70629162/104312354-d588fc80-5519-11eb-9358-41276b1d03ad.png">
+<img width="1100" alt="スクリーンショット 2021-01-12 21 03 03" src="https://user-images.githubusercontent.com/70629162/104312354-d588fc80-5519-11eb-9358-41276b1d03ad.png">
 
 <h3>☑reply（教員コメント）</h3>
-生徒が書いた学習の記録に対して教員がコメントをすることによって、生徒に「先生からちゃんと見られているんだ」という意識を持たせることができる。
-<img width="1200" alt="スクリーンショット 2021-01-12 21 12 08" src="https://user-images.githubusercontent.com/70629162/104313262-20efda80-551b-11eb-9c6c-a907d66edfb4.png">
+生徒が書いた学習の記録に対して教員がコメントをすることによって、教員が毎回確認していることを生徒に認知させることができる。
+<img width="1100" alt="スクリーンショット 2021-01-12 21 12 08" src="https://user-images.githubusercontent.com/70629162/104313262-20efda80-551b-11eb-9c6c-a907d66edfb4.png">
   
 <h3>☑data（学習データ）</h3>
 学習の記録で記入した学習内容と学習時間をもとにチャートが作成され、生徒が自身の努力を可視化することができる。
-<img width="1200" alt="スクリーンショット 2021-01-12 21 16 51" src="https://user-images.githubusercontent.com/70629162/104313536-7fb55400-551b-11eb-8af5-c5c2334932db.png">
-<img width="1200" alt="スクリーンショット 2021-01-12 21 28 59" src="https://user-images.githubusercontent.com/70629162/104314735-31a15000-551d-11eb-8425-ee3cbcabfa16.png">  
+<img width="1100" alt="スクリーンショット 2021-01-12 21 16 51" src="https://user-images.githubusercontent.com/70629162/104313536-7fb55400-551b-11eb-8af5-c5c2334932db.png">
+<img width="1100" alt="スクリーンショット 2021-01-12 21 28 59" src="https://user-images.githubusercontent.com/70629162/104314735-31a15000-551d-11eb-8425-ee3cbcabfa16.png">  
 
 
 <br>  
