@@ -13,7 +13,7 @@ URL：https://recture.herokuapp.com/
 pass : 2222 
   
 【動作確認用ログインユーザー】  
-①ユーザータイプ＝教員  
+①ユーザータイプ＝<span style="color:red;">教員</span>
 Email：kawakatu12271@gmail.com  
 Password：aaaa111
 
