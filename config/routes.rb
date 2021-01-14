@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'tips/lists' => 'tips#lists'
   get 'tips/questions' => 'tips#questions'
   get 'tips/hours' => 'tips#hours'
+  get 'tips/levels' => 'tips#levels'
   get 'tips/commentnum' => 'tips#commentnum'
   get 'rooms/students' => 'rooms#students'
   get 'messages/students' => 'messages#students'
