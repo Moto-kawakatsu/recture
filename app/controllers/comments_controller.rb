@@ -10,7 +10,6 @@ class CommentsController < ApplicationController
     @message = Message.find(params[:message_id])
     @comments = @message.comments.order("created_at DESC")
     @comment = Comment.new
-    # @messages = Message.all
     @room = Room.all
   end
 
