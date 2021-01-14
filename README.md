@@ -42,9 +42,9 @@ Password：aaaa111
 
 生徒はURLから検索し、復習のため家でもスライドを閲覧できる。
 <br>  
-<img width="400" alt="スクリーンショット 2021-01-12 12 26 29" src="https://user-images.githubusercontent.com/70629162/104265919-f75e9100-54d1-11eb-9d8c-938e3ca32223.png">
+<img width="390" alt="スクリーンショット 2021-01-12 12 26 29" src="https://user-images.githubusercontent.com/70629162/104265919-f75e9100-54d1-11eb-9d8c-938e3ca32223.png">
 <img width="120" alt="スクリーンショット 2021-01-12 12 25 16" src="https://user-images.githubusercontent.com/70629162/104265566-3c35f800-54d1-11eb-80ad-86573c1dc3a9.png">
-<img width="400" alt="スクリーンショット 2021-01-12 12 16 48" src="https://user-images.githubusercontent.com/70629162/104265024-0e9c7f00-54d0-11eb-925c-72d4af30f67e.png">  
+<img width="390" alt="スクリーンショット 2021-01-12 12 16 48" src="https://user-images.githubusercontent.com/70629162/104265024-0e9c7f00-54d0-11eb-925c-72d4af30f67e.png">  
 <br>  
 <br>  
 <h3>☑comment（質問）</h3>
