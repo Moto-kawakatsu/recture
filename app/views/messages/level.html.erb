@@ -1,1 +1,6 @@
-level test
+    <%level_count = current_user.diary_ids.length + current_user.comment_ids.length*1.2 + current_user.response_ids.length*1.5%>
+    <div>現在のレベル<%=level_count.floor%></div>
+
+    <%if level_count < 10 %>
+    <div>次のレベルまで<%=15 - level_count.to_i%>ポイント</div>
+    <%end%>
