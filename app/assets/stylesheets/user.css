@@ -251,3 +251,8 @@ select {
 .login-day {
   color:rgb(255, 81, 81);
 }
+
+.level-template {
+  color:white;
+  background:rgba(255, 0, 0, 0.484);
+}
