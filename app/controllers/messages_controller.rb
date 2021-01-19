@@ -48,8 +48,8 @@ class MessagesController < ApplicationController
     @ids = current_user.diary_ids
   end
 
-  def level
-    
+  def levelup
+    @users = User.all
   end
 
   private
