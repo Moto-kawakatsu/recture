@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'rooms/students' => 'rooms#students'
   get 'messages/students' => 'messages#students'
   get 'messages/list' => 'messages#list'
-  get 'messages/level' => 'messages#level'
+  get 'messages/levelup' => 'messages#levelup'
   get 'diaries/count_words' => 'diaries#count_words'
   get '/users/sign_out' => 'devise/sessions#destroy'
 
