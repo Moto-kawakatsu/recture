@@ -149,6 +149,10 @@ select {
   color:white;
 }
 
+.user-level2 {
+  color:black;
+}
+
 .lists {
   width:200px;
 
@@ -253,6 +257,24 @@ select {
 }
 
 .level-template {
-  color:white;
-  background:rgba(255, 0, 0, 0.484);
+
+}
+
+.post-sums {
+  margin-top:20px;
+}
+
+.post-sums li{
+  padding:10px;
+  font-size:17px;
+}
+
+.post-sums span {
+  color:red;
+  font-weight:bold;
+  margin: 0 5px;
+}
+
+.current-info {
+  display:flex;
 }
