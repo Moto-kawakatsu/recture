@@ -277,4 +277,9 @@ select {
 
 .current-info {
   display:flex;
+  padding:10px;
+}
+
+.good2 {
+  font-size:30px;
 }
