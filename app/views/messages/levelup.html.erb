@@ -1,0 +1,35 @@
+   <%level_count = current_user.diary_ids.length + current_user.comment_ids.length*1.2 + current_user.response_ids.length*1.5%>
+   
+   <div class="current-info">
+      <div><%=current_user.name%>さん(<%=level_count.round%>ポイント)</div>
+      <div><%=render "layouts/level2" %></div>
+      <%if level_count < 15 %>
+      <div>次のレベルまで<%= 15 - level_count.to_i%>ポイント</div>
+      <%end%>
+   </div>
+
+  <ul class="post-sums">
+    <%if current_user.diary_ids.count <= level_count/3 %>
+      <li>学習の記録<span><%= current_user.diary_ids.count%></span>個　少ない</li>
+    <%elsif current_user.diary_ids.count > level_count/3%>
+      <li>学習の記録<span><%= current_user.diary_ids.count%></span>個　<span class="good2">👍</span></li>
+    <%else%>
+      <li>学習の記録<span><%= current_user.diary_ids.count%></span>個</li>
+    <%end%>
+
+    <%if current_user.comment_ids.count <= level_count/3 %>
+      <li>学習の記録<span><%= current_user.comment_ids.count%></span>個　少ない</li>
+    <%elsif current_user.comment_ids.count > level_count/3%>
+      <li>学習の記録<span><%= current_user.diary_ids.count%></span>個　<span class="good2">👍</span></li>
+    <%else%>
+      <li>学習の記録<span><%= current_user.comment_ids.count%></span>個</li>
+    <%end%>
+
+    <%if current_user.response_ids.count <= level_count/3 %>
+      <li>学習の記録<span><%= current_user.response_ids.count%></span>個　少ない</li>
+    <%elsif current_user.response_ids.count > level_count/3%>
+      <li>学習の記録<span><%= current_user.diary_ids.count%></span>個　<span class="good2">👍</span></li>
+    <%else%>
+      <li>学習の記録<span><%= current_user.response_ids.count%></span>個</li>
+    <%end%>
+  <ul>
