@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :agrees, dependent: :destroy
   has_many :diaries, dependent: :destroy
   has_many :replies, dependent: :destroy
+  has_many :exams, dependent: :destroy
   
 with_options presence: true do
   validates :email
