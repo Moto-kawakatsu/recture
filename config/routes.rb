@@ -47,4 +47,7 @@ Rails.application.routes.draw do
   resources :diaries do
     resources :replies, only: [:new, :create, :destroy]
   end
+
+  resources :users do
+    resources :exams, only: [:new, :create, :destroy, :show]
 end
