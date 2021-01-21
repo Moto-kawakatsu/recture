@@ -60,9 +60,10 @@ ActiveRecord::Schema.define(version: 2021_01_20_110634) do
 
   create_table "exams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
-    t.string "exam_type"
-    t.string "subject"
     t.string "term"
+    t.string "subject"
+    t.integer "score"
+    t.string "considering"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
