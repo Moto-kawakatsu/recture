@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2021_01_20_110634) do
   create_table "exams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.string "term"
-    t.string "subject"
+    t.integer "subject"
     t.integer "score"
     t.string "considering"
     t.integer "grade_num"
