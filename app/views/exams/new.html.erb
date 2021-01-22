@@ -1,5 +1,4 @@
 <%= form_with model: [@user,@exam],class: 'form4', local: true do |f| %>
-<%= render 'layouts/error_messages', model: f.object %>
   <div class="input-info">
     <div class="input-content"><%= f.select :term, [["term",nil],["１学期ー中間", "１学期中間"],["１学期ー期末", "１学期期末"], ["２学期ー中間", "２学期ー中間"], ["２学期ー期末", "２学期ー期末"],["学年末", "学年末"]]%></div>
     <div class="input-content"><%= f.select :subject, [["subject",nil],["国語", "国語"],["数学", "数学"],["理科", "理科"],["社会", "社会"],["英語", "英語"]] %></div>
@@ -7,6 +6,7 @@
     <div class="input-content"><%= f.text_area :considering,class: 'input-text', placeholder: 'text' %></div>
     <div><%= f.submit '送信', class: 'input-submit' %></div>
   </div>
+  <%= render 'layouts/error_messages3', model: f.object %>
 <% end %>
 
 
