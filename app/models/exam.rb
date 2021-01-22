@@ -6,5 +6,6 @@ class Exam < ApplicationRecord
     validates :subject
     validates :score
     validates :considering
+    validates :grade_num
     end
 end

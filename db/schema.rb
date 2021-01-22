@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2021_01_20_110634) do
     t.string "subject"
     t.integer "score"
     t.string "considering"
+    t.integer "grade_num"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
