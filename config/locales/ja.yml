@@ -21,6 +21,11 @@ ja:
         text: コメント
       response:
         response_text: 回答
+      exam:
+        term: 種類
+        subject: 教科 
+        score: 点数
+        considering: 考察
   date:
     abbr_day_names:
     - 日
