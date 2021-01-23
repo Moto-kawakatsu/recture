@@ -17,11 +17,11 @@ class ExamsController < ApplicationController
               redirect_to new_user_exam_path(@user)
             else
               @user = User.find(params[:user_id])
-              @exams_first_mid = Exam.all.where(term:"１学期中間") 
-              @exams_first_end = Exam.all.where(term:"１学期期末")
-              @exams_second_mid = Exam.all.where(term:"２学期中間")
-              @exams_second_end = Exam.all.where(term:"２学期期末")
-              @exams_third = Exam.all.where(term:"学年末")
+              @exams_first_mid = Exam.all.where(term:"１学期中間").order("subject ASC")
+              @exams_first_end = Exam.all.where(term:"１学期期末").order("subject ASC")
+              @exams_second_mid = Exam.all.where(term:"２学期中間").order("subject ASC")
+              @exams_second_end = Exam.all.where(term:"２学期期末").order("subject ASC")
+              @exams_third = Exam.all.where(term:"学年末").order("subject ASC")
               render :new
             end
         end
