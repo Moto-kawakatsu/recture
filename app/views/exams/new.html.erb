@@ -9,9 +9,15 @@
   </div>
   <%= render 'layouts/error_messages3', model: f.object %>
 <% end %>
+<%if current_user.grade == 1%>
+<%=render 'first_grade_exams/1first_mid'%>
+<%=render 'first_grade_exams/1first_end'%>
+<%=render 'first_grade_exams/1second_mid'%>
+<%=render 'first_grade_exams/1second_end'%>
+<%=render 'first_grade_exams/1third' %>
 
-<%=render '1first_mid'%>
-<%=render '1first_end'%>
-<%=render '1second_mid'%>
-<%=render '1second_end'%>
-<%=render '1third' %>
+<%elsif current_user.grade == 2%>
+２年生
+<%elsif current_user.grade == 3%>
+３年生
+<%end%>
