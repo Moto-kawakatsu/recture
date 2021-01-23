@@ -22,6 +22,7 @@ ja:
       response:
         response_text: 回答
       exam:
+        grade_num: 学年
         term: 種類
         subject: 教科 
         score: 点数
