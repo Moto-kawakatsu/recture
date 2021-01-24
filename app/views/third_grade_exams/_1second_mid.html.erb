@@ -1,0 +1,59 @@
+<%if @exams_second_mid.present? || @exams_second_end.present?%>
+<div class="term-number2">２学期</div>
+
+<div class="term">
+<%if @exams_second_mid.present?%>
+
+  <div class="exam-wrapper">
+    <div class="term-name">中間考査</div>
+
+    <div class="subjects">
+    <% @exams_second_mid.each do |exam_second_mid| %>
+        <%if exam_second_mid.user == current_user && current_user.grade == 1 %>
+          <div class="exam-content">
+          <%if exam_second_mid.subject ==1%>
+            <div class="subject">国語</div>
+          <%elsif exam_second_mid.subject ==2%>
+            <div class="subject">数学</div>
+          <%elsif exam_second_mid.subject ==3%>
+            <div class="subject">理科</div>
+          <%elsif exam_second_mid.subject ==4%>
+            <div class="subject">社会</div>
+          <%elsif exam_second_mid.subject ==5%>
+            <div class="subject">英語</div>
+          <%end%>
+            <div class="score">
+            <%if exam_second_mid.subject ==1%>
+              <%=exam_second_mid.score%>
+                <p>
+                  <%=Exam.where(term:"２学期中間").where(subject:1).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:1).where(grade_num: 2).length %>
+                </p>
+            <%elsif exam_second_mid.subject ==2%>
+              <%=exam_second_mid.score%>
+                <p>
+                  <%=Exam.where(term:"２学期中間").where(subject:2).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:2).where(grade_num: 2).length %>
+                </p>
+            <%elsif exam_second_mid.subject ==3%>
+              <%=exam_second_mid.score%>
+                <p>
+                  <%=Exam.where(term:"２学期中間").where(subject:3).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:3).where(grade_num: 2).length %>
+                </p>
+            <%elsif exam_second_mid.subject ==4%>
+              <%=exam_second_mid.score%>
+                <p>
+                  <%=Exam.where(term:"２学期中間").where(subject:4).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:4).where(grade_num: 2).length %>
+                </p>
+            <%elsif exam_second_mid.subject ==5%>
+              <%=exam_second_mid.score%>
+                <p>
+                  <%=Exam.where(term:"２学期中間").where(subject:5).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:5).where(grade_num: 2).length %>
+                </p>
+            <%end%>
+            </div>
+          </div>
+        <%end%>
+    <%end%>
+    </div>
+  </div>
+<%end%>
+<%end%>
