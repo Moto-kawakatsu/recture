@@ -1,1 +1,19 @@
-test
+<% @exams_first_mid.each do |exam_first_mid| %>
+<%if exam_first_mid.user == current_user%>
+
+<div class="exam-content2">
+    <div><%=exam_first_mid.considering%></div>
+    <%if exam_first_mid.subject == 1%>
+    <div>国語</div>
+    <%elsif exam_first_mid.subject == 2%>
+    <div>数学</div>
+    <%elsif exam_first_mid.subject == 3%>
+    <div>理科</div>
+    <%elsif exam_first_mid.subject == 4%>
+    <div>社会</div>
+    <%elsif exam_first_mid.subject == 5%>
+    <div>英語</div>
+    <%end%>
+</div>
+<%end%>
+<%end%>
