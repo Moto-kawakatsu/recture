@@ -226,3 +226,24 @@
     justify-content:center;
     background-color: #DDDDDD;
 }
+
+
+/* show.html.erb */
+
+.exam-content2 {
+    display:flex;
+    padding:10px;
+}
+
+.exam-considering {
+    margin-left:10px;
+    margin-bottom:10px;
+    padding:10px;
+    border:1px solid black;
+    width:800px;
+}
+
+.exam-content2 p {
+    width:10px;
+    margin-right:10px;
+}
