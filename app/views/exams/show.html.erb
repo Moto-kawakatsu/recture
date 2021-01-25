@@ -2,18 +2,19 @@
 <%if exam_first_mid.user == current_user%>
 
 <div class="exam-content2">
-    <div><%=exam_first_mid.considering%></div>
-    <%if exam_first_mid.subject == 1%>
-    <div>国語</div>
+
+    <%if exam_first_mid.subject == 1 %>
+    <p>国語</p>
     <%elsif exam_first_mid.subject == 2%>
-    <div>数学</div>
+    <p>数学</p>
     <%elsif exam_first_mid.subject == 3%>
-    <div>理科</div>
+    <p>理科</p>
     <%elsif exam_first_mid.subject == 4%>
-    <div>社会</div>
+    <p>社会</p>
     <%elsif exam_first_mid.subject == 5%>
-    <div>英語</div>
+    <p>英語</p>
     <%end%>
+    <div class="exam-considering"><%=exam_first_mid.considering%></div>
 </div>
 <%end%>
 <%end%>
