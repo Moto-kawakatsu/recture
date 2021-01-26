@@ -1,3 +1,4 @@
+<div>１学期中間</div>
 <% @exams_first_mid.each do |exam_first_mid| %>
 <%if exam_first_mid.user == current_user%>
 
@@ -20,6 +21,7 @@
 <%end%>
 
 
+<div>１学期期末</div>
 <% @exams_first_end.each do |exam_first_end| %>
 <%if exam_first_end.user == current_user%>
 
@@ -42,6 +44,7 @@
 <%end%>
 
 
+<div>２学期中間</div>
 <% @exams_second_mid.each do |exam_second_mid| %>
 <%if exam_second_mid.user == current_user%>
 
@@ -64,6 +67,7 @@
 <%end%>
 
 
+<div>２学期期末</div>
 <% @exams_second_end.each do |exam_second_end| %>
 <%if exam_second_end.user == current_user%>
 
@@ -86,6 +90,7 @@
 <%end%>
 
 
+<div>学年末</div>
 <% @exams_third.each do |exam_third| %>
 <%if exam_third.user == current_user%>
 
