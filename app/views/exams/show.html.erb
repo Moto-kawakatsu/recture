@@ -18,3 +18,91 @@
 </div>
 <%end%>
 <%end%>
+
+
+<% @exams_first_end.each do |exam_first_end| %>
+<%if exam_first_end.user == current_user%>
+
+<div class="exam-content2">
+
+    <%if exam_first_end.subject == 1 %>
+    <p>国語</p>
+    <%elsif exam_first_end.subject == 2%>
+    <p>数学</p>
+    <%elsif exam_first_end.subject == 3%>
+    <p>理科</p>
+    <%elsif exam_first_end.subject == 4%>
+    <p>社会</p>
+    <%elsif exam_first_end.subject == 5%>
+    <p>英語</p>
+    <%end%>
+    <div class="exam-considering"><%=exam_first_end.considering%></div>
+</div>
+<%end%>
+<%end%>
+
+
+<% @exams_second_mid.each do |exam_second_mid| %>
+<%if exam_second_mid.user == current_user%>
+
+<div class="exam-content2">
+
+    <%if exam_second_mid.subject == 1 %>
+    <p>国語</p>
+    <%elsif exam_second_mid.subject == 2%>
+    <p>数学</p>
+    <%elsif exam_second_mid.subject == 3%>
+    <p>理科</p>
+    <%elsif exam_second_mid.subject == 4%>
+    <p>社会</p>
+    <%elsif exam_second_mid.subject == 5%>
+    <p>英語</p>
+    <%end%>
+    <div class="exam-considering"><%=exam_second_mid.considering%></div>
+</div>
+<%end%>
+<%end%>
+
+
+<% @exams_second_end.each do |exam_second_end| %>
+<%if exam_second_end.user == current_user%>
+
+<div class="exam-content2">
+
+    <%if exam_second_end.subject == 1 %>
+    <p>国語</p>
+    <%elsif exam_second_end.subject == 2%>
+    <p>数学</p>
+    <%elsif exam_second_end.subject == 3%>
+    <p>理科</p>
+    <%elsif exam_second_end.subject == 4%>
+    <p>社会</p>
+    <%elsif exam_second_end.subject == 5%>
+    <p>英語</p>
+    <%end%>
+    <div class="exam-considering"><%=exam_second_end.considering%></div>
+</div>
+<%end%>
+<%end%>
+
+
+<% @exams_third.each do |exam_third| %>
+<%if exam_third.user == current_user%>
+
+<div class="exam-content2">
+
+    <%if exam_third.subject == 1 %>
+    <p>国語</p>
+    <%elsif exam_third.subject == 2%>
+    <p>数学</p>
+    <%elsif exam_third.subject == 3%>
+    <p>理科</p>
+    <%elsif exam_third.subject == 4%>
+    <p>社会</p>
+    <%elsif exam_third.subject == 5%>
+    <p>英語</p>
+    <%end%>
+    <div class="exam-considering"><%=exam_third.considering%></div>
+</div>
+<%end%>
+<%end%>
