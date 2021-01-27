@@ -65,9 +65,6 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem "chartkick"
 gem 'groupdate'
-gem 'jquery-rails', '4.3.3'
-gem 'fullcalendar-rails'
-gem 'momentjs-rails'
 
 group :production do
   gem 'rails_12factor'
