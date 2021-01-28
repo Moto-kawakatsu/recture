@@ -10,7 +10,7 @@
 
     <div class="subjects">
     <% @exams_third.each do |exam_third| %>
-        <%if exam_third.user == current_user && current_user.grade == 1 %>
+        <%if exam_third.user == current_user && current_user.grade == 1 && current_user.grade == exam_third.grade_num %>
           <div class="exam-content">
           <%if exam_third.subject ==1%>
             <div class="subject">国語</div>
