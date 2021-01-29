@@ -6,6 +6,6 @@ class Exam < ApplicationRecord
     validates :term
     validates :subject
     validates :score
-    validates :considering
+    validates :considering, length: {maximum: 50 }
     end
 end
