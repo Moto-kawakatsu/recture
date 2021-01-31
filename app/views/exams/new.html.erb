@@ -19,8 +19,8 @@
     <div class="input-content"><%= f.select :term, [["term",nil],["１学期ー中間", "１学期中間"],["１学期ー期末", "１学期期末"], ["２学期ー中間", "２学期中間"], ["２学期ー期末", "２学期期末"],["学年末", "学年末"]]%></div>
     <div class="input-content"><%= f.select :subject, [["subject",nil],["国語", 1],["数学", 2],["理科", 3],["社会", 4],["英語", 5]] %></div>
     <div><%= f.text_field :score,class: 'input-score',placeholder:" score"%></div>
-    <div class="input-content"><%= f.text_field :considering,class: 'input-text', placeholder: 'text' %></div>
-    <div><%= f.submit '送信', class: 'input-submit' %></div>
+    <div class="input-content"><%= f.text_field :considering,class: 'input-text', placeholder: 'text', id:"input" %><span id="inputCounter" class="counter">0</span></div>
+    <%= f.submit '送信', class: 'input-submit' %>
   </div>
   <%= render 'layouts/error_messages3', model: f.object %>
 <% end %>
@@ -44,5 +44,18 @@
 <%=render 'third_grade_exams/1second_mid'%>
 <%=render 'third_grade_exams/1second_end'%>
 <%=render 'third_grade_exams/1third' %>
-
 <%end%>
+
+  <script>
+    var input = document.getElementById("input");
+    var span = document.getElementById("inputCounter");
+    input.addEventListener("keyup", function(){
+      if (input.value.length > 40) {
+        span.textContent = "投稿できません"
+        span.style.color = 'red';
+      }else{
+        span.textContent = input.value.length;
+        span.style.color = 'black';
+      }   
+    });
+  </script>
