@@ -129,7 +129,8 @@
 
   .error-message3 {
       margin:0 10px;
-      margin-top:3px;
+      margin-top:15px;
+      font-size:11px;
   }
 
   .error-list {
@@ -252,4 +253,9 @@
     margin-top:20px;
     width:800px;
     background:rgb(201, 201, 201);
+}
+
+.counter {
+  margin-left:5px;
+  font-size:11px;
 }
