@@ -53,6 +53,7 @@
     text-align:center;
     border:1px solid black;
     padding-top:2px;
+
 }
 
 .exam-wrapper {
@@ -258,4 +259,14 @@
 .counter {
   margin-left:5px;
   font-size:11px;
+}
+
+.fa-backspace {
+    font-size:10px;
+    margin-right:1px;
+}
+
+.move-from-left {
+    margin-left:25px;
+    font-size:6px;
 }
