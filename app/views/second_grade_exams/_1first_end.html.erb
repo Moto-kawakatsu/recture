@@ -48,7 +48,10 @@
                   <%=Exam.where(term:"１学期期末").where(subject:5).where(grade_num: 2).pluck(:score).sum / Exam.where(term:"１学期期末").where(subject:5).where(grade_num: 2).length %>
                 </p>
             <%end%>
-            </div>
+            </div>      
+              <%= button_to user_exam_path(current_user.id, exam_first_end.id), method: :delete, class: "delete-button" do %>
+              <i class="fas fa-trash move-from-left"></i>
+              <%end%>
           </div>
         <%end%>
     <%end%>
