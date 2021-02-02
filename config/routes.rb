@@ -52,5 +52,5 @@ Rails.application.routes.draw do
     resources :exams, only: [:new, :create, :destroy, :show]
   end
 
-  resources :tasks, only: [:index, :create, :destroy]
+  resources :tasks
 end
