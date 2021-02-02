@@ -26,6 +26,7 @@ Rails.application.routes.draw do
 
   resources :rooms do
     resources :messages, only: [:index, :new, :create, :destroy]
+    resources :tasks, only: [:index, :new, :create, :destroy, :edit, :update]
   end
 
   resources :messages, only: [:index, :new, :create, :destroy] do
@@ -51,6 +52,4 @@ Rails.application.routes.draw do
   resources :users do
     resources :exams, only: [:new, :create, :destroy, :show]
   end
-
-  resources :tasks
 end
