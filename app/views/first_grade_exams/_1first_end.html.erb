@@ -23,27 +23,27 @@
           <%end%>
             <div class="score">
             <%if exam_first_end.subject ==1%>
-              <%=exam_first_end.score%>
+            <%=button_to exam_first_end.score,user_exam_path(current_user.id, exam_first_end.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"１学期期末").where(subject:1).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"１学期期末").where(subject:1).length %>
                 </p>
             <%elsif exam_first_end.subject ==2%>
-              <%=exam_first_end.score%>
+            <%=button_to exam_first_end.score,user_exam_path(current_user.id, exam_first_end.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"１学期期末").where(subject:2).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"１学期期末").where(subject:2).length %>
                 </p>
             <%elsif exam_first_end.subject ==3%>
-              <%=exam_first_end.score%>
+            <%=button_to exam_first_end.score,user_exam_path(current_user.id, exam_first_end.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"１学期期末").where(subject:3).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"１学期期末").where(subject:3).length %>
                 </p>
             <%elsif exam_first_end.subject ==4%>
-              <%=exam_first_end.score%>
+            <%=button_to exam_first_end.score,user_exam_path(current_user.id, exam_first_end.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"１学期期末").where(subject:4).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"１学期期末").where(subject:4).length %>
                 </p>
             <%elsif exam_first_end.subject ==5%>
-              <%=exam_first_end.score%>
+            <%=button_to exam_first_end.score,user_exam_path(current_user.id, exam_first_end.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"１学期期末").where(subject:5).where(grade_num: 1).pluck(:score).sum / Exam.where(term:"１学期期末").where(subject:5).length %>
                 </p>

@@ -270,3 +270,12 @@
     margin-left:25px;
     font-size:6px;
 }
+
+.delete {
+    border:none;
+    background:none;
+}
+
+.delete:hover {
+    color:rgb(0, 64, 255);
+}

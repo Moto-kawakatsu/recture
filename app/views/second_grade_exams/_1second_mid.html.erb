@@ -24,27 +24,27 @@
           <%end%>
             <div class="score">
             <%if exam_second_mid.subject ==1%>
-              <%=exam_second_mid.score%>
+            <%=button_to exam_second_mid.score,user_exam_path(current_user.id, exam_second_mid.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"２学期中間").where(subject:1).where(grade_num: 2).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:1).where(grade_num: 2).length %>
                 </p>
             <%elsif exam_second_mid.subject ==2%>
-              <%=exam_second_mid.score%>
+            <%=button_to exam_second_mid.score,user_exam_path(current_user.id, exam_second_mid.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"２学期中間").where(subject:2).where(grade_num: 2).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:2).where(grade_num: 2).length %>
                 </p>
             <%elsif exam_second_mid.subject ==3%>
-              <%=exam_second_mid.score%>
+            <%=button_to exam_second_mid.score,user_exam_path(current_user.id, exam_second_mid.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"２学期中間").where(subject:3).where(grade_num: 2).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:3).where(grade_num: 2).length %>
                 </p>
             <%elsif exam_second_mid.subject ==4%>
-              <%=exam_second_mid.score%>
+            <%=button_to exam_second_mid.score,user_exam_path(current_user.id, exam_second_mid.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"２学期中間").where(subject:4).where(grade_num: 2).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:4).where(grade_num: 2).length %>
                 </p>
             <%elsif exam_second_mid.subject ==5%>
-              <%=exam_second_mid.score%>
+            <%=button_to exam_second_mid.score,user_exam_path(current_user.id, exam_second_mid.id), method: :delete, class:"delete" %>
                 <p>
                   <%=Exam.where(term:"２学期中間").where(subject:5).where(grade_num: 2).pluck(:score).sum / Exam.where(term:"２学期中間").where(subject:5).where(grade_num: 2).length %>
                 </p>
