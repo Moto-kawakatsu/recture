@@ -1,7 +1,11 @@
 <h1>タスク編集</h1>
 <%= form_with model: [@room, @task],url:room_task_path(@room, @task), local: true do |f| %>
-  <div><%= f.label :title %></div>
+  <div><%= f.label :タイトル %></div>
   <div><%= f.text_field :title %></div>
-  <div><%= f.submit %></div>
+  <div><%= f.label :内容 %></div>
+  <div><%= f.text_field :task_content %></div>
+  <div><%= f.label :締め切り %></div>
+  <div><%= f.date_field :deadline %></div>
+  <div><%= f.submit value="更新" %></div>
 <% end %>
-<%= link_to '戻る', room_tasks_path(@room) %>
+<%= link_to '戻る',new_room_task_path(@room)%>
