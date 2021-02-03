@@ -122,6 +122,8 @@ ActiveRecord::Schema.define(version: 2021_02_02_073641) do
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "room_id"
     t.string "title"
+    t.string "content"
+    t.integer "deadline"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
