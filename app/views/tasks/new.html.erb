@@ -1,17 +1,68 @@
-<h1>新規タスク</h1>
+<div class="top-announce">
+  <div class="announce">連絡事項</div>
+  <div class="announce back-from-task"><%=link_to "back", room_messages_path(@room) %></div>
+</div>
+<div class="main-task-wrapper">
 <%= form_with model: [@room,@task], url:room_tasks_path(@room), local: true do |f| %>
-  <div><%= f.label :title %></div>
-  <div><%= f.text_field :title %></div>
-  <div><%= f.submit %></div>
-<% end %>
-<%# <%= link_to '戻る', room_tasks_path(@room) %>
+<div class="task-form1">
+  <div>
+    <div><%= f.label :タイトル %></div>
+    <div class="title-input"><%= f.text_area :title %></div>
+  </div>
 
-<div class="task-name">タスク名</div>
+  <div>
+    <div ><%= f.label :内容 %></div>
+    <div class="content-input"><%= f.text_area :task_content %></div>
+  </div>
+</div>
+
+<div class="task-form2">
+  <div>
+    <div class="deadline-input"><%= f.label :締め切り（日時） %></div>
+    <div class="deadline-input"><%= f.date_field :deadline %></div>
+  </div>
+
+  <div>
+    <div class="deadline-input"><%= f.label :締め切り（時間） %></div>
+    <div class="deadline-input"><%= f.time_field :deadline %></div>
+  </div>
+  <div class="task-submit"><%= f.submit value="作成" %></div>
+</div>
+<% end %>
+</div>
+
+<div class="announce-wrapper">
+<div class="task-name"></div>
+  <div class="announce">連絡事項</div>
+<div class="remainder">
+  <div class="content-name">タイトル</div>
+  <div class="content-name2">期限</div>
+  <div class="content-name3">編集・削除</div>
+</div>
+
     <% @tasks.each do |task| %>
+
       <div class="remainder">
-        <div><%= task.title %></div>
-        <div><%= link_to '編集', edit_room_task_path(@room, task) %></div>
-        <div><%= link_to '削除', room_task_path(@room, task), method: :delete %></div>
+        <div class="task-wrapper">
+          <div class="task-title"><%= link_to task.title, room_task_path(@room.id, task.id) %></div>
+        </div>
+        <%if task.present?%>
+        <div class="task-wrapper2">
+         <% youbi = %w[日 月 火 水 木 金 土 日] %>
+          <%= task.deadline.strftime('%m月%d日%H時%M分')%>
+          (<%= youbi[task.deadline.wday]%>)
+          <%end%>
+        </div>
+        
+        <div class="task-wrapper3">
+          <%= link_to edit_room_task_path(@room, task) do %>
+          <i class="fas fa-edit"></i>
+          <%end%>
+          <%= link_to room_task_path(@room, task), method: :delete do%>
+          <i class="far fa-trash-alt"></i>
+          <%end%>
+        </div>
+
       </div>
     <% end %>
-<%# <%= link_to '追加', new_room_task_path(@room) %>
+    </div>
