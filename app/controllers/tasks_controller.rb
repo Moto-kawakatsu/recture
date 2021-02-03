@@ -6,6 +6,7 @@ class TasksController < ApplicationController
 
     def new
         @room = Room.find(params[:room_id])
+        @tasks = @room.tasks
         @task = Task.new
     end
 
@@ -13,9 +14,11 @@ class TasksController < ApplicationController
         @task = Task.new(task_params)
         @room = Room.find(params[:room_id])
         if @task.save
-            redirect_to room_tasks_path(@room)
+            redirect_to new_room_task_path(@room)
         else
-            redirect_to room_tasks_path(@room)
+            @room = Room.find(params[:room_id])
+            @tasks = @room.tasks
+            render :new
         end
     end
 
@@ -23,18 +26,13 @@ class TasksController < ApplicationController
     def edit
         @room = Room.find(params[:room_id])
         @task = Task.find(params[:id])
-        # if @task.edit(task_params)
-        #     redirect_to room_tasks_path(@room)
-        # else
-        #     render :new
-        # end
     end
     
     def update
         @room = Room.find(params[:room_id])
         @task = Task.find(params[:id])
         if @task.update(task_params)
-            redirect_to room_tasks_path(@room)
+            redirect_to new_room_task_path(@room)
         else
             render :new
         end
@@ -44,7 +42,7 @@ class TasksController < ApplicationController
         @task = Task.find(params[:id])
         @room = Room.find(params[:room_id])
         if @task.destroy
-          redirect_to room_tasks_path(@room)
+          redirect_to new_room_task_path(@room)
         else
             render :new
         end
