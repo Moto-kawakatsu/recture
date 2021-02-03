@@ -3,8 +3,8 @@ class CreateTasks < ActiveRecord::Migration[6.0]
     create_table :tasks do |t|
       t.integer :room_id, foreign_key: true
       t.string :title
-      t.string :content
-      t.integer :deadline
+      t.string :task_content
+      t.datetime :deadline
       t.timestamps
     end
   end
