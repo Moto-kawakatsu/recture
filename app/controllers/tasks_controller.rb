@@ -22,7 +22,6 @@ class TasksController < ApplicationController
         end
     end
 
-
     def edit
         @room = Room.find(params[:room_id])
         @task = Task.find(params[:id])
@@ -48,15 +47,16 @@ class TasksController < ApplicationController
         end
     end
 
+    def show
+        @task = Task.new(task_params)
+        @room = Room.find(params[:room_id])
+        @tasks = @room.tasks
+    end
+
     private
     
     def task_params
         @room = Room.find(params[:room_id])
-        params.require(:task).permit(:title, :room_id).merge(room_id: @room.id)
+        params.require(:task).permit(:title, :task_content, :deadline, :room_id).merge(room_id: @room.id)
     end
-        
-    def exam_params
-        params.require(:exam).permit(:term, :subject, :score, :considering, :grade_num, :user_id).merge(user_id: current_user.id)
-    end
-
   end
