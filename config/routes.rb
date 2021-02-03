@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   resources :rooms do
     resources :messages, only: [:index, :new, :create, :destroy]
-    resources :tasks, only: [:index, :new, :create, :destroy, :edit, :update]
+    resources :tasks
   end
 
   resources :messages, only: [:index, :new, :create, :destroy] do
