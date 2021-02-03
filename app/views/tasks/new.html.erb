@@ -4,4 +4,14 @@
   <div><%= f.text_field :title %></div>
   <div><%= f.submit %></div>
 <% end %>
-<%= link_to '戻る', room_tasks_path(@room) %>
+<%# <%= link_to '戻る', room_tasks_path(@room) %>
+
+<div class="task-name">タスク名</div>
+    <% @tasks.each do |task| %>
+      <div class="remainder">
+        <div><%= task.title %></div>
+        <div><%= link_to '編集', edit_room_task_path(@room, task) %></div>
+        <div><%= link_to '削除', room_task_path(@room, task), method: :delete %></div>
+      </div>
+    <% end %>
+<%# <%= link_to '追加', new_room_task_path(@room) %>
