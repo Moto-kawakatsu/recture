@@ -1,6 +1,4 @@
 <div class="top-announce">
-  <div class="announce">連絡事項</div>
-  <div class="announce back-from-task"><%=link_to "back", room_messages_path(@room) %></div>
 </div>
 <div class="main-task-wrapper">
 <%= form_with model: [@room,@task], url:room_tasks_path(@room), local: true do |f| %>
@@ -28,12 +26,14 @@
   </div>
   <div class="task-submit"><%= f.submit value="作成" %></div>
 </div>
+<%= render 'layouts/error_messages4', model: f.object %>
 <% end %>
 </div>
 
+<%=link_to "back", room_messages_path(@room), class:"back-from-task" %>
 <div class="announce-wrapper">
 <div class="task-name"></div>
-  <div class="announce">連絡事項</div>
+  <div class="announce"></div>
 <div class="remainder">
   <div class="content-name">タイトル</div>
   <div class="content-name2">期限</div>
