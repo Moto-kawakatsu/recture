@@ -20,7 +20,7 @@
 }
 
 .task-submit input {
-    padding:3px 7px;
+    padding:8px 10px;
     border:none;
     border-radius:3px;
 }
@@ -33,6 +33,7 @@
 .fa-trash-alt {
     margin-left:10px;
     padding:3px;
+    font-size:20px;
 }
 
 .fa-trash-alt:hover {
@@ -42,6 +43,7 @@
 .fa-edit {
     margin-left:10px;
     padding:3px;
+    font-size:20px;
 }
 
 .fa-edit:hover {
@@ -52,7 +54,7 @@
     border:1px solid black;
     border-right:none;
     text-align:center;
-    width:601px;
+    width:311px;
     height:30px;
     background:rgb(255, 190, 190);
 }
@@ -61,48 +63,90 @@
     border-left:1px solid black;
     border-bottom:1px solid black;
     padding:15px 0;
+    padding-right:10px;
+    display: flex;
+    align-items: center;
 }
+
+.task-wrapper1 {
+    border-left:1px solid black;
+    border-bottom:1px solid black;
+    padding:15px 0;
+    padding-right:10px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.content-name1 {
+    border:1px solid black;
+    border-right:none;
+    text-align:center;
+    width:731px;
+    height:30px;
+    background:rgb(255, 190, 190);
+}
+
 
 .content-name2 {
     border:1px solid black;
     text-align:center;
-    width:320px;
+    width:220px;
     height:30px;
     border-right:none;
     background:rgb(255, 190, 190);
 }
 
 .task-wrapper2 {
-    width:321px;
+    width:221px;
     border-left:1px solid black;
     border-right:1px solid black;
     border-bottom:1px solid black;
-    padding:15px 0;
-    text-align:center;
     letter-spacing:3px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color:red;
 }
 
 .task-wrapper3 {
     margin-right:20px;
     border-right:1px solid black;
     border-bottom:1px solid black;
-    width:150px;
+    width:100px;
     text-align:center;
     padding:15px 0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
 
 .content-name3 {
     border:1px solid black;
     text-align:center;
-    width:150px;
+    width:100px;
     height:30px;
     background:rgb(255, 190, 190);
 }
 
 .task-title {
-    width:600px;
+    width:300px;
     padding-left:10px;
     letter-spacing:1px;
+}
+
+.task-title input {
+    word-wrap:break-all;
+}
+
+.task-content {
+    width:720px;
+    padding-left:10px;
+    letter-spacing:1px;
+}
+
+.task-content input {
+    word-wrap:break-all;
 }
 
 .task-form1, .task-form2 {
@@ -128,6 +172,7 @@
 .deadline-input input {
     width:120px;
     border:none;
+    height:40px;
 }
 
 .deadline-input {
@@ -157,15 +202,19 @@
     padding-top:30px;
     margin-right:500px;
     padding-left:10px;
+    position:relative;
 }
 
 .back-from-task {
-        width:80px;
-        height:40px;
-        border: 1px solid rgb(0, 98, 255);
-        font-size:25px;
-        margin-left:876px;
-        padding:5px;
+    width:80px;
+    border: 1px solid rgb(0, 98, 255);
+    font-size:25px;
+    padding:5px;
+    padding-left:12px;
+    position:absolute;
+    top:370px;
+    right:0;
+    border-radius:10px;
 }
 
 .back-from-task:hover {
