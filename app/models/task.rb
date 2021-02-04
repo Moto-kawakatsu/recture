@@ -4,5 +4,6 @@ class Task < ApplicationRecord
     validates :title
     validates :task_content
     validates :deadline
+    validates :deadline_time
     end
 end
