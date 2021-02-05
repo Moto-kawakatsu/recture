@@ -48,15 +48,15 @@ class TasksController < ApplicationController
     end
 
     def show
-        @task = Task.new(task_params)
         @room = Room.find(params[:room_id])
-        @tasks = @room.tasks
+        @task = Task.find(params[:id])
+        
     end
 
     private
     
     def task_params
         @room = Room.find(params[:room_id])
-        params.require(:task).permit(:title, :task_content, :deadline, :deadline_time, :room_id).merge(room_id: @room.id)
+        params.require(:task).permit(:title, :task_content, :deadline, :room_id).merge(room_id: @room.id)
     end
   end
