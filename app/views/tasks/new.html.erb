@@ -1,41 +1,42 @@
+<%if current_user.genre == '教員'%>
 <div class="top-announce">
 </div>
 <div class="main-task-wrapper">
 <%= form_with model: [@room,@task], url:room_tasks_path(@room), local: true do |f| %>
 <div class="task-form1">
-  <div>
-    <div><%= f.label :タイトル %></div>
-    <div class="title-input"><%= f.text_area :title %></div>
-  </div>
 
-  <div>
-    <div ><%= f.label :内容 %></div>
-    <div class="content-input"><%= f.text_area :task_content %></div>
-  </div>
+    <div>
+      <div><%= f.label :タイトル %></div>
+      <div class="title-input"><%= f.text_area :title %></div>
+    </div>
+
+    <div>
+      <div ><%= f.label :内容 %></div>
+      <div class="content-input"><%= f.text_area :task_content %></div>
+    </div>
 </div>
 
 <div class="task-form2">
-  <div>
-    <div class="deadline-input"><%= f.label :締め切り（日時） %></div>
-    <div class="deadline-input"><%= f.date_field :deadline %></div>
-  </div>
+    <div>
+      <div class="deadline-input"><%= f.label :締め切り（日時） %></div>
+      <div class="deadline-input"><%= f.datetime_field :deadline %></div>
+    </div>
+    
+    <div class="task-submit"><%= f.submit value="作成" %></div>
 
-  <div>
-    <div class="deadline-input"><%= f.label :締め切り（時間） %></div>
-    <div class="deadline-input"><%= f.time_field :deadline %></div>
-  </div>
-  <div class="task-submit"><%= f.submit value="作成" %></div>
 </div>
+
 <%= render 'layouts/error_messages4', model: f.object %>
 <% end %>
+<%=link_to "back", room_messages_path(@room), class:"back-from-task" %>
 </div>
 
-<%=link_to "back", room_messages_path(@room), class:"back-from-task" %>
 <div class="announce-wrapper">
 <div class="task-name"></div>
   <div class="announce"></div>
 <div class="remainder">
   <div class="content-name">タイトル</div>
+  <div class="content-name1">内容</div>
   <div class="content-name2">期限</div>
   <div class="content-name3">編集・削除</div>
 </div>
@@ -44,14 +45,27 @@
 
       <div class="remainder">
         <div class="task-wrapper">
-          <div class="task-title"><%= link_to task.title, room_task_path(@room.id, task.id) %></div>
+          <div class="task-title"><%=link_to task.title, room_task_path(@room, task.id) %></div>
         </div>
+        <div class="task-wrapper1">
+          <div class="task-content"><%=task.task_content%></div>
+        </div>
+
         <%if task.present?%>
-        <div class="task-wrapper2">
-         <% youbi = %w[日 月 火 水 木 金 土 日] %>
-          <%= task.deadline.strftime('%m月%d日%H時%M分')%>
-          (<%= youbi[task.deadline.wday]%>)
-          <%end%>
+        <%if task.deadline.strftime('%m%d').to_i > DateTime.current.since(2.days).strftime('%m%d').to_i %>
+          <div class="task-wrapper2">
+          <% youbi = %w[日 月 火 水 木 金 土 日] %>
+          <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
+        <%elsif task.deadline.strftime('%m%d').to_i <= DateTime.current.since(1.days).strftime('%m%d').to_i%>        
+          <div class="task-wrapper2-soon2">
+          <% youbi = %w[日 月 火 水 木 金 土 日] %>
+          <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
+        <%elsif task.deadline.strftime('%m%d').to_i <= DateTime.current.since(2.days).strftime('%m%d').to_i%>
+          <div class="task-wrapper2-soon">
+          <% youbi = %w[日 月 火 水 木 金 土 日] %>
+          <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
+         <%end%>
+         <%end%>
         </div>
         
         <div class="task-wrapper3">
@@ -66,3 +80,51 @@
       </div>
     <% end %>
     </div>
+    <% else %>
+    <%=link_to "back", room_messages_path(@room), class:"back-from-task2" %>
+    <div class="announce-wrapper">
+<div class="task-name"></div>
+  <div class="announce"></div>
+<div class="remainder">
+  <div class="content-name">タイトル</div>
+  <div class="content-name1">内容</div>
+  <div class="content-name2">期限</div>
+  <div class="content-name3">編集・削除</div>
+</div>
+
+    <% @tasks.each do |task| %>
+
+      <div class="remainder">
+        <div class="task-wrapper">
+          <div class="task-title"><%=link_to task.title, room_task_path(@room, task) %></div>
+        </div>
+        <div class="task-wrapper1">
+          <div class="task-content"><%=task.task_content%></div>
+        </div>
+
+        <%if task.present?%>
+        <%if task.deadline.strftime('%m%d').to_i > DateTime.current.since(2.days).strftime('%m%d').to_i %>
+          <div class="task-wrapper2">
+          <% youbi = %w[日 月 火 水 木 金 土 日] %>
+          <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
+        <%elsif task.deadline.strftime('%m%d').to_i <= DateTime.current.since(1.days).strftime('%m%d').to_i%>        
+          <div class="task-wrapper2-soon2">
+          <% youbi = %w[日 月 火 水 木 金 土 日] %>
+          <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
+        <%elsif task.deadline.strftime('%m%d').to_i <= DateTime.current.since(2.days).strftime('%m%d').to_i%>
+          <div class="task-wrapper2-soon">
+          <% youbi = %w[日 月 火 水 木 金 土 日] %>
+          <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
+         <%end%>
+         <%end%>
+        </div>
+        
+        <div class="task-wrapper3">
+          <i class="fas fa-edit"></i>
+          <i class="far fa-trash-alt"></i>
+        </div>
+
+      </div>
+    <% end %>
+    </div>
+    <% end %>
