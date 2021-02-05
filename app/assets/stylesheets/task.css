@@ -54,7 +54,7 @@
     border:1px solid black;
     border-right:none;
     text-align:center;
-    width:311px;
+    width:241px;
     height:30px;
     background:rgb(255, 190, 190);
 }
@@ -82,7 +82,7 @@
     border:1px solid black;
     border-right:none;
     text-align:center;
-    width:731px;
+    width:701px;
     height:30px;
     background:rgb(255, 190, 190);
 }
@@ -131,9 +131,8 @@
 }
 
 .task-wrapper3 {
-    margin-right:20px;
-    border-right:1px solid black;
     border-bottom:1px solid black;
+    border-right:1px solid black;
     width:100px;
     text-align:center;
     padding:15px 0;
@@ -144,6 +143,15 @@
 
 .content-name3 {
     border:1px solid black;
+    border-right:none;
+    text-align:center;
+    width:100px;
+    height:30px;
+    background:rgb(255, 190, 190);
+}
+
+.content-name4 {
+    border:1px solid black;
     text-align:center;
     width:100px;
     height:30px;
@@ -151,9 +159,10 @@
 }
 
 .task-title {
-    width:300px;
-    padding-left:10px;
+    width:230px;
     letter-spacing:1px;
+    display:flex;
+    justify-content:center;
 }
 
 .task-title input {
@@ -161,7 +170,7 @@
 }
 
 .task-content {
-    width:720px;
+    width:690px;
     padding-left:10px;
     letter-spacing:1px;
 }
