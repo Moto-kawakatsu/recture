@@ -6,8 +6,24 @@
       <%=link_to "クイズ",tips_questions_path, class:"qs3" %>
       <%=link_to "勉強時間",tips_hours_path, class:"qs4" %>
       <%# <%=link_to "レベル",messages_levelup_path, class:"qs3" %>
+      <%=link_to "模範生徒",messages_students_path, class:"qs3" %>
       <%=link_to "考査",new_user_exam_path(current_user), class:"qs5" %>
-      <%=link_to "連絡",room_tasks_path(@room), class:"qs5" %>
+      <%if current_user.genre == '生徒' %>
+        <%if @room.tasks.present?%>
+          <%=link_to "連絡",new_room_task_path(@room), class:"qs5 red" %>
+        <%end%>
+      <%elsif current_user.genre == '教員'%>
+            <%=link_to "連絡",new_room_task_path(@room), class:"qs5" %>
+      <%end%>
+    <div class="aa">
+    <%@tasks.each do |task|%>
+    <%if task.deadline.strftime('%m%d').to_i <= DateTime.current.since(1.days).strftime('%m%d').to_i%> 
+    <span><i class="far fa-envelope"></i></span>
+    <%elsif task.deadline.strftime('%m%d').to_i > DateTime.current.since(1.days).strftime('%m%d').to_i%>
+     <span class="aaa"><i class="far fa-envelope"></i></span>
+    <%end %> 
+    <%end%>
+    </div>
 
     </div>
   </div>
