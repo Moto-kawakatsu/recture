@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+    # impressionist :actions=> [:show]
+
     def index
       @room = Room.find(params[:room_id])
       @tasks = @room.tasks
@@ -50,7 +52,7 @@ class TasksController < ApplicationController
     def show
         @room = Room.find(params[:room_id])
         @task = Task.find(params[:id])
-        
+        impressionist(@task, nil, unique: [:ip_address])
     end
 
     private
