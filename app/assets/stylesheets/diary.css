@@ -102,13 +102,6 @@
     height:199px;
   }
 
-  .messages1 {
-    background-color: #FAFAFA;
-    height: calc(100vh - 400px - 90px);
-    padding: 30px 40px 0;
-    overflow: scroll;
-  }
-
   .form-submit2 {
     background-color: #38aef0;
     border: none;
@@ -403,3 +396,138 @@
 .studies span{
   letter-spacing:2px;
 }
+
+.roads {
+  display:flex;
+}
+
+.road {
+  width:110px;
+  background:rgba(181, 52, 52, 0.142);
+  height:20px;
+  font-size:5px;
+  display:flex;
+  justify-content:center;
+  margin-bottom:35px;
+  padding-top:3px;
+}
+
+  .messages1 {
+    background-color: #FAFAFA;
+    height: calc(100vh - 400px - 90px);
+    padding: 55px 0px 0;
+    overflow: scroll;
+  }
+
+  .fa-running {
+    font-size:23px;
+    color:rgba(0, 0, 0, 0.747);
+  }
+
+
+
+  .d100 {
+    margin-left:95%;
+  }
+
+  .d200, .d300, .d400 {
+    margin-left:95%;
+  }
+
+  
+  .d90 {
+    margin-left:90%;
+  }
+
+  .d190, .d290, .d390 {
+    margin-left:85.5%;
+  }
+
+
+  .d80 {
+    margin-left:81%;
+  }
+
+  .d180, .d280, .d380 {
+    margin-left:76.5%;
+  }
+
+
+  .d70 {
+    margin-left:71%;
+  }
+
+  .d170, .d270, .d370 {
+    margin-left:67%;
+  }
+
+  .d60 {
+    margin-left:61.5%;
+  }
+
+  .d160, .d260, .d360 {
+    margin-left:58%;
+  }
+
+  .d50 {
+    margin-left:51.5%;
+  }
+
+  .d150, .d250, .d350 {
+    margin-left:49%;
+  }
+
+  .d40 {
+    margin-left:42%;
+  }
+
+  .d140, .d240, .d340 {
+    margin-left:40%;
+  }
+
+  .d30 {
+    margin-left:32.5%;
+  }
+
+  .d130, .d230, .d330 {
+    margin-left:31%;
+  }
+
+  .d20 {
+    margin-left:22.8%;
+  }
+
+  .d120, .d220, .d320 {
+    margin-left:22%;
+  }
+
+  .d10, .d110, .d210, .d310 {
+    margin-left:13%;
+  }
+
+  .d0, .d00 {
+    margin-left:0%;
+  }
+
+  .d0 {
+    margin-left:40px;
+  }
+
+  .start, .goal {
+    font-weight:bold;
+    font-size:13px;
+    width:110px;
+    background:rgba(181, 52, 52, 0.142);
+    height:20px;
+    display:flex;
+    justify-content:center;
+    margin-bottom:35px;
+  }
+
+  .start {
+    background:rgba(0, 140, 255, 0.573);
+  }
+
+  .goal {
+    background:rgba(253, 67, 67, 0.486);
+  }
