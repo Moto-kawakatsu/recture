@@ -95,6 +95,7 @@
   <div class="content-name1">内容</div>
   <div class="content-name2">期限</div>
   <div class="content-name3">編集・削除</div>
+  <div class="content-name4">確認済</div>
 </div>
 
     <% @tasks.each do |task| %>
@@ -123,12 +124,14 @@
          <%end%>
          <%end%>
         </div>
-
-          <div><%=task.impressionist_count - 1%>/<%=@room.users.count - 1 %></div>
-        
+      
         <div class="task-wrapper3">
           <i class="fas fa-edit"></i>
           <i class="far fa-trash-alt"></i>
+        </div>
+
+        <div class="task-wrapper3">
+          <%=task.impressionist_count - 1%>/<%=@room.users.count - 1 %>
         </div>
 
       </div>
