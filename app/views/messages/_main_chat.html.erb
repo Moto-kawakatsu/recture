@@ -1,13 +1,14 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="header-title">
-      <%= @room.name %>
-      <%=link_to "生徒一覧",messages_list_path, class:"qs1" %>
-      <%=link_to "クイズ",tips_questions_path, class:"qs3" %>
-      <%=link_to "勉強時間",tips_hours_path, class:"qs4" %>
+      <%= link_to @room.name, root_path %>
+      <%# <%=link_to "生徒一覧",messages_list_path, class:"qs1" %>
+      <%# <%=link_to "クイズ",tips_questions_path, class:"qs3" %>
+      <%# <%=link_to "勉強時間",tips_hours_path, class:"qs4" %>
       <%# <%=link_to "レベル",messages_levelup_path, class:"qs3" %>
-      <%=link_to "模範生徒",messages_students_path, class:"qs3" %>
-      <%=link_to "考査",new_user_exam_path(current_user), class:"qs5" %>
+      <%# <%=link_to "模範生徒",messages_students_path, class:"qs3" %>
+      <%# <%=link_to "模範生徒",messages_students_path, class:"qs3" %>
+  
       <%if current_user.genre == '生徒' %>
         <%if @room.tasks.present?%>
           <%=link_to "連絡",new_room_task_path(@room), class:"qs5 red" %>
