@@ -91,6 +91,7 @@
     <% end %>
     </div>
     <% else %>
+    <%# ユーザーが生徒の場合 %>
     
     <%=link_to "back", room_messages_path(@room), class:"back-from-task2" %>
     <div class="announce-wrapper">
@@ -115,22 +116,22 @@
         </div>
 
         <%if task.present?%>
-        <%if task.deadline.strftime('%m%d').to_i > DateTime.current.since(2.days).strftime('%m%d').to_i %>
-          <div class="task-wrapper2">
-          <% youbi = %w[日 月 火 水 木 金 土 日] %>
+        <% youbi = %w[日 月 火 水 木 金 土 日] %>
+        <%if task.present?%>
+        <%if task.deadline.strftime('%m%d').to_i < DateTime.current.strftime('%m%d').to_i%>
+        
+          <div class="task-wrapper2-soon2 over">
           <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
-        <%elsif task.deadline.strftime('%m%d').to_i < DateTime.current.strftime('%m%d').to_i%>
-          <div class="task-wrapper2-soo">
-          <% youbi = %w[日 月 火 水 木 金 土 日] %>
+        <%elsif task.deadline.strftime('%m%d').to_i > DateTime.current.since(2.days).strftime('%m%d').to_i %>
+          <div class="task-wrapper2">
           <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
         <%elsif task.deadline.strftime('%m%d').to_i <= DateTime.current.since(1.days).strftime('%m%d').to_i%>        
           <div class="task-wrapper2-soon2">
-          <% youbi = %w[日 月 火 水 木 金 土 日] %>
           <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
         <%elsif task.deadline.strftime('%m%d').to_i <= DateTime.current.since(2.days).strftime('%m%d').to_i%>
           <div class="task-wrapper2-soon">
-          <% youbi = %w[日 月 火 水 木 金 土 日] %>
           <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
+         <%end%>
          <%end%>
          <%end%>
         </div>
