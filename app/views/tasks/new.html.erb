@@ -52,18 +52,20 @@
           <div class="task-content"><%=task.task_content%></div>
         </div>
 
+        <% youbi = %w[日 月 火 水 木 金 土 日] %>
         <%if task.present?%>
-        <%if task.deadline.strftime('%m%d').to_i > DateTime.current.since(2.days).strftime('%m%d').to_i %>
+        <%if task.deadline.strftime('%m%d').to_i < DateTime.current.strftime('%m%d').to_i%>
+        
+          <div class="task-wrapper2-soon2 over">
+          <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
+        <%elsif task.deadline.strftime('%m%d').to_i > DateTime.current.since(2.days).strftime('%m%d').to_i %>
           <div class="task-wrapper2">
-          <% youbi = %w[日 月 火 水 木 金 土 日] %>
           <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
         <%elsif task.deadline.strftime('%m%d').to_i <= DateTime.current.since(1.days).strftime('%m%d').to_i%>        
           <div class="task-wrapper2-soon2">
-          <% youbi = %w[日 月 火 水 木 金 土 日] %>
           <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
         <%elsif task.deadline.strftime('%m%d').to_i <= DateTime.current.since(2.days).strftime('%m%d').to_i%>
           <div class="task-wrapper2-soon">
-          <% youbi = %w[日 月 火 水 木 金 土 日] %>
           <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
          <%end%>
          <%end%>
@@ -79,7 +81,11 @@
         </div>
 
         <div class="task-wrapper3">
-        <%=task.impressionist_count - 1%>/<%=@room.users.count - 1 %>
+        <%if task.impressionist_count == 0%>
+          <%=task.impressionist_count%>/<%=@room.users.count - 1 %>
+        <%elsif task.impressionist_count >= 1 %>
+          <%=task.impressionist_count - 1 %>/<%=@room.users.count - 1 %>
+        <%end%>
         </div>
       </div>
     <% end %>
@@ -113,6 +119,10 @@
           <div class="task-wrapper2">
           <% youbi = %w[日 月 火 水 木 金 土 日] %>
           <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
+        <%elsif task.deadline.strftime('%m%d').to_i < DateTime.current.strftime('%m%d').to_i%>
+          <div class="task-wrapper2-soo">
+          <% youbi = %w[日 月 火 水 木 金 土 日] %>
+          <%= task.deadline.strftime('%m/%d' + '('+(youbi[task.deadline.wday]) +')'+ ' %H:%M')%>
         <%elsif task.deadline.strftime('%m%d').to_i <= DateTime.current.since(1.days).strftime('%m%d').to_i%>        
           <div class="task-wrapper2-soon2">
           <% youbi = %w[日 月 火 水 木 金 土 日] %>
@@ -131,7 +141,11 @@
         </div>
 
         <div class="task-wrapper3">
-          <%=task.impressionist_count - 1%>/<%=@room.users.count - 1 %>
+        <%if task.impressionist_count == 0%>
+          <%=task.impressionist_count%>/<%=@room.users.count - 1 %>
+        <%elsif task.impressionist_count >= 1 %>
+          <%=task.impressionist_count - 1 %>/<%=@room.users.count - 1 %>
+        <%end%>
         </div>
 
       </div>
