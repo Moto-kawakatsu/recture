@@ -278,8 +278,12 @@
     margin-top:12px;
 }
 
-.aaa {
+.envelop-blue {
     color:rgb(0, 98, 255);
+}
+
+.envelop-red {
+    color:red;
 }
 
 .red {
@@ -288,7 +292,17 @@
     border:red;
 }
 
+.blue {
+    background:rgb(0, 98, 255);
+    color:white;
+    border:red;
+}
+
 .over {
     background:black;
     border:black 5px solid;
+}
+
+.fa-envelope {
+    margin-left:8px;
 }
