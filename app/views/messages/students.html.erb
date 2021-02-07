@@ -1,8 +1,8 @@
 <%@users.each do |user| %>
+<%if user.genre == '生徒'%>
  <div>
  <%=user.name%>
- <%=@rank =user.diary_ids.length + user.comment_ids.length + user.response_ids.length%>
+ <%=user.diary_ids.length + user.comment_ids.length + user.response_ids.length%>
+ <% end %>
  <% end %>
  </div>
-
- <%=@comment%>
