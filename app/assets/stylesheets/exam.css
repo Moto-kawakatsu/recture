@@ -181,6 +181,10 @@
     font-size:20px;
 }
 
+.exam-result a:hover {
+    text-decoration:none;
+}
+
 .exam-result-back {
     display:flex;
     justify-content:center;
@@ -199,6 +203,7 @@
 .exam-result-back a:hover {
     background:rgb(24, 108, 245);
     color:white;
+    text-decoration:none;
 }
 
 .exam-result-back2 {
@@ -220,6 +225,7 @@
 .exam-result-back2 a:hover {
     background:rgb(24, 108, 245);
     color:white;
+    text-decoration:none;
 }
 
 

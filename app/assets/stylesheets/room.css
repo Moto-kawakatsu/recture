@@ -215,6 +215,10 @@ label {
   border-radius:20px;
 }
 
+.diary:hover {
+  text-decoration:none;
+}
+
 .stu-num {
   letter-spacing:10px;
 }
@@ -264,6 +268,9 @@ label {
 
 .room-wrapper {
   display:flex;
-  /* width:300px; */
-  /* height:100px; */
 }
+
+.room-name3:hover {
+  text-decoration:none;
+}
+

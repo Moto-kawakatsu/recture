@@ -140,6 +140,10 @@
     color:black;
   }
 
+  .diary-study-time a:hover{
+    text-decoration:none;
+  }
+
   .back-from-diary {
     padding-top:5px;
     padding-left:8px;
@@ -156,6 +160,10 @@
 
   .back-from-diary2 a {
     color:white;
+  }
+
+  .back-from-diary2 a:hover, .back-from-diary a:hover {
+    text-decoration:none;
   }
 
   .back-from-reply {
@@ -340,7 +348,8 @@
     letter-spacing:7px;
   }
 
-  .vocabulary {
+  .page-title a:hover {
+    text-decoration:none;
   }
 
   .grammar {

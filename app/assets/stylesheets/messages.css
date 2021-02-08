@@ -22,6 +22,10 @@
     text-decoration: none;
   }
 
+  .header-name a:hover {
+    text-decoration:none;
+  }
+
 
   
   .create-room {
@@ -143,7 +147,7 @@
     margin-bottom: 40px;
   }
   
-  .message-content a {
+  .message-content a:hover {
     text-decoration: none;
     color:#558ef8;
   }

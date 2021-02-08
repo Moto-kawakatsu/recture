@@ -1,13 +1,12 @@
-.qs1, .qs2, .qs3, .qs4, .qs5 {
+.qs1, .qs2, .qs3, .qs4, .qs5, .qs6 {
     font-size:16px;
     padding:13px;
-    margin-left:45px;
     margin-right:15px;
     border: 1px solid rgb(22, 81, 219);
     color: rgb(22, 81, 219);
 }
 
-.qs1:hover, .qs2:hover, .qs3:hover, .qs4:hover, .qs5:hover {
+.qs1:hover, .qs2:hover, .qs3:hover, .qs4:hover, .qs5:hover, .qs6:hover {
     background: #2f73fc;
     color:white;
     text-decoration:none;
@@ -31,6 +30,12 @@
   .qs5 {
     letter-spacing:24px;
     padding-left:32px;
+  }
+
+  .qs6 {
+    letter-spacing:24px;
+    padding-left:32px;
+    margin-left:45px;
   }
 
 .pop-comments {
