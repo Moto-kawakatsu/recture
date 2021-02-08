@@ -2,17 +2,13 @@
   <div class="left-header">
     <div class="header-title">
       <div class="room-wrapper">
-        <%= link_to @room.name, root_path %>
-          <%if current_user.genre == '生徒' %>
-            <%if @room.tasks.present?%>
-              <div><%=link_to "連絡",new_room_task_path(@room), class:"qs5 red" %></div>
-            <%else%>
-              <div><%=link_to "連絡",new_room_task_path(@room), class:"qs5 blue" %></div>
-            <%end%>
-          <%elsif current_user.genre == '教員'%>
-            <div><%=link_to "連絡",new_room_task_path(@room), class:"qs5" %></div>
-          <%end%>
+        <%= link_to @room.name, root_path, class:"room-name3" %>
 
+            <%if @room.tasks.present?%>
+              <div><%=link_to "連絡",new_room_task_path(@room), class:"qs6 blue" %></div>
+            <%else%>
+              <div><%=link_to "連絡",new_room_task_path(@room), class:"qs6" %></div>
+            <%end%>
 
     <%@tasks.each do |task|%>
     <%if task.deadline.strftime('%m%d').to_i <= DateTime.current.since(1.days).strftime('%m%d').to_i%> 
