@@ -88,28 +88,48 @@
 <%# -----------------学習時間合計値（終了）----------------- %>
 
 <% total = @array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum%>
-<%if total > 32999%>
+<%if total > 31000%>
 <i></i>
 <%elsif total > 30000%>
 <i class="fas fa-running d100"></i>
+<%elsif total > 28500%>
+<i class="fas fa-running d95"></i>
 <%elsif total > 27000%>
 <i class="fas fa-running d90"></i>
+<%elsif total > 25500%>
+<i class="fas fa-running d85"></i>
 <%elsif total > 24000%>
 <i class="fas fa-running d80"></i>
+<%elsif total > 22500%>
+<i class="fas fa-running d75"></i>
 <%elsif total > 21000%>
 <i class="fas fa-running d70"></i>
+<%elsif total > 19500%>
+<i class="fas fa-running d65"></i>
 <%elsif total > 18000%>
 <i class="fas fa-running d60"></i>
+<%elsif total > 16500%>
+<i class="fas fa-running d55"></i>
 <%elsif total > 15000%>
 <i class="fas fa-running d50"></i>
+<%elsif total > 13500%>
+<i class="fas fa-running d45"></i>
 <%elsif total > 12000%>
 <i class="fas fa-running d40"></i>
+<%elsif total > 10500%>
+<i class="fas fa-running d35"></i>
 <%elsif total > 9000%>
 <i class="fas fa-running d30"></i>
+<%elsif total > 7500%>
+<i class="fas fa-running d25"></i>
 <%elsif total > 6000%>
 <i class="fas fa-running d20"></i>
+<%elsif total > 4500%>
+<i class="fas fa-running d15"></i>
 <%elsif total > 3000%>
 <i class="fas fa-running d10"></i>
+<%elsif total > 1500%>
+<i class="fas fa-running d5"></i>
 <%elsif total >= 0%>
 <i class="fas fa-running d0"></i>
 <%end%>
@@ -117,175 +137,233 @@
 
   <div class="roads">
     <div class="start">start</div>
-    <div class="road">50時間</div>
+    <div class="road">50h</div>
     <%# 10個目 3000分 %>
-    <div class="road">100時間</div>
+    <div class="road">100h</div>
     <%# 20個目 6000分 %>
-    <div class="road">150時間</div>
+    <div class="road">150h</div>
     <%# 30個目 9000分 %>
-    <div class="road">200時間</div>
+    <div class="road">200h</div>
     <%# 40個目 12,000分 %>
-    <div class="road">250時間</div>
+    <div class="road">250h</div>
     <%# 50個目 15,000分 %>
-    <div class="road">300時間</div>
+    <div class="road">300h</div>
     <%# 60個目 18,000分 %>
-    <div class="road">350時間</div>
+    <div class="road">350h</div>
     <%# 70個目 21,000分 %>
-    <div class="road">400時間</div>
+    <div class="road">400h</div>
     <%# 80個目 24,000分 %>
-    <div class="road">450時間</div>
+    <div class="road">450h</div>
     <%# 90個目 27,000分 %>
-    <div class="road">500時間</div>
+    <div class="road">500h</div>
     <%# 100個目 30,000分 %>
   </div>
 
-<%if total > 62999%>
+<%if total > 61000%>
 <i></i>
 <%elsif total > 60000%>
 <i class="fas fa-running d200"></i>
+<%elsif total > 58500%>
+<i class="fas fa-running d195"></i>
 <%elsif total > 57000%>
 <i class="fas fa-running d190"></i>
+<%elsif total > 55500%>
+<i class="fas fa-running d185"></i>
 <%elsif total > 54000%>
 <i class="fas fa-running d180"></i>
+<%elsif total > 52500%>
+<i class="fas fa-running d175"></i>
 <%elsif total > 51000%>
 <i class="fas fa-running d170"></i>
+<%elsif total > 49500%>
+<i class="fas fa-running d165"></i>
 <%elsif total > 48000%>
 <i class="fas fa-running d160"></i>
+<%elsif total > 46500%>
+<i class="fas fa-running d155"></i>
 <%elsif total > 45000%>
 <i class="fas fa-running d150"></i>
+<%elsif total > 43500%>
+<i class="fas fa-running d145"></i>
 <%elsif total > 42000%>
 <i class="fas fa-running d140"></i>
+<%elsif total > 40500%>
+<i class="fas fa-running d135"></i>
 <%elsif total > 39000%>
 <i class="fas fa-running d130"></i>
+<%elsif total > 37500%>
+<i class="fas fa-running d125"></i>
 <%elsif total > 36000%>
 <i class="fas fa-running d120"></i>
+<%elsif total > 34500%>
+<i class="fas fa-running d115"></i>
 <%elsif total > 33000%>
 <i class="fas fa-running d110"></i>
-<%elsif total > 30000%>
+<%elsif total > 31500%>
+<i class="fas fa-running d105"></i>
+<%elsif total > 31000%>
 <i class="fas fa-running d00"></i>
 <%end%>
 
   <div class="roads">
     <div class="road"></div>
-    <div class="road">550時間</div>
+    <div class="road">550h</div>
     <%# 10個目 3000分 %>
-    <div class="road">600時間</div>
+    <div class="road">600h</div>
     <%# 20個目 6000分 %>
-    <div class="road">650時間</div>
+    <div class="road">650h</div>
     <%# 30個目 9000分 %>
-    <div class="road">700時間</div>
+    <div class="road">700h</div>
     <%# 40個目 12,000分 %>
-    <div class="road">750時間</div>
+    <div class="road">750h</div>
     <%# 50個目 15,000分 %>
-    <div class="road">800時間</div>
+    <div class="road">800h</div>
     <%# 60個目 18,000分 %>
-    <div class="road">850時間</div>
+    <div class="road">850h</div>
     <%# 70個目 21,000分 %>
-    <div class="road">900時間</div>
+    <div class="road">900h</div>
     <%# 80個目 24,000分 %>
-    <div class="road">950時間</div>
+    <div class="road">950h</div>
     <%# 90個目 27,000分 %>
-    <div class="road">1,000時間</div>
+    <div class="road">1,000h</div>
     <%# 100個目 30,000分 %>
   </div>
 
 
-<%if total > 92999%>
+<%if total > 91000%>
 <i></i>
 <%elsif total > 90000%>
 <i class="fas fa-running d300"></i>
+<%elsif total > 88500%>
+<i class="fas fa-running d295"></i>
 <%elsif total > 87000%>
 <i class="fas fa-running d290"></i>
+<%elsif total > 85500%>
+<i class="fas fa-running d285"></i>
 <%elsif total > 84000%>
 <i class="fas fa-running d280"></i>
+<%elsif total > 82500%>
+<i class="fas fa-running d275"></i>
 <%elsif total > 81000%>
 <i class="fas fa-running d270"></i>
+<%elsif total > 79500%>
+<i class="fas fa-running d265"></i>
 <%elsif total > 78000%>
 <i class="fas fa-running d260"></i>
+<%elsif total > 76500%>
+<i class="fas fa-running d255"></i>
 <%elsif total > 75000%>
 <i class="fas fa-running d250"></i>
+<%elsif total > 73500%>
+<i class="fas fa-running d245"></i>
 <%elsif total > 72000%>
 <i class="fas fa-running d240"></i>
+<%elsif total > 70500%>
+<i class="fas fa-running d235"></i>
 <%elsif total > 69000%>
 <i class="fas fa-running d230"></i>
+<%elsif total > 67500%>
+<i class="fas fa-running d225"></i>
 <%elsif total > 66000%>
 <i class="fas fa-running d220"></i>
+<%elsif total > 64500%>
+<i class="fas fa-running d215"></i>
 <%elsif total > 63000%>
 <i class="fas fa-running d210"></i>
-<%elsif total > 60000%>
+<%elsif total > 61500%>
+<i class="fas fa-running d205"></i>
+<%elsif total > 61000%>
 <i class="fas fa-running d00"></i>
 <%end%>
 
 
   <div class="roads">
     <div class="road"></div>
-    <div class="road">1,050時間</div>
+    <div class="road">1,050h</div>
     <%# 10個目 3000分 %>
-    <div class="road">1,100時間</div>
+    <div class="road">1,100h</div>
     <%# 20個目 6000分 %>
-    <div class="road">1,150時間</div>
+    <div class="road">1,150h</div>
     <%# 30個目 9000分 %>
-    <div class="road">1,200時間</div>
+    <div class="road">1,200h</div>
     <%# 40個目 12,000分 %>
-    <div class="road">1,250時間</div>
+    <div class="road">1,250h</div>
     <%# 50個目 15,000分 %>
-    <div class="road">1,300時間</div>
+    <div class="road">1,300h</div>
     <%# 60個目 18,000分 %>
-    <div class="road">1,350時間</div>
+    <div class="road">1,350h</div>
     <%# 70個目 21,000分 %>
-    <div class="road">1,400時間</div>
+    <div class="road">1,400h</div>
     <%# 80個目 24,000分 %>
-    <div class="road">1,450時間</div>
+    <div class="road">1,450h</div>
     <%# 90個目 27,000分 %>
-    <div class="road">1,500時間</div>
+    <div class="road">1,500h</div>
     <%# 100個目 30,000分 %>
   </div>
 
-<%if total > 129999%>
+<%if total > 120000%>
 <i class="fas fa-running d400"></i>
-<%elsif total > 120000%>
-<i class="fas fa-running d400"></i>
+<%elsif total > 118500%>
+<i class="fas fa-running d395"></i>
 <%elsif total > 117000%>
 <i class="fas fa-running d390"></i>
+<%elsif total > 115500%>
+<i class="fas fa-running d385"></i>
 <%elsif total > 114000%>
 <i class="fas fa-running d380"></i>
+<%elsif total > 112500%>
+<i class="fas fa-running d375"></i>
 <%elsif total > 111000%>
 <i class="fas fa-running d370"></i>
+<%elsif total > 109500%>
+<i class="fas fa-running d365"></i>
 <%elsif total > 108000%>
 <i class="fas fa-running d360"></i>
+<%elsif total > 106500%>
+<i class="fas fa-running d355"></i>
 <%elsif total > 105000%>
 <i class="fas fa-running d350"></i>
+<%elsif total > 103500%>
+<i class="fas fa-running d345"></i>
 <%elsif total > 102000%>
 <i class="fas fa-running d340"></i>
+<%elsif total > 100500%>
+<i class="fas fa-running d335"></i>
 <%elsif total > 99000%>
 <i class="fas fa-running d330"></i>
+<%elsif total > 97500%>
+<i class="fas fa-running d325"></i>
 <%elsif total > 96000%>
 <i class="fas fa-running d320"></i>
+<%elsif total > 94500%>
+<i class="fas fa-running d315"></i>
 <%elsif total > 93000%>
 <i class="fas fa-running d310"></i>
-<%elsif total > 90000%>
+<%elsif total > 91500%>
+<i class="fas fa-running d305"></i>
+<%elsif total > 91000%>
 <i class="fas fa-running d00"></i>
 <%end%>
 
   <div class="roads">
     <div class="road"></div>
-    <div class="road">1,550時間</div>
+    <div class="road">1,550h</div>
     <%# 10個目 3000分 %>
-    <div class="road">1,600時間</div>
+    <div class="road">1,600h</div>
     <%# 20個目 6000分 %>
-    <div class="road">1,650時間</div>
+    <div class="road">1,650h</div>
     <%# 30個目 9000分 %>
-    <div class="road">1,700時間</div>
+    <div class="road">1,700h</div>
     <%# 40個目 12,000分 %>
-    <div class="road">1,750時間</div>
+    <div class="road">1,750h</div>
     <%# 50個目 15,000分 %>
-    <div class="road">18,00時間</div>
+    <div class="road">18,00h</div>
     <%# 60個目 18,000分 %>
-    <div class="road">18,50時間</div>
+    <div class="road">18,50h</div>
     <%# 70個目 21,000分 %>
-    <div class="road">1,900時間</div>
+    <div class="road">1,900h</div>
     <%# 80個目 24,000分 %>
-    <div class="road">1,950時間</div>
+    <div class="road">1,950h</div>
     <%# 90個目 27,000分 %>
     <div class="goal">goal</div>
     <%# 100個目 30,000分 %>
@@ -302,7 +380,7 @@
       <div class="study-title"><%= f.text_area :title,class: 'form-message4', placeholder: 'title' %></div>
       <div class="studies">
         <div class="study-hour"><%= f.select :study_content, [["content",nil],["vocabulary", "単語"],["grammar", "文法"], ["speaking", "スピーキング"], ["writing", "ライティング"], ["listening", "リスニング"],["reading","リーディング"]]%></div>
-        <div class="study-content"><%= f.select :study_time, [["study hours",nil],["１０分", 10],["２０分", 20],["３０分", 30],["４０分", 40],["５０分", 50],["６０分", 60],["７０分", 70],["８０分", 80],["９０分", 90],["１００分", 100],["１２０分", 120],["１３０分", 130],["１４０分", 140],["１５０分", 150]] %></div>
+        <div class="study-content"><%= f.select :study_time, [["study hours",nil],["１０分", 3000],["２０分", 20],["３０分", 30],["４０分", 40],["５０分", 50],["６０分", 60],["７０分", 70],["８０分", 80],["９０分", 90],["１００分", 100],["１２０分", 120],["１３０分", 130],["１４０分", 140],["１５０分", 150]] %></div>
       </div>
       <div><%= f.text_area :writing,class: 'form-message2', placeholder: 'diary' %></div>
   </div>

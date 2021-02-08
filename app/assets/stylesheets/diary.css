@@ -540,3 +540,44 @@
   .goal {
     background:rgba(253, 67, 67, 0.486);
   }
+
+  .d5, .d105, .d205, .d305 {
+    margin-left:7%;
+  }
+
+  .d15, .d115, .d215, .d315 {
+    margin-left:17%;
+  }
+  
+  .d25, .d125, .d225, .d325 {
+    margin-left:25%;
+  }
+
+  .d35, .d135, .d235, .d335 {
+    margin-left:36%;
+  }
+
+  .d45, .d145, .d245, .d345 {
+    margin-left:45%;
+  }
+
+  .d55, .d155, .d255, .d355 {
+    margin-left:54%;
+  }
+
+  .d65, .d165, .d265, .d365 {
+    margin-left:63%;
+  }
+
+  .d75, .d175, .d275, .d375 {
+    margin-left:72%;
+  }
+
+  .d85, .d185, .d285, .d385 {
+    margin-left:81%;
+  }
+
+  .d95, .d195, .d295, .d395 {
+    margin-left:90%;
+  }
+
