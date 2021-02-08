@@ -3,7 +3,7 @@
   <%if @user.exams.present?%>
   <div class="exam-result-back2"><%=link_to "反省", user_exam_path(@user.id, @user.exams.ids) %></div>
   <%end%>
-  <div class="exam-result-back"><%=link_to "back", root_path %></div>
+  <div class="exam-result-back"><%=link_to "戻る", root_path %></div>
 </div>
 <%= form_with model: [@user,@exam],class: 'form4', local: true do |f| %>
   <div class="input-info">
