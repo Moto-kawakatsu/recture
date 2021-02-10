@@ -1,5 +1,5 @@
 <div class="room-name2">
-  <div class="room-name3"><%=link_to @room.name, room_messages_path(@room)%></div>
+<%=link_to @room.name, room_messages_path(@room), class:"room-name3"%>
 </div>
 <%@users.each do |user| %>
 <%if user.genre == "生徒"%>
