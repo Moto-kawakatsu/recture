@@ -232,6 +232,10 @@ label {
   margin-left:20px;
 }
 
+.user_name {
+  text-decoration:none;
+}
+
 .stu-name1 {
   letter-spacing:36px;
 }
@@ -250,6 +254,9 @@ label {
   margin-right:17px;
 }
 
+.a {
+  text-decoration:none;
+}
 
 .room-name2 {
   font-size:20px;
@@ -260,6 +267,10 @@ label {
 
 .room-name3 {
   margin-right:20px;
+}
+
+.room-name3 {
+  text-decoration:none;
 }
 
 .room-back {
