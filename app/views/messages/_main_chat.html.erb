@@ -11,11 +11,13 @@
             <%end%>
 
     <%@tasks.each do |task|%>
+        <%unless task.deadline.strftime('%m%d%H:%M').to_i < DateTime.current.strftime('%m%d%H:%M').to_i%>
     <%if task.deadline.strftime('%m%d').to_i <= DateTime.current.since(1.days).strftime('%m%d').to_i%> 
     <span class="envelop-red"><i class="far fa-envelope"></i></span>
     <%elsif task.deadline.strftime('%m%d').to_i > DateTime.current.since(1.days).strftime('%m%d').to_i%>
      <span class="envelop-blue"><i class="far fa-envelope"></i></span>
     <%end %> 
+    <%end%>
     <%end%>
     </div>
 
