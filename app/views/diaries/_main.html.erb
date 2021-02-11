@@ -1,3 +1,4 @@
+<%= render "if" %>
 <div class="chat-header2">
 <div class="diary-title">学習<span class="small-no">の</span>記録</div>
   <div class="left-header">
@@ -11,7 +12,13 @@
   </div>
 </div>
 <div class="messages1">
-
+<div class="study-hour">
+  <b>
+    <div class="left">残り</div>
+    <%=120000 - (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum)%>
+  </b>
+<span class="mins">mins</span>
+</div>
 
 <%# -----------------学習時間合計値（開始）----------------- %>
 <%@array_word = []%>
