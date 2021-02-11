@@ -308,11 +308,6 @@
     font-size:20px;
   }
 
-  .mins {
-    font-size:12px;
-    margin-left:2px;
-  }
-
   .studies {
     font-size:15px;
     padding-top:4px;
@@ -424,7 +419,7 @@
   .messages1 {
     background-color: #FAFAFA;
     height: calc(100vh - 400px - 90px);
-    padding: 35px 0px 0;
+    padding: 15px 0px 0;
     overflow: scroll;
   }
 
@@ -584,4 +579,18 @@
 .left {
   font-size:10px;
   color:black;
+  margin-left:20px;
+  margin-right:8px;
+  margin-top:10px;
+}
+
+.left-time {
+  display:flex;
+  margin-bottom:10px;
+}
+
+.mins {
+  font-size:12px;
+  margin-left:8px;
+  margin-top:9px;
 }
