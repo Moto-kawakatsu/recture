@@ -43,7 +43,7 @@
 </div>
 
     <% @tasks.each do |task| %>
-
+    <%unless task.deadline.strftime('%m%d%H:%M').to_i < DateTime.current.strftime('%m%d%H:%M').to_i%>
       <div class="remainder">
         <div class="task-wrapper">
           <div class="task-title"><%=link_to task.title, room_task_path(@room, task.id) %></div>
@@ -51,6 +51,7 @@
         <div class="task-wrapper1">
           <div class="task-content"><%=task.task_content%></div>
         </div>
+
 
         <% youbi = %w[日 月 火 水 木 金 土 日] %>
         <%if task.present?%>
@@ -88,9 +89,11 @@
         <%end%>
         </div>
       </div>
+      <%end%>
     <% end %>
     </div>
     <% else %>
+
     <%# ユーザーが生徒の場合 %>
     
     <%=link_to "back", room_messages_path(@room), class:"back-from-task2" %>
@@ -106,7 +109,7 @@
 </div>
 
     <% @tasks.each do |task| %>
-
+    <%unless task.deadline.strftime('%m%d%H:%M').to_i < DateTime.current.strftime('%m%d%H:%M').to_i%>
       <div class="remainder">
         <div class="task-wrapper">
           <div class="task-title"><%=link_to task.title, room_task_path(@room, task) %></div>
@@ -148,8 +151,8 @@
           <%=task.impressionist_count - 1 %>/<%=@room.users.count - 1 %>
         <%end%>
         </div>
-
       </div>
+      <%end%>
     <% end %>
     </div>
     <% end %>
