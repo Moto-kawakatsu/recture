@@ -424,7 +424,7 @@
   .messages1 {
     background-color: #FAFAFA;
     height: calc(100vh - 400px - 90px);
-    padding: 55px 0px 0;
+    padding: 35px 0px 0;
     overflow: scroll;
   }
 
@@ -581,3 +581,7 @@
     margin-left:90%;
   }
 
+.left {
+  font-size:10px;
+  color:black;
+}
