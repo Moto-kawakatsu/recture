@@ -16,7 +16,11 @@
   <b>
   <div class="left-time">
     <span class="left">残り</span>
+    <%if 120000 - (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum) >= 0%>
     <div class="left2"><%=120000 - (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum)%></div>
+    <%else%>
+    0
+    <%end%>
     <span class="mins">mins</span>
   </div>
   </b>
