@@ -13,10 +13,12 @@
 </div>
 <div class="messages1">
 <div class="study-hour">
+<%# 残り時間（分表示） %>
   <b>
   <div class="left-time">
     <span class="left">残り</span>
-    <%if 120000 - (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum) >= 0%>
+    <%@sum = 120000 - (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum)%>
+    <%if @sum >= 0%>
     <div class="left2"><%=120000 - (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum)%></div>
     <%else%>
     0
@@ -24,6 +26,32 @@
     <span class="mins">mins</span>
   </div>
   </b>
+
+<%# 残り時間（時間表示） %>
+    <b>
+  <div class="left-time">
+    <span class="left"></span>
+
+    <%if @sum >= 0%>
+    <div class="left2"><%=@sum / 60 %></div>
+    <%else%>
+    0
+    <%end%>
+    <span class="mins">hours</span>
+  </div>
+  </b>
+  
+<%# 残り時間（％表示） %>
+    </b>
+    <b>
+  <div class="left-time">
+    <span class="left"></span>
+    <%@percentage = (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum).to_f * 100 / 120000 %>
+    <div class="left2"><%= @percentage.round(2) %></div>
+    <span class="mins">percent</span>
+  </div>
+  </b>
+  
 </div>
 
 <%# -----------------学習時間合計値（開始）----------------- %>
@@ -150,23 +178,23 @@
 
   <div class="roads">
     <div class="start">start</div>
-    <div class="road">50h</div>
+    <div class="road"></div>
     <%# 10個目 3000分 %>
     <div class="road">100h</div>
     <%# 20個目 6000分 %>
-    <div class="road">150h</div>
+    <div class="road"></div>
     <%# 30個目 9000分 %>
     <div class="road">200h</div>
     <%# 40個目 12,000分 %>
-    <div class="road">250h</div>
+    <div class="road"></div>
     <%# 50個目 15,000分 %>
     <div class="road">300h</div>
     <%# 60個目 18,000分 %>
-    <div class="road">350h</div>
+    <div class="road"></div>
     <%# 70個目 21,000分 %>
     <div class="road">400h</div>
     <%# 80個目 24,000分 %>
-    <div class="road">450h</div>
+    <div class="road"></div>
     <%# 90個目 27,000分 %>
     <div class="road">500h</div>
     <%# 100個目 30,000分 %>
@@ -220,23 +248,23 @@
 
   <div class="roads">
     <div class="road"></div>
-    <div class="road">550h</div>
+    <div class="road"></div>
     <%# 10個目 3000分 %>
     <div class="road">600h</div>
     <%# 20個目 6000分 %>
-    <div class="road">650h</div>
+    <div class="road"></div>
     <%# 30個目 9000分 %>
     <div class="road">700h</div>
     <%# 40個目 12,000分 %>
-    <div class="road">750h</div>
+    <div class="road"></div>
     <%# 50個目 15,000分 %>
     <div class="road">800h</div>
     <%# 60個目 18,000分 %>
-    <div class="road">850h</div>
+    <div class="road"></div>
     <%# 70個目 21,000分 %>
     <div class="road">900h</div>
     <%# 80個目 24,000分 %>
-    <div class="road">950h</div>
+    <div class="road"></div>
     <%# 90個目 27,000分 %>
     <div class="road">1,000h</div>
     <%# 100個目 30,000分 %>
@@ -292,23 +320,23 @@
 
   <div class="roads">
     <div class="road"></div>
-    <div class="road">1,050h</div>
+    <div class="road"></div>
     <%# 10個目 3000分 %>
     <div class="road">1,100h</div>
     <%# 20個目 6000分 %>
-    <div class="road">1,150h</div>
+    <div class="road"></div>
     <%# 30個目 9000分 %>
     <div class="road">1,200h</div>
     <%# 40個目 12,000分 %>
-    <div class="road">1,250h</div>
+    <div class="road"></div>
     <%# 50個目 15,000分 %>
     <div class="road">1,300h</div>
     <%# 60個目 18,000分 %>
-    <div class="road">1,350h</div>
+    <div class="road"></div>
     <%# 70個目 21,000分 %>
     <div class="road">1,400h</div>
     <%# 80個目 24,000分 %>
-    <div class="road">1,450h</div>
+    <div class="road"></div>
     <%# 90個目 27,000分 %>
     <div class="road">1,500h</div>
     <%# 100個目 30,000分 %>
@@ -360,23 +388,23 @@
 
   <div class="roads">
     <div class="road"></div>
-    <div class="road">1,550h</div>
+    <div class="road"></div>
     <%# 10個目 3000分 %>
     <div class="road">1,600h</div>
     <%# 20個目 6000分 %>
-    <div class="road">1,650h</div>
+    <div class="road"></div>
     <%# 30個目 9000分 %>
     <div class="road">1,700h</div>
     <%# 40個目 12,000分 %>
-    <div class="road">1,750h</div>
+    <div class="road"></div>
     <%# 50個目 15,000分 %>
     <div class="road">18,00h</div>
     <%# 60個目 18,000分 %>
-    <div class="road">18,50h</div>
+    <div class="road"></div>
     <%# 70個目 21,000分 %>
     <div class="road">1,900h</div>
     <%# 80個目 24,000分 %>
-    <div class="road">1,950h</div>
+    <div class="road"></div>
     <%# 90個目 27,000分 %>
     <div class="goal">goal</div>
     <%# 100個目 30,000分 %>
