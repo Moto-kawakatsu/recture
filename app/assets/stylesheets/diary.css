@@ -302,6 +302,7 @@
   .study-hour {
     margin-left:10px;
     width:50%;
+    display:flex;
   }
 
   .study-hour b {
@@ -412,7 +413,7 @@
   font-size:5px;
   display:flex;
   justify-content:center;
-  margin-bottom:35px;
+  margin-bottom:28px;
   padding-top:3px;
 }
 
@@ -586,7 +587,7 @@
 
 .left-time {
   display:flex;
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
 .mins {
