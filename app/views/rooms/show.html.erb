@@ -6,7 +6,11 @@
 <div class="students-in-room">
     <div class="stu-num"><%=user.student_number%>番</div>　　
     <% @d_path = link_to user.name,new_user_diary_path(user)%>
-    <%if user.name.length == 3%>
+    <%if user.name.length == 1%>
+    <div class="stu-name0"><%=@d_path%></div>　　
+    <%elsif user.name.length == 2%>
+    <div class="stu-name"><%=@d_path%></div>　　
+    <%elsif user.name.length == 3%>
     <div class="stu-name1"><%=@d_path%></div>　　
     <% elsif user.name.length == 4%>
     <div class="stu-name2"><%=@d_path%></div>　　　
