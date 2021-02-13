@@ -283,3 +283,11 @@ select {
 .good2 {
   font-size:30px;
 }
+
+.user-level {
+  margin:7px 0;
+}
+
+.class-number, .class-number2, .class-number3 {
+  cursor:pointer;
+}
