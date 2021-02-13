@@ -59,10 +59,10 @@
   }
 
   .form-message2 {
-    border: none;
-    height: 243px;
-    width: 100%;
-    padding-left: 10px;
+    border:none;
+    height:243px;
+    width:100%;
+    padding-left:10px;
     margin-top:5px;
   }
 
@@ -89,7 +89,8 @@
 
 
   .form2 {
-    background-color: #DDDDDD;
+   
+    background-color: #dddddda2;
     padding: 18px 25px;
     display: flex;
     
@@ -418,7 +419,7 @@
 }
 
   .messages1 {
-    background-color: #FAFAFA;
+    background-color: #dddddda2;
     height: calc(100vh - 400px - 90px);
     padding: 15px 0px 0;
     overflow: scroll;
@@ -578,11 +579,24 @@
   }
 
 .left {
-  font-size:10px;
+  font-size:12px;
   color:black;
   margin-left:20px;
   margin-right:8px;
-  margin-top:10px;
+  margin-top:16px;
+}
+
+.left2 {
+  font-size:25px;
+  color:white;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+}
+
+.left3 {
+  margin-left:20px;
+  font-size:25px;
+  color:white;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
 }
 
 .left-time {
@@ -591,7 +605,16 @@
 }
 
 .mins {
-  font-size:12px;
+  font-size:15px;
   margin-left:8px;
-  margin-top:9px;
+  margin-top:10px;
+}
+
+.left-time-wrapper {
+  display:flex;
+  margin:10px 50%;
+}
+
+.mg {
+  margin:0 20px;
 }
