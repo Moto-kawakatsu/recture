@@ -13,45 +13,49 @@
 </div>
 <div class="messages1">
 <div class="study-hour">
+
+<div class="left-time-wrapper">
 <%# 残り時間（分表示） %>
+
   <b>
   <div class="left-time">
-    <span class="left">残り</span>
+
     <%@sum = 120000 - (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum)%>
     <%if @sum >= 0%>
     <div class="left2"><%=120000 - (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum)%></div>
     <%else%>
     0
     <%end%>
-    <span class="mins">mins</span>
+    <p class="mins">mins</p>
   </div>
   </b>
 
 <%# 残り時間（時間表示） %>
-    <b>
+  <b class="mg">
   <div class="left-time">
-    <span class="left"></span>
+    <p class="left"></p>
 
     <%if @sum >= 0%>
-    <div class="left2"><%=@sum / 60 %></div>
+    <div class="left3"><%=@sum / 60 %></div>
     <%else%>
     0
     <%end%>
-    <span class="mins">hours</span>
+    <p class="mins">hours</p>
   </div>
   </b>
   
 <%# 残り時間（％表示） %>
-    </b>
-    <b>
+  </b>
+  <b>
   <div class="left-time">
     <span class="left"></span>
     <%@percentage = (@array_word.sum + @array_reading.sum + @array_speaking.sum + @array_grammar.sum + @array_listening.sum + @array_writing.sum).to_f * 100 / 120000 %>
-    <div class="left2"><%= @percentage.round(2) %></div>
-    <span class="mins">percent</span>
+    <div class="left3"><%= @percentage.round(2) %></div>
+    <p class="mins">％</p>
   </div>
   </b>
-  
+</div>
+
 </div>
 
 <%# -----------------学習時間合計値（開始）----------------- %>
