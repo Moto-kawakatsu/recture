@@ -19,7 +19,8 @@
     </div>
     <div class="message-date">
       <%=@diary.created_at.strftime('%m/%d %H:%M') if @diary%>
-      【<%=@diary.writing.length %>文字】
+      <b class="study-time"><%=@diary.study_time%>mins</b>
+      【<%=@diary.writing.length %>words】
       <%=@diary.user.name%>
     </div>
       <% if current_user.genre == "教員" %>
