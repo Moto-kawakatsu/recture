@@ -6,6 +6,6 @@
   <div><%= f.text_field :task_content %></div>
   <div><%= f.label :締め切り %></div>
   <div><%= f.datetime_field :deadline %></div>
-  <div><%= f.submit value="更新" %></div>
+  <div class="update"><%= f.submit value="更新" %></div>
 <% end %>
-<%= link_to '戻る',new_room_task_path(@room)%>
+<div class="back3"><%= link_to '戻る',new_room_task_path(@room)%></div>

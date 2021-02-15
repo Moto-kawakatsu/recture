@@ -308,3 +308,19 @@
 .fa-envelope {
     margin-left:8px;
 }
+
+.back3 {
+    width:36px;
+    border:1px solid black;
+    border-radius:3px;
+    background:rgb(240, 239, 239);
+    margin-top:20px;
+}
+
+.back3 a {
+    color:black;
+}
+
+.update {
+    margin-top:20px;
+}
